@@ -24,7 +24,7 @@
     "id": "glyphs",
     "label": "Deck of Glyphs",
     "description": "Helpful support classes that provide both healing and leadership.",
-    "color": "#a9ff52",
+    "color": "#5ba81d",
     "classes": ["mender","seer","occultist","glyphs"]
   }
 ]
