@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shard — Character Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+
+    <header id="top-bar">
+      <div class="brand">&#9876; Shard <span class="brand-sub">Character Builder</span></div>
+      <nav class="top-bar-nav">
+        <a class="top-bar-link" href="../class-browser/">Class Browser</a>
+        <a class="top-bar-link active" href="#">Character Builder</a>
+      </nav>
+      <div class="top-bar-hint">Build a character step by step, then export for Foundry import.</div>
+    </header>
+
+    <div id="layout">
+
+      <!-- ── Left: Summary panel ─────────────────────────────── -->
+      <aside id="summary-panel">
+        <div class="panel-label">Character</div>
+
+        <div class="name-row">
+          <label class="name-label" for="char-name">Name</label>
+          <input id="char-name" type="text" value="Hero" autocomplete="off" spellcheck="false">
+        </div>
+
+        <div id="summary-levels">
+          <!-- Populated by builder.js -->
+        </div>
+
+        <div class="panel-actions">
+          <button id="add-level-btn" class="btn-action" hidden>+ Add Level</button>
+          <button id="export-btn"    class="btn-export" disabled>&#8595; Export JSON</button>
+        </div>
+      </aside>
+
+      <!-- ── Right: Step panel ───────────────────────────────── -->
+      <main id="step-panel">
+        <p class="loading-msg">Loading&hellip;</p>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- marked for Markdown → HTML -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+  <script src="builder.js"></script>
+</body>
+</html>

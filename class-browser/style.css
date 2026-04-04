@@ -1,0 +1,498 @@
+/* ============================================================
+   Shard Class Browser — style.css
+   Color palette mirrors the FoundryVTT system sheet.
+   ============================================================ */
+
+:root {
+  /* Brand palette */
+  --bg:           #fef8e7;
+  --bg-card:      #fffdf5;
+  --bg-sidebar:   #f5e9a8;
+  --accent:       #7a3500;
+  --accent-mid:   #b85c00;
+  --gold:         #b8920a;
+  --text:         #1a1000;
+  --text-muted:   #6b4c00;
+  --border:       rgba(184, 146, 10, 0.35);
+  --hit:          #1a6b2a;
+
+  /* Rank colors */
+  --rank-basic:   #1a6b2a;
+  --rank-heroic:  #8a6800;
+  --rank-1:       #7a3500;
+  --rank-2:       #4a2d7a;
+  --rank-3:       #1a4a6b;
+  --rank-4:       #6b1a3a;
+  --rank-5:       #1a1a1a;
+
+  /* Layout */
+  --sidebar-w:    192px;
+  --header-h:     52px;
+  --radius:       6px;
+  --card-min:     380px;
+
+  /* Typography */
+  --font-serif:   "Georgia", "Times New Roman", serif;
+  --font-ui:      system-ui, -apple-system, sans-serif;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ── Top bar ───────────────────────────────────────────────── */
+#top-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0 20px;
+  height: var(--header-h);
+  background: var(--accent);
+  color: #fef8e7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: bold;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+.brand-sub {
+  font-weight: normal;
+  font-size: 0.82rem;
+  opacity: 0.75;
+  margin-left: 6px;
+}
+
+/* ── Top-bar page nav ──────────────────────────────────────── */
+.top-bar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 4px;
+}
+.top-bar-link {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-family: var(--font-ui);
+  color: #fef8e7;
+  opacity: 0.65;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s, background 0.15s;
+}
+.top-bar-link:hover {
+  opacity: 1;
+  background: rgba(255,255,255,0.1);
+}
+.top-bar-link.active {
+  opacity: 1;
+  background: rgba(255,255,255,0.15);
+  font-weight: 600;
+}
+
+#search {
+  flex: 1;
+  max-width: 420px;
+  padding: 7px 14px;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+  transition: background 0.15s;
+}
+#search::placeholder { color: rgba(255, 255, 255, 0.55); }
+#search:focus        { background: rgba(255, 255, 255, 0.25); }
+
+/* ── Layout ────────────────────────────────────────────────── */
+#layout {
+  display: flex;
+  height: calc(100vh - var(--header-h));
+  margin-top: var(--header-h);
+}
+
+/* ── Sidebar ───────────────────────────────────────────────── */
+#sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--gold);
+  overflow-y: auto;
+  padding: 12px 0 24px;
+}
+
+.sidebar-label {
+  padding: 4px 16px 10px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.cat-btn {
+  display: block;
+  width: 100%;
+  padding: 9px 16px;
+  border: none;
+  border-left: 3px solid transparent;
+  background: transparent;
+  text-align: left;
+  font-size: 0.875rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s, color 0.1s;
+}
+.cat-btn:hover  { background: rgba(0, 0, 0, 0.05); }
+.cat-btn.active {
+  background: rgba(122, 53, 0, 0.1);
+  border-left-color: var(--cat-color, var(--accent));
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Main content ──────────────────────────────────────────── */
+#main-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+#class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min), 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+/* ── Class card ────────────────────────────────────────────── */
+.class-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+/* Card header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px 11px;
+  background: linear-gradient(135deg, #f7e8a0 0%, #eacf60 100%);
+  border-bottom: 1px solid var(--gold);
+}
+
+.class-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: bold;
+  color: var(--accent);
+  flex: 1;
+}
+
+.cat-badge {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 2px 9px;
+  border-radius: 10px;
+  background: var(--cat-color, var(--accent));
+  color: #fff;
+}
+
+/* Stats bar */
+.class-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.stat {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 10px;
+  background: rgba(184, 146, 10, 0.12);
+  border: 1px solid rgba(184, 146, 10, 0.28);
+  color: var(--accent);
+  white-space: nowrap;
+}
+.stat.hp {
+  background: rgba(26, 107, 42, 0.12);
+  border-color: rgba(26, 107, 42, 0.28);
+  color: var(--hit);
+}
+
+/* Description */
+.class-desc {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--text);
+}
+.class-desc p            { margin-bottom: 0.45em; }
+.class-desc p:last-child { margin-bottom: 0; }
+.class-desc strong       { color: var(--accent); }
+.class-desc em           { color: var(--text-muted); }
+
+/* ── Ability groups ────────────────────────────────────────── */
+.card-abilities { }
+
+.rank-group {
+  border-bottom: 1px solid var(--border);
+}
+.rank-group:last-child { border-bottom: none; }
+
+.rank-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.025);
+  transition: background 0.1s;
+}
+.rank-group-header:hover { background: rgba(0, 0, 0, 0.06); }
+
+.caret {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  width: 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* Rank badges (reused from Foundry sheet aesthetic) */
+.rank-badge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 9px;
+  border-radius: 10px;
+  color: #fff;
+}
+.rank-basic   { background: var(--rank-basic); }
+.rank-heroic  { background: var(--rank-heroic); }
+.rank-1       { background: var(--rank-1); }
+.rank-2       { background: var(--rank-2); }
+.rank-3       { background: var(--rank-3); }
+.rank-4       { background: var(--rank-4); }
+.rank-5       { background: var(--rank-5); }
+
+.rank-group-heroic > .rank-group-header {
+  background: rgba(184, 146, 10, 0.07);
+  border-left: 3px solid var(--gold);
+}
+.rank-group-heroic > .rank-group-header:hover {
+  background: rgba(184, 146, 10, 0.14);
+}
+
+.rank-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.rank-count {
+  margin-left: auto;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.07);
+  padding: 1px 7px;
+  border-radius: 8px;
+}
+
+.rank-abilities { }
+
+/* ── Ability rows ──────────────────────────────────────────── */
+.ability-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 6px 16px 6px 24px;
+  font-size: 0.84rem;
+}
+.ability-row.has-details {
+  cursor: pointer;
+}
+.ability-row.has-details:hover {
+  background: rgba(122, 53, 0, 0.04);
+}
+
+.ab-caret {
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  width: 10px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-left: -8px;
+}
+
+.ab-name {
+  font-weight: 600;
+  color: var(--text);
+  flex: 1;
+  min-width: 110px;
+}
+
+/* Cost badges */
+.cost-badge {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+.cost-passive  { background: #e8e8e8; color: #555; }
+.cost-reaction { background: #dde8ff; color: #2244aa; }
+.cost-free     { background: #d8fde0; color: #1a6b2a; }
+.cost-ap       { background: #ffe8cc; color: #8a4000; }
+
+.focus-badge {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 8px;
+  background: #e6d8ff;
+  color: #4a2d7a;
+}
+
+.range-badge {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.ab-tags {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.ab-tag {
+  font-size: 0.66rem;
+  padding: 1px 6px;
+  border-radius: 8px;
+  background: rgba(184, 146, 10, 0.1);
+  border: 1px solid rgba(184, 146, 10, 0.22);
+  color: var(--text-muted);
+}
+
+/* ── Ability details (expanded) ────────────────────────────── */
+.ability-details {
+  padding: 8px 16px 12px 28px;
+  background: rgba(0, 0, 0, 0.03);
+  border-top: 1px dashed var(--border);
+  font-size: 0.84rem;
+}
+
+.d-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 4px;
+  align-items: baseline;
+}
+.d-label {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  min-width: 82px;
+}
+
+.ab-desc {
+  margin-top: 8px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.ab-desc p            { margin-bottom: 0.4em; }
+.ab-desc p:last-child { margin-bottom: 0; }
+.ab-desc strong       { color: var(--accent); }
+.ab-desc code {
+  font-size: 0.85em;
+  background: rgba(0,0,0,0.06);
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+/* ── Empty / error states ──────────────────────────────────── */
+.load-error {
+  grid-column: 1 / -1;
+  background: #fff0f0;
+  border: 1px solid #c00;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  color: #800;
+  line-height: 1.75;
+}
+.load-error code {
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.07);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.loading-msg,
+.no-results {
+  grid-column: 1 / -1;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 16px;
+}
+
+.no-abilities {
+  padding: 8px 16px 10px 28px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ── Scrollbars (WebKit) ───────────────────────────────────── */
+#sidebar::-webkit-scrollbar,
+#main-content::-webkit-scrollbar      { width: 6px; }
+#sidebar::-webkit-scrollbar-track,
+#main-content::-webkit-scrollbar-track { background: transparent; }
+#sidebar::-webkit-scrollbar-thumb,
+#main-content::-webkit-scrollbar-thumb {
+  background: rgba(184, 146, 10, 0.3);
+  border-radius: 3px;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 700px) {
+  #sidebar { display: none; }
+  #class-grid { grid-template-columns: 1fr; }
+  :root { --card-min: 280px; }
+}

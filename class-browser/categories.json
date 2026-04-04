@@ -1,0 +1,9 @@
+[
+  {
+    "id": "martial",
+    "label": "Martial",
+    "description": "Combat-focused classes that excel in direct confrontation.",
+    "color": "#7a3500",
+    "classes": ["warrior"]
+  }
+]

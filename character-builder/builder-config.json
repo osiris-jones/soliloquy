@@ -1,0 +1,21 @@
+{
+  "_comment": "Adjust deckForClass to match your source data. pseudoClasses are excluded from base-class selection.",
+  "pseudoClasses": ["towers", "blades", "magi", "glyphs", "heroic"],
+  "deckForClass": {
+    "paladin":     "towers",
+    "warrior":     "towers",
+    "avenger":     "towers",
+    "blademaster": "blades",
+    "scoundrel":   "blades",
+    "marksman":    "blades",
+    "arcanimist":  "magi",
+    "tactician":   "magi",
+    "occultist":   "magi",
+    "seer":        "glyphs",
+    "transmuter":  "glyphs",
+    "mender":      "glyphs"
+  },
+  "rankLevelRequirements": { "1": 1, "2": 2, "3": 4, "4": 5, "5": 8 },
+  "heroicTalentLevels":    [4, 8, 12, 16, 20],
+  "heroicTalentClassLevelReq": 3
+}
