@@ -11,7 +11,7 @@
     "label": "Deck of Blades",
     "description": "Deadly combat classes that excel in skirmish encounters.",
     "color": "#ff5252",
-    "classes": ["blademaster","scoundrel","marksman","blades"]
+    "classes": ["blademaster","scoundrel","marksman","masquerade","blades"]
   },
   {
     "id": "magi",
@@ -25,6 +25,13 @@
     "label": "Deck of Glyphs",
     "description": "Helpful support classes that provide both healing and leadership.",
     "color": "#5ba81d",
-    "classes": ["mender","seer","occultist","glyphs"]
+    "classes": ["mender","seer","occultist","lightbearer","glyphs"]
+  },
+  {
+    "id": "extended-sul",
+    "label": "Bonus Content: Sulphire",
+    "description": "Extended classes from the Soliloquy document.",
+    "color": "#5ba81d",
+    "classes": ["masquerade","lightbearer"]
   }
 ]
