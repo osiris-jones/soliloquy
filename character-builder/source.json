@@ -151,14 +151,14 @@
     {
       "id": "limitround",
       "name": "1/Round",
-      "description": "**Effect:** Perform this **Action** only once per round, refreshing at the start of your second turn and on each of your subsequent turns.",
+      "description": "**Effect:** Perform this **Action** only once per round, refreshing at the start of your second turn and on each of your subsequent turns. *Passive* and other special abilities with this property trigger or take effect no more than once per round.",
       "advantageBonus": 0,
       "disadvantageBonus": 0
     },
     {
       "id": "limitencounter",
       "name": "1/Encounter",
-      "description": "**Effect:** Perform this **Action** only once per encounter.",
+      "description": "**Effect:** **Actions** with this property can be performed only once per encounter. *Passive* and other special abilities with this property can only be used, trigger, or take effect once per encounter.",
       "advantageBonus": 0,
       "disadvantageBonus": 0
     },
@@ -193,7 +193,7 @@
     {
       "id": "limitturn",
       "name": "1/Turn",
-      "description": "**Effect:** You can't perform this ability more than once during any character's turn.",
+      "description": "**Effect:** You can't perform this ability more than once during any character's turn; this ability can't take effect more than once per turn.",
       "advantageBonus": 0,
       "disadvantageBonus": 0
     },
@@ -289,9 +289,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Hostile characters treat tiles adjacent to you as **Difficult Terrain**."
     },
     {
@@ -355,7 +353,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "aura"
       ],
       "description": "Allied characters within your **Aura** have **+1 Advantage** on **Resistance Rolls**."
@@ -377,7 +374,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Perform a *Shield* **Action** that costs **1 AP** or less. You're **Stunned +1**�it can't be prevented."
+      "description": "Perform a *Shield* **Action** that costs **1 AP** or less. You're **Stunned +1**. This **Condition** can't be prevented."
     },
     {
       "id": "paladin-pavise",
@@ -396,7 +393,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "aura"
       ],
       "description": "Allied characters within your **Aura** can use you as **Cover**."
@@ -486,9 +482,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "You have **Block Rating** +2."
     },
     {
@@ -507,9 +501,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Aura* is a **Size 2 Area**, though characters outside your **Line of Effect** gain no benefits.\r\nYou also gain the **Prominence** *Special* **Action**."
     },
     {
@@ -594,9 +586,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Whenever **Barrier, Damage Resistance, or Invulnerability** affects the amount of damage you take: Recover **1 Focus**."
     },
     {
@@ -615,9 +605,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Under Construction**."
     },
     {
@@ -641,7 +629,7 @@
         "spell",
         "reaction"
       ],
-      "description": "**Condition:** An allied character makes a successful attack against a hostile character adjacent to you.\r\n**Effect - Focus Cost 2:** Choose one �the attack does [tier]+2 **Bonus Damage**, or the attacker receives [tier]+2 **Healing**."
+      "description": "**Condition:** An allied character makes a successful attack against a hostile character adjacent to you.\n**Effect - Focus Cost 2:** Choose one:\n- The attack does [tier]+2 **Bonus Damage**.\n- The attacker receives [tier]+2 **Healing**."
     },
     {
       "id": "paladin-rampart",
@@ -664,7 +652,7 @@
         "support",
         "spell"
       ],
-      "description": "You create a **Rampart**, a line of five contiguous tiles where all five share an edge and the centermost is adjacent to you. It lasts until the end of your next turn. Your **Rampart** has the following properties:\r\n\r\n� You and allied characters have **Damage Resistance** against attacks that draw **Line of Effect** through the **Rampart**.\r\n� A hostile character that begins a turn in a tile adjacent to or occupied by the **Rampart** makes a **Resistance Roll** or is **Immobilized 1**. \r\n� You have **Maximum Speed: 1** and can't perform *Movement* **Actions** other than the *Basic* **Move Action**. *(The Rampart moves with you.)*\r\n\r\n**Sustain:** **Focus Cost 2**"
+      "description": "You create a **Rampart**, a line of five contiguous tiles where all five share an edge and the centermost is adjacent to you. It lasts until the end of your next turn. Your **Rampart** has the following properties:\n\n- You and allied characters have **Damage Resistance** against attacks that draw **Line of Effect** through the **Rampart**.\n- A hostile character that begins a turn in a tile adjacent to or occupied by the **Rampart** makes a **Resistance Roll** or is **Immobilized 1**. \n- You have **Maximum Speed: 1** and can't perform *Movement* **Actions** other than the *Basic* **Move Action**. *(The Rampart moves with you.)*\n\n**Sustain** (0 AP): **Focus Cost 2**"
     },
     {
       "id": "paladin-blessed-armor",
@@ -683,7 +671,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "limitround"
       ],
       "description": "The damage of the first successful *Attack* against you each round is reduced by 5 before all other forms of resistance and armor."
@@ -725,9 +712,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Passive:** +2 Maximum HP."
     },
     {
@@ -772,11 +757,11 @@
       "tags": [
         "melee"
       ],
-      "description": "**Under Construction**."
+      "description": "**On Hit**: You are **Grappling**, and the target is **Restrained**. *(They're special Statuses that exist in a pair.)*\n- The **Grappling** character can't perform **Grapple**, and can't perform more than one *Movement* **Action** in a turn. That character can clear this status as a **Free Action**.\n- The **Restrained** character is **Immobilized** and mirrors the **Grappling** character's movement as involuntary movement. That character has (**1AP**) **Resistance Roll (10):** Clear the status.\nThe status is cleared any time the characters are no longer adjacent, either character is reduced to 0 HP, or there is a difference in elevation between the characters."
     },
     {
       "id": "towers-generic-stampede",
-      "name": "Stamped",
+      "name": "Stampede",
       "class": "towers",
       "rank": 2,
       "cost": "passive",
@@ -793,7 +778,7 @@
       "tags": [
         "melee"
       ],
-      "description": "You can attempt to move into a hostile character�s space. When you do, that character makes a **Resistance Roll**. If the character **Resists**, your *Movement* ends. Otherwise, you move into that space, but can�t end your turn there.\r\nA **Prone** character automatically fails the **Resistance Roll**."
+      "description": "You can attempt to move into a hostile character's space. When you do, that character makes a **Resistance Roll**. If the character **Resists**, your *Movement* ends. Otherwise, you move into that space, but can't end your turn there.\nA **Prone** character automatically fails the **Resistance Roll**."
     },
     {
       "id": "towers-generic-toughness-2",
@@ -811,9 +796,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Passive:** +4 Maximum HP."
     },
     {
@@ -832,9 +815,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Passive:** +1 Armor *(max. 2)*"
     },
     {
@@ -853,9 +834,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Passive:** +1 DEF"
     },
     {
@@ -986,7 +965,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "limitencounter"
       ],
       "description": "**Passive:** Increased **Focus Pool (+1)**.\r\n\r\n**1/Encounter:** When you **Refocus**, apply **Healing** to yourself equal to half your maximum HP."
@@ -1032,7 +1010,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "bound"
       ],
       "description": "**Bind** to a *non-Spell Attack* **Action**.\r\nThe **Bound** *Attack* has **+1 Disadvantage** and **+1 Bonus Damage**. When dealing damage with the **Bound** *Attack*, roll all damage dice twice and use the highest results."
@@ -1054,7 +1031,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "shield"
       ],
       "description": "**While you're in a** *Shield* **Stance:** Whenever an adjacent hostile character damages your **Barrier**, that character suffers **Push 1** and **Off Guard**."
@@ -1165,7 +1141,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "limitturn"
       ],
       "description": "You may **Recover 1 Focus** on a hit with a *Basic Melee* **Attack Action**."
@@ -1387,9 +1362,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "While **Battered**, you have **Damage Resistance**.\r\n\r\n**1/Encounter:** The first time **Shadowbringer** would bring you to 0 or less HP, your HP becomes your **Battered** threshold."
     },
     {
@@ -1496,7 +1469,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "battered"
       ],
       "description": "**While Battered:** The first *Attack* you make as part of each *Attack* **Action** you perform deals **+2** **Bonus Damage** on a hit."
@@ -1518,7 +1490,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "battered"
       ],
       "description": "**While Battered:** You have **+1 Speed.**"
@@ -1631,9 +1602,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Taunted** you apply doesn't Decay on a character unless that character targets you or forces you to make a **Resistance Roll** with any **Action** during their turn."
     },
     {
@@ -1652,9 +1621,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you take damage from a hostile character, recover 1 **Focus**."
     },
     {
@@ -1696,9 +1663,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Attack* **Actions** have **+1 Advantage** against **Taunted, Poisoned,** or **Bleeding** characters."
     },
     {
@@ -1764,9 +1729,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you inflict **Taunted, Poisoned,** or **Bleeding** to a hostile character, also inflict **Stunned +1.**\r\nEach hostile character can only be **Stunned** by **Frightening Aspersion** once per encounter."
     },
     {
@@ -1909,7 +1872,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "limitround"
       ],
       "description": "**Each round,** your first hit with a *Weapon Attack* **Action** deals **+2 Bonus Damage** to one target."
@@ -1930,9 +1892,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "You have **+1 Advantage** on *Melee Attack Actions* against a character you are *Flanking*.\r\n*(You are Flanking a character if you and an allied character are in melee range of, and on opposite sides of that character. A line drawn from the center of your tile to the center of the ally's tile must pass through opposite corners or sides of the flanked character's tile. It's a special Status.)*"
     },
     {
@@ -1952,7 +1912,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "bound"
       ],
       "description": "**Bind** to a *non-Basic Attack* **Action**. *( When you begin a Quest, choose an option from those available to you to bind this ability to. )*\r\nThe **Bound** *Attack* is a **Combo Action** with **Focus Cost +1.**"
@@ -2061,9 +2020,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**+1 Speed.**"
     },
     {
@@ -2082,9 +2039,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you **Delay**, you may initiate a **True Charge,** which has the following properties:\r\n- Until your **Delayed** turn begins, if you would take any amount of damage from a single source, you may gain **Damage Resistance** against that damage. Activate this effect only once per **True Charge.**\r\n- At the beginning of your **Delayed** turn, you may perform the *Basic* **Evade Action** as a **Free Action**.\r\n- The first *Melee Attack* **Action** you perform during your **Delayed** turn deals **+2 Bonus Damage** on a hit."
     },
     {
@@ -2103,9 +2058,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Melee Weapon Attack* **Actions** have **Initiative:** The **Attack Roll** has **+1 Advantage.** *( An Action activates its Initiative effects if it's your turn and your first AP is spent on that Action. )*"
     },
     {
@@ -2124,9 +2077,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "During *Movement*, you can move through hostile characters. You still provoke Reactions."
     },
     {
@@ -2234,7 +2185,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "limitround"
       ],
       "description": "The first **Attack Roll** you make for the first *Weapon Attack* **Action** you perform during each of your turns has **+1 Advantage**."
@@ -2479,9 +2429,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "In **Versatile Stance** or **Heavy Stance**: Your first *Melee Weapon Attack* **Action** each turn has **Cleave 2**."
     },
     {
@@ -2568,9 +2516,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "You can move diagonally."
     },
     {
@@ -2644,7 +2590,7 @@
         "weapon",
         "attack"
       ],
-      "description": "Perform **Eviscerate** only against a target that is not adjacent to any of its allies.\r\n\r\n**On Miss: ** Refund **Eviscerate's Inspiration Cost** and **1/Quest** property.\r\n\r\n**Finisher: Eviscerate** has the following properties:\r\n- The **Attack Roll** has +1 **Advantage.**\r\n- **On Hit:** The target is **Sundered** until the end of their next turn.\r\n\r\nThen, **Move** or **Evade** as a **Free Action**."
+      "description": "Perform **Eviscerate** only against a target that is not adjacent to any of its allies.\n\n**On Miss:** Refund **Eviscerate's Inspiration Cost** and **1/Quest** property.\n\n**Finisher: Eviscerate** has the following properties:\n- The **Attack Roll** has +1 **Advantage.**\n- **On Hit:** The target is **Sundered** until the end of their next turn.\n\nThen, **Move** or **Evade** as a **Free Action**."
     },
     {
       "id": "scoundrel-lightfoot",
@@ -2662,9 +2608,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Movement* **Actions** ignore *natural* **Difficult Terrain** and don't activate hostile *Traps*."
     },
     {
@@ -2731,9 +2675,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your **Refocus** is a *Combo* **Action**."
     },
     {
@@ -2760,7 +2702,7 @@
     },
     {
       "id": "scoundrel-dual-stance-special",
-      "name": "Off Hand",
+      "name": "Dual Wield Stance: Off Hand",
       "class": "scoundrel",
       "rank": 2,
       "cost": "passive",
@@ -2845,9 +2787,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Finisher* **Actions** have **Finisher - On Hit:** Recover 1 **Focus.**"
     },
     {
@@ -2866,14 +2806,12 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "In **Trick Stance:** The first *Melee Attack* **Action** you perform during your turn has **Range** 3, deals half damage, and inflicts **Poisoned 2.**\r\nOtherwise, you have the **Razor** *Special* **Action**."
     },
     {
       "id": "scoundrel-knife-juggler-special",
-      "name": "Razor",
+      "name": "Knife Juggler: Razor",
       "class": "scoundrel",
       "rank": 3,
       "cost": "1",
@@ -2912,9 +2850,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "If you used a *Stealth* **Action* this turn or have **Concealment**: **Study** has **+3 Range.**\r\nWhen you **Study** a character, your next **Attack Roll** against that character deals **+3 Bonus Damage** on a hit."
     },
     {
@@ -2958,14 +2894,12 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
-      "description": "In **Trick Stance:** You have the **Bag of Tricks** *Special* **Action.** Otherwise, the first *Weapon Attack* **Action** you perform during your turn has **On Hit:** Inflict **Poisoned +1**."
+      "tags": [],
+      "description": "In **Trick Stance:** You have the **Malice** *Special* **Action.** Otherwise, the first *Weapon Attack* **Action** you perform during your turn has **On Hit:** Inflict **Poisoned +1**."
     },
     {
       "id": "scoundrel-bagoftricks-special",
-      "name": "Torment",
+      "name": "Bag of Tricks: Malice",
       "class": "scoundrel",
       "rank": 4,
       "cost": "2",
@@ -2984,7 +2918,7 @@
         "ranged",
         "attack"
       ],
-      "description": "If you performed a *Melee Weapon* *Attack* **Action** this turn, **Bag of Tricks** is a **Combo** action, **1 AP** less *(min. 1)*, and you don't suffer **Disadvantage** when using this *Ranged Attack* **Action** while a hostile character is adjacent.\r\n**On Hit: **Inflict **Poisoned +1.**"
+      "description": "If you performed a *Melee Weapon* *Attack* **Action** this turn, **Malice** is a **Combo** action, **1 AP** less *(min. 1)*, and you don't suffer **Disadvantage** when using this *Ranged Attack* **Action** while a hostile character is adjacent.\n**On Hit:** Inflict **Poisoned +1.**"
     },
     {
       "id": "scoundrel-skillsteal",
@@ -3245,10 +3179,8 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
-      "description": "When you perform the *Basic* **Aid Action** onan allied character, **Focus Cost:** 2--- That character receives **1 Healing** and removes **Bleeding, Slowed,** and **Immobilized** if those conditions weren't self-inflicted."
+      "tags": [],
+      "description": "When you perform the *Basic* **Aid Action** on an allied character, **Focus Cost:** 2 -- That character receives **1 Healing** and removes **Bleeding, Slowed,** and **Immobilized** if those conditions weren't self-inflicted."
     },
     {
       "id": "marksman-opportunity",
@@ -3357,9 +3289,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Each round,** the first **Attack Roll** you make as part of a *Ranged Weapon Attack* **Action** has **On Damage:** Deal **3 Damage** to up to one hostile character of your choice adjacent to one target of the attack. *(No roll.)*"
     },
     {
@@ -3378,9 +3308,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Start of Turn:** You may become **Immobilized** until the start of your next turn. While **Immobilized** this way, *Ranged Attack* **Actions** have **+1 Advantage.**"
     },
     {
@@ -3399,9 +3327,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you perform the *Basic* **Refocus Action**, you can perform a *Ranged Attack* **Action** that costs **1 AP** as a **Free Action**. It deals no bonus damage."
     },
     {
@@ -3447,7 +3373,7 @@
         "weapon",
         "stance"
       ],
-      "description": "You have **+1 Attack**. Your *Basic* *Attack* **Action** is *Ranged* and has **Range 3.** Your **Actions** with **Range** have a **Maximum Range** of **3.**\r\nYou don't suffer **Disadvantage** for performing ***non-Spell*** *Ranged* **Attack Actions** against adjacent targets. Your *Ranged* **Attack Actions** ignore cover.\r\n\r\nYou don't suffer **Disadvantage** for performing ***non-Spell*** *Ranged* **Attack Actions** against adjacent targets. Your *Ranged* **Attack Actions** ignore cover."
+      "description": "You have **+1 Attack**. Your *Basic* *Attack* **Action** is *Ranged* and has **Range 3.** Your **Actions** with **Range** have a **Maximum Range** of **3.**\n\nYou don't suffer **Disadvantage** for performing ***non-Spell*** *Ranged* **Attack Actions** against adjacent targets. Your *Ranged* **Attack Actions** ignore cover."
     },
     {
       "id": "marksman-rupturing-shot",
@@ -3474,7 +3400,7 @@
     },
     {
       "id": "marksman-rupturing-shot-special",
-      "name": "Rupture",
+      "name": "Rupturing Shot: Rupture",
       "class": "marksman",
       "rank": 5,
       "cost": "reaction",
@@ -3512,9 +3438,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Attack* **Actions** with non-*Melee* **Range** have +2 **Range.**"
     },
     {
@@ -3533,9 +3457,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Increased **Focus Pool** (+2)."
     },
     {
@@ -3554,9 +3476,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Healing** you confer is increased by 1."
     },
     {
@@ -3638,9 +3558,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Healing** you confer is increased by 1."
     },
     {
@@ -3659,9 +3577,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Increased **Focus Pool** (+2)."
     },
     {
@@ -3680,9 +3596,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "The DV of **Resistance Rolls** you force is increased by 1."
     },
     {
@@ -3706,7 +3620,7 @@
         "special",
         "limitencounter"
       ],
-      "description": "Create an **Arcane Glyph** on your tile. For the rest of the encounter, when you **Refocus:** Move your **Arcane Glyph** to your tile.\r\nWhile in a tile with your **Arcane Glyph:**\r\nYour non-*Support* **Spells** have **Focus Cost -(?)** *(min. ?)*.\r\n*Spell* **Actions** have **Focus Cost -1** *(min. 1)*.\r\n**Spells** with **Range** have **Range +1**."
+      "description": "Create an **Arcane Glyph** on your tile.\n- For the rest of the encounter, when you **Refocus:** Move your **Arcane Glyph** to your tile.\n- While in a tile with your **Arcane Glyph:**\n- Your non-*Support* **Spells** have **-1 AP Cost** *(min. 1)*.\n- *Spell* **Actions** have **Focus Cost -1** *(min. 1)*.\n- **Spells** with **Range** have **Range +1**."
     },
     {
       "id": "arcanimist-arcane-warp",
@@ -3817,9 +3731,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Ranged Spell Attack* **Actions** with **Focus Costs** and without **Graze** have **On Miss: Graze x**, where x is the **Focus Cost**.\r\n*(Graze can activate **On Damage** effects, but not **On Hit** effects.)*"
     },
     {
@@ -3838,9 +3750,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you **Refocus**, receive **1 Healing** and the first *Spell Attack* **Action** you perform during your next turn has **+1 Advantage**. *(Does not stack.)*"
     },
     {
@@ -3859,9 +3769,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "During your **Delayed Turn:** Your first **Attack Action** has **+1 Advantage**."
     },
     {
@@ -3927,9 +3835,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "After you perform a *Spell* **Action:** Spend up to **6 Focus**. **Overload** deals that much **Chaos Damage** to each character dealt damage by that *Spell* **Action**. This damage is halved against a target that was dealt half damage by the **Spell**."
     },
     {
@@ -3948,9 +3854,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your *Spell Attack* **Actions** have **On Hit:** Characters adjacent to the target take **[tier]+1 Damage**. This benefit applies only once per **Action**. *(No roll.)*"
     },
     {
@@ -3970,7 +3874,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "bound"
       ],
       "description": "**Bind to a *Spell Attack* Action.** *(When you begin an encounter, choose an option from those available to you to bind this ability to.)*\r\nThe **Bound Attack** has **On Hit: Push 1**."
@@ -4010,7 +3913,7 @@
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": true,
-      "resistanceDV": "10",
+      "resistanceDV": "10+[tier]",
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
@@ -4460,7 +4363,7 @@
     },
     {
       "id": "heroic-generic-ranger",
-      "name": "Ranger",
+      "name": "Ranged Stance",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4550,7 +4453,7 @@
         "weapon",
         "attack"
       ],
-      "description": "Perform **Snipe** only during your turn, only with **Initiative**, and only while you have **Concealment**.\r\n-**Flurry**. \r\n-**+1 Advantage**.\r\n-**On Critical:** The target is **Stunned +2**."
+      "description": "Perform **Snipe** only during your turn, only with **Initiative**, and only while you have **Concealment**.\n- **Flurry**. \n- **+1 Advantage**.\n- **On Critical:** The target is **Stunned +2**."
     },
     {
       "id": "marskman-heroic-trueshot",
@@ -4593,7 +4496,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "While you aren�t in a *Ranged Weapon Stance*: You can perform *Ranged Weapon* **Actions** in any *Stance*.\r\nIf the **Focus Cost** of those **Actions** is lower than the **AP Cost** of those **Actions**, the **Focus Cost** becomes the **AP Cost**.\r\nAny [atk] in the damage profile of those **Actions** becomes [mag]."
+      "description": "While you aren't in a *Ranged Weapon Stance*: You can perform *Ranged Weapon* **Actions** in any *Stance*.\nIf the **Focus Cost** of those **Actions** is lower than the **AP Cost** of those **Actions**, the **Focus Cost** becomes the **AP Cost**.\nAny [atk] in the damage profile of those **Actions** becomes [mag]."
     },
     {
       "id": "marksman-heroic-animal-companion",
@@ -4705,7 +4608,7 @@
         "shield",
         "attack"
       ],
-      "description": "**On Hit:** **Spend 1 Inspiration:** You may repeat **Oathsworn Shield** as a **Free Action** against a different character, with **Range** originating from the previous target. It has **Flurry,** costs **0 Focus,** and deals no **Bonus Damage.** You may pay this **Inspiration** cost any number of times or until you target the same character an additional time.\r\n\r\n**On Damage: **The target makes a **Resistance Roll** or becomes **Prone.**"
+      "description": "**On Hit:** **Spend 1 Inspiration:** You may repeat **Oathsworn Shield** as a **Free Action** against a different character, with **Range** originating from the previous target. It has **Flurry,** costs **0 Focus,** and deals no **Bonus Damage.** You may pay this **Inspiration** cost any number of times or until you target the same character an additional time.\n\n**On Damage:** The target makes a **Resistance Roll** or becomes **Prone.**"
     },
     {
       "id": "paladin-heroic-dip",
@@ -5262,7 +5165,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "**Beginning of Encounter:** Create an **Astral Die** and **Umbral Die.** *(They're d6s with values that begin at \"1\".)*\r\n\r\n**When your** *Spell* **Action** confers **Healing** or **Barrier** to one or more characters**, choose one or both:**\r\n- Reduce your **Astral Star**'s value to \"1\" and increase that **Healing** or **Barrier** by **twice the difference.**\r\n- Increase your **Umbral Star's** value by 1.\r\n\r\n**When your** *Spell* **Action** deals damage to one or more characters, **choose one or both:**\r\n- Reduce your **Umbral Star's** value to \"1\" and recover **Focus** equal to **one plus the difference.**\r\n- Increase your **Astral Star's** value by 1."
+      "description": "**Beginning of Encounter:** Create an **Astral Die** and **Umbral Die.** *(They're d6s with values that begin at \"1\".)*\n\n**When your** *Spell* **Action** confers **Healing** or **Barrier** to one or more characters, **choose one or both:**\n- Reduce your **Astral Star**'s value to \"1\" and increase that **Healing** or **Barrier** by **twice the difference.**\n- Increase your **Umbral Star's** value by 1.\n\n**When your** *Spell* **Action** deals damage to one or more characters, **choose one or both:**\n- Reduce your **Umbral Star's** value to \"1\" and recover **Focus** equal to **one plus the difference.**\n- Increase your **Astral Star's** value by 1."
     },
     {
       "id": "arcanimist-heroic-dip",
@@ -5862,9 +5765,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Start of Encounter:** Choose a terrain type to associate with your **Elemental Shift.**\r\n- **Fire** — A character that ends their turn in Fire suffers 1d6 Piercing Damage.\r\n- **Water** — Water is **Difficult Terrain.**\r\n- **Air** — Characters in the area have **Concealment 2.**\r\n\r\nWhen you perform the *Basic* **Refocus Action,** you may choose a different terrain type."
     },
     {
@@ -5904,9 +5805,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your movement ignores **Difficult Terrain.**"
     },
     {
@@ -5972,7 +5871,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "If you would **Push** or **Pull** a character, instead, you move that character that far in any direction."
+      "description": "If you would **Push** or **Pull** a character, instead, you move that character that far in any direction.  You have **Teleport Ally**."
     },
     {
       "id": "transmuter-heroic-adept-of-motion-special",
@@ -5995,7 +5894,7 @@
         "heroic",
         "limitencounter"
       ],
-      "description": "**1/Encounter — Spend 1 Inspiration:** Teleport yourself or an allied character within **Range** to a target free tile within **Range.** You have **Teleport Ally**.",
+      "description": "**1/Encounter — Spend 1 Inspiration:** Teleport yourself or an allied character within **Range** to a target free tile within **Range.**",
       "parent": "transmuter-heroic-adept-of-motion"
     },
     {
@@ -6123,7 +6022,6 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "passive",
         "trap"
       ],
       "description": "When a hostile character triggers your **Trap:** That character suffers **3 Damage.** *(No roll.)*"
@@ -6144,9 +6042,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Each turn, your first **Attack Action** has **+1 Advantage** against targets in **Difficult Terrain.**"
     },
     {
@@ -6320,9 +6216,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "At the end of your turn, if you are adjacent to exactly two obstructed tiles: **Recover 2 Focus.**"
     },
     {
@@ -6838,9 +6732,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your **Summons** have **Max HP: +4.**"
     },
     {
@@ -6977,9 +6869,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "**Beginning of Encounter:** Perform a *Summon Spell* **Action** as a **Free Reaction** before any character takes a turn. *(You still pay its costs.)*"
     },
     {
@@ -7108,11 +6998,11 @@
       "focusCost": 8,
       "range": "Range 8",
       "isAttack": false,
-      "damage": "",
+      "damage": "[mag]",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": true,
-      "resistanceDV": "10",
+      "resistanceDV": "10+[tier]",
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
@@ -7429,9 +7319,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "Your **Attack Actions** without **Graze** have **On Miss:** Graze 2.\r\n\r\n*(Graze activates On Damage effects, but not On Hit effects.)*"
     },
     {
@@ -7450,9 +7338,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you perform the *Basic* **Aid Action,** you may have the chosen character become **Blessed** instead of the **Action's** other effects."
     },
     {
@@ -7689,7 +7575,7 @@
       "rank": 4,
       "cost": "reaction",
       "focusCost": 3,
-      "range": "",
+      "range": "Range 8",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -7704,7 +7590,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** An allied character performs the **Refocus Action.**\n\n**Effect — Focus Cost 3:** That character recovers **1 AP** and receives [mag] **Barrier.** It isn't lost as turns end this turn."
+      "description": "**Condition:** An allied character within **Range** performs the **Refocus Action.**\n\n**Effect — Focus Cost 3:** That character recovers **1 AP** and receives [mag] **Barrier.** It isn't lost as turns end this turn."
     },
     {
       "id": "seer-grasp-the-future",
@@ -7768,9 +7654,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When a character receives **Healing** from you, that character gains **Regeneration 1.**"
     },
     {
@@ -7792,7 +7676,7 @@
       "tags": [
         "limitencounter"
       ],
-      "description": "Perform **Presence of Mind** only as your first **Action** during your turn. *(You keep the Initiative as long as no AP is spent.)*\r\n\r\nAdd **(1ap).** Spend it only on a *Spell* **Action.**"
+      "description": "Perform **Presence of Mind** only as your first **Action** during your turn. *(You keep the Initiative as long as no AP is spent.)*\n\nGain **1 AP.** Spend it only on a *Spell* **Action.**"
     },
     {
       "id": "mender-supreme-resolve",
@@ -7810,9 +7694,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "The *Basic* **Refocus Action** restores 1/2 of your maximum **Focus.** *(Instead of 1/3.)*"
     },
     {
@@ -7963,9 +7845,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When you **Refocus,** you or up to one adjacent allied character clear a **Condition** of your choice that wasn't self-inflicted."
     },
     {
@@ -7984,9 +7864,7 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [
-        "passive"
-      ],
+      "tags": [],
       "description": "When performing **Aid,** the allied character receives **Regeneration 2.**"
     },
     {
@@ -8002,7 +7880,7 @@
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": true,
-      "resistanceDV": "10",
+      "resistanceDV": "10+[tier]",
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
@@ -8048,7 +7926,7 @@
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": true,
-      "resistanceDV": "10",
+      "resistanceDV": "10+[tier]",
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
@@ -8276,7 +8154,1213 @@
         "spell",
         "limitencounter"
       ],
-      "description": "Perform **Condemn** only with **Initiative.**\r\n\r\nTarget hostile character that isn't **Elite** or **Legendary** is **Stunned 3.** *(No roll.)*"
+      "description": "Perform **Condemn** only with **Initiative.**\n\nTarget hostile character that isn't **Elite** or **Legendary** is **Stunned 3.** *(No roll.)*\n\nYou can't target the same character with **Condemn** more than **1/Encounter**."
+    },
+    {
+      "id": "masquerade-stance",
+      "name": "Duet Stance",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "weapon",
+        "stance"
+      ],
+      "description": "**As you enter Duet Stance:** Up to one allied character of your choice becomes your **Foil.**\n- **In Duet Stance, End of Turn:** If you spent 3 or more **Focus** on **Focus Costs** this turn, your **Foil** recovers **Focus** equal to **1/3** of the **Focus** you spent on **Focus Costs** this turn.\n- When you **Refocus,** you may choose a new **Foil.** The chosen character must be within your **line of effect.**\n- You have the **Rite of Inspiration** *Special* **Action**."
+    },
+    {
+      "id": "masquerade-stance-special",
+      "name": "Duet Stance: Rite of Inspiration",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "0",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "limitencounter"
+      ],
+      "description": "Your **Foil** may perform a non-*Ultimate* **Action** that costs (?) or less as a **Free Reaction.**"
+    },
+    {
+      "id": "masquerade-en-avant",
+      "name": "En Avant",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "*Movement* **Focus Cost -1**. *(min. 1)*\n\nYour *Basic* **Evade Action** is **Move** 2.\n\nIncoming **falling damage** is reduced to 1."
+    },
+    {
+      "id": "masquerade-ultimate",
+      "name": "Last Dance",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "Melee",
+      "isAttack": true,
+      "damage": "2[atk]",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "heroic",
+        "ultimate",
+        "melee",
+        "weapon",
+        "attack"
+      ],
+      "description": "**Flurry**\n\nAll hostile characters in **Range** become targets.\n\n**On Attack**: Any number of target non-Downed allied characters within **Range** become **Blessed**, gain **Barrier 3**, and have **+1 Turn AP** next turn."
+    },
+    {
+      "id": "masquerade-heroic-pawn",
+      "name": "En Passant",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [],
+      "description": "**Start of Turn:** Choose one.\n- **Fly 1**.\n- **1/Encounter, Spend 1 Inspiration: Fly** 3."
+    },
+    {
+      "id": "masquerade-heroic-fortune",
+      "name": "Fortune's Favor",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "reaction",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [
+        "limitround"
+      ],
+      "description": "**Condition:** An Attack Roll targets you, or you make a **Resistance Roll**.\n\n**Effect - Spend 1 Inspiration**: **Gamble** ***x***, where ***x*** is a number of your choice (1-5). If you win, reduce the result of **Attack Roll** or increase the result of the **Resistance Roll** by ***x***."
+    },
+    {
+      "id": "masquerade-heroic-afteryou",
+      "name": "After You",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "3",
+      "focusCost": 0,
+      "range": "Range 3",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [
+        "limitround"
+      ],
+      "description": "**\"After You!\"** can't be **Bound**.\n\nPerform **\"After You!\"** only while within **Range 3** of a hostile character that hasn't acted during the current round and isn't **Stunned**.\n\nPerform the *Basic* **Refocus Action** as part of this **Action**. You become **Blessed**, gain **Barrier 3**, and have **+1 Turn AP** next turn."
+    },
+    {
+      "id": "masquerade-heroic-misdirection",
+      "name": "Misdirection",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [],
+      "description": "Hostile characters have **+1 Disadvantage** on the **Resistance Roll** against your Feint.\n\nWhen an attack against a character you performed **Feint** on this turn consumes **Off Guard**: The target becomes **Off Guard**."
+    },
+    {
+      "id": "masquerade-heroic-techstep",
+      "name": "Technical Step",
+      "class": "masquerade",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [],
+      "description": "While in Duet Stance: You may perform **Rite of Inspiration** as though it had \"**1/Round, Spend 1 Inspiration**\" instead of **1/Encounter**."
+    },
+    {
+      "id": "masquerade-feint",
+      "name": "Feint",
+      "class": "masquerade",
+      "rank": 1,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "melee",
+        "weapon",
+        "limitround"
+      ],
+      "description": "The target makes a **Resistance Roll** or becomes **Off Guard**."
+    },
+    {
+      "id": "masquerade-dash",
+      "name": "Dash",
+      "class": "masquerade",
+      "rank": 1,
+      "cost": "1",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "movement",
+        "limitround"
+      ],
+      "description": "**Move** up to **Speed**+2. You become **Off Guard**."
+    },
+    {
+      "id": "masquerade-inspiringstrike",
+      "name": "Inspiring Strike",
+      "class": "masquerade",
+      "rank": 1,
+      "cost": "2",
+      "focusCost": 1,
+      "range": "",
+      "isAttack": true,
+      "damage": "[atk]",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "melee",
+        "weapon",
+        "attack"
+      ],
+      "description": "**On Attack**: Up to one allied character within *Range* becomes **Blessed**."
+    },
+    {
+      "id": "masquerade-performance",
+      "name": "Performance",
+      "class": "masquerade",
+      "rank": 1,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "When you **Refocus**, up to one allied character within *Range* becomes **Blessed**."
+    },
+    {
+      "id": "masquerade-cascade",
+      "name": "Cascade",
+      "class": "masquerade",
+      "rank": 2,
+      "cost": "1",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": true,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "melee",
+        "weapon",
+        "attack",
+        "limitround"
+      ],
+      "description": "- **Flurry**\n- **On Hit**: The target is Dazed +1."
+    },
+    {
+      "id": "masquerade-flair",
+      "name": "Flair",
+      "class": "masquerade",
+      "rank": 2,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "bound"
+      ],
+      "description": "**Bind** to a *Melee Attack* **Action**.\n- The Bound Action is a *Movement* **Action**.\n- You may **Fly** 1 as you perform the **Bound Action**. *(You can target a character outside the Action's Range if this movement brings you into Range.)*"
+    },
+    {
+      "id": "masquerade-silhouette",
+      "name": "Silhouette",
+      "class": "masquerade",
+      "rank": 2,
+      "cost": "reaction",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "movement",
+        "reaction",
+        "limitround"
+      ],
+      "description": "**Silhouette** doesn't trigger **Reactions**.\n- **Condition: An adjacent character performs a *Movement* **Action**.\n- **Effect (Focus Cost 2):** Perform the *Basic* **Evade Action** as part of this **Reaction**."
+    },
+    {
+      "id": "masquerade-closedposition",
+      "name": "Closed Position",
+      "class": "masquerade",
+      "rank": 3,
+      "cost": "1",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "movement",
+        "reaction"
+      ],
+      "description": "Target a character. **Move** 2. The target mirrors your movement, ignoring restrictions on diagonal movement. Both movements are involuntary.\nA hostile target makes a **Resistance Roll**. On a **Resist**, they aren't moved, and you may still **Move** 2, but your movement is voluntary and triggers **Reactions**."
+    },
+    {
+      "id": "masquerade-bravura",
+      "name": "Bravura",
+      "class": "masquerade",
+      "rank": 3,
+      "cost": "1",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": true,
+      "damage": "[atk]",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "melee",
+        "weapon",
+        "attack"
+      ],
+      "description": "- **Flurry**\n**On Hit:** The target is **Off Guard** and makes a **Resistance Roll** or becomes **Blinded** 3."
+    },
+    {
+      "id": "masquerade-flyby",
+      "name": "Flyby",
+      "class": "masquerade",
+      "rank": 3,
+      "cost": "1",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": true,
+      "damage": "[atk]",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "movement",
+        "melee",
+        "weapon",
+        "attack",
+        "limitround"
+      ],
+      "description": "**Flurry**\n\nYou may **Move** 2 as you perform **Flyby**.\n\n**On Hit**: **Move** 2. This movement doesn't trigger **Reactions**."
+    },
+    {
+      "id": "masquerade-syncopate",
+      "name": "Syncopate",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "**Start of Turn**: Choose and expend a tag that hasn't been chosen this encounter from among *Attack, Spell, Movement, and Support*.\n\nIf all tags have been chosen, instead, reset the expended choices. *(You don't make a choice this turn.)*\n\n**This turn**, if the second Action Point you spend is used to perform an **Action** with the chosen tag, recover 1 Focus. If it isn't, reset the expended tag."
+    },
+    {
+      "id": "masquerade-petaldance",
+      "name": "Falling Petals",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "reaction",
+      "focusCost": 3,
+      "range": "Range 3",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "weapon",
+        "reaction"
+      ],
+      "description": "**Condition:** You finish performing an **Action** that inflicts **Dazed, Off Guard, or Blinded** on a hostile character.\n\n**Effect** **(Focus Cost 3)**: Each hostile character within **Range** makes a **Resistance Roll** or suffers each **Condition** inflicted by the triggering **Action**."
+    },
+    {
+      "id": "masquerade-improvisation",
+      "name": "Improvisation",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "2",
+      "focusCost": 4,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "limitround"
+      ],
+      "description": "**Improvisation** can't be **Bound**.\n\nChoose a *Special* **Improvisation** **Action** you haven't chosen this encounter, and perform that **Action** as a part of this **Action.**\n\nOn subsequent turns, you can **(1 AP)**: Repeat **Improvisation** with **Focus Cost:** 0. The effect continues until all *Special* **Improvisation** **Actions** have been chosen, or until you end a turn without performing this **Action**."
+    },
+    {
+      "id": "masquerade-improvisation-special-1",
+      "name": "Improvisation: Devilry",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "Range 3",
+      "isAttack": true,
+      "damage": "2[atk]+2",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "melee",
+        "weapon",
+        "attack",
+        "limitround"
+      ],
+      "description": "Perform only as a part of **Inspiration.**\n\n**On Hit:** The target is **Blinded** 3.",
+      "parent": "masquerade-improvisation"
+    },
+    {
+      "id": "masquerade-improvisation-special-2",
+      "name": "Improvisation: Dazzlement",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "spell",
+        "limitround"
+      ],
+      "description": "Perform only as a part of **Inspiration.**\n\nEach adjacent hostile character makes a ***Resistance Roll** or is **Stunned +1**.",
+      "parent": "masquerade-improvisation"
+    },
+    {
+      "id": "masquerade-improvisation-special-3",
+      "name": "Improvisation: Dynamics",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "movement",
+        "limitround"
+      ],
+      "description": "Perform only as a part of **Inspiration.**\n\n**Fly** 3.",
+      "parent": "masquerade-improvisation"
+    },
+    {
+      "id": "masquerade-improvisation-special-4",
+      "name": "Improvisation: Dignity",
+      "class": "masquerade",
+      "rank": 4,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "Range 3",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "support",
+        "limitround"
+      ],
+      "description": "Perform only as a part of **Inspiration.**\n\nYou and up to one allied character within **Range** 3 each become **Blessed** and gain **Barrier** 3.",
+      "parent": "masquerade-improvisation"
+    },
+    {
+      "id": "masquerade-restage",
+      "name": "Curtain Call",
+      "class": "masquerade",
+      "rank": 5,
+      "cost": "reaction",
+      "focusCost": 3,
+      "range": "Range 2",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "spell",
+        "reaction"
+      ],
+      "description": "**Condition:** A turn ends.\n\n**Effect (Focus Cost 3):** Up to one hostile character within **Range** suffers **+1** to each incremental **Condition** that character suffered this turn. Then, that character makes a **Resistance Roll** with **+1 Disadvantage** or suffers ***x*** **Piercing Chaos Damage**, where ***x*** is half the total amount of damage that character suffered this turn."
+    },
+    {
+      "id": "masquerade-virtuoso",
+      "name": "Virtuoso",
+      "class": "masquerade",
+      "rank": 5,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "bound"
+      ],
+      "description": "**Bind** to an *Attack* **Action**.\n\nThe **Bound Action** deals half damage and no bonus damage, and has **AP Cost -1** *(min. 1)*."
+    },
+    {
+      "id": "lightbearer-motes",
+      "name": "Motes of Light",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "**Beginning of Encounter**: Create three **Motes of Light**. *(They're d6s with values that begin at \"1\".)*\nWhen you provide **Healing**, increase a **Mote of Light**'s value by the amount of **HP** the healed character gains."
+    },
+    {
+      "id": "lightbearer-searing-ray",
+      "name": "Searing Ray",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "Range 5",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": true,
+      "grazeDamage": "1",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "ranged",
+        "attack"
+      ],
+      "description": "**Flurry**\n\nAs an additional cost, choose a **Mote of Light** with a value above \"1\". The base damage is equal to **1** + that **Mote of Light's** value. That **Mote of Light's** value becomes \"1\". You may repeat the attack against the same target or different targets any number of times, until all **Motes of Light** have values of \"1\".\n\n**Searing Ray** doesn't deal **Bonus Damage**, can't be **Bound**, and doesn't trigger **Reactions**."
+    },
+    {
+      "id": "lightbearer-radiant-touch",
+      "name": "Radiant Touch",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "Melee",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "support",
+        "spell",
+        "limitround"
+      ],
+      "description": "Up to one allied character in **Range** receives **[mag]+1 Healing**."
+    },
+    {
+      "id": "lightbearer-ultimate",
+      "name": "Prominence",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "0",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "heroic",
+        "ultimate",
+        "spell"
+      ],
+      "description": "Create a **New Sun**, then remove your **Motes of Light** from play. *(The New Sun is a d20 with a value that begins at \"1\" plus the current combined values of your Motes of Light.)*\n\nWhile you have a **New Sun**:\n- **Start of Turn:** You receive 2 **Healing**.\n- You have **+1 Speed** and are **Flying**.\n- **Healing** you provide can exceed a character's maximum **HP**. When you provide **Healing**, increase the **New Sun's** value by the amount of **HP** the healed character gained. *(Excess HP is lost at the end of the encounter.)*\n- You can perform **Behold, The Glory of a New Sun!**"
+    },
+    {
+      "id": "lightbearer-ultimate-special",
+      "name": "Prominence: Behold The Glory of a New Sun",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "Range 5",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "limitencounter"
+      ],
+      "description": "Up to one hostile character in **Range** suffers **Piercing Damage** equal to the **New Sun's** value. That character and all adjacent characters are **Blinded 3**. Remove the **New Sun** from play and return your **Motes of Light** to play. *(Their values begin at \"1\". The hostile character isn't targeted; this action ignores cover and concealment as long as you can draw line of effect to the chosen character.)*"
+    },
+    {
+      "id": "lightbearer-heroic-celestialblast",
+      "name": "Celestial Blast",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [],
+      "description": "- **Start of Encounter:** Create a **Mote of Light**. *(Per the Featherblade's \"Motes of Light\" Basic Ability. Its value begins at \"1\" and increases when you heal characters.)*\n- The first time each turn you perform a *Spell Attack* **Action,** you may choose a **Mote of Light** with a value above 1. If you do, the spell deals bonus damage equal to the **Mote of Light's** value and the **Mote of Light** is turned to 1."
+    },
+    {
+      "id": "lightbearer-heroic-higher",
+      "name": "Higher, O Higher",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [],
+      "description": "When you perform **Rise Up Through The Night, Spend 1 Inspiration:** Instead of healing allied characters at the end of the movement, you heal each allied character you became adjacent to at any point during the movement. Characters healed this way clear **Prone** and are **Blessed**."
+    },
+    {
+      "id": "lightbearer-heroic-fountain",
+      "name": "Fountain of Blood",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [],
+      "description": "When you create a **Fountain of Light, Spend 1 Inspiration:** Your **Fountain of Light** has three additional charges. You and allied characters adjacent to the **Fountain** can now use the **1/Turn Reaction** and consume a charge to gain **+1 Advantage** on an **Attack Roll** or deal **+1d6 Bonus Damage** on a successful attack."
+    },
+    {
+      "id": "lightbearer-heroic-icariantrip",
+      "name": "Icarian Trip",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "1",
+      "focusCost": 3,
+      "range": "Range 12",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [
+        "support",
+        "spell",
+        "limitencounter"
+      ],
+      "description": "Teleport up to one allied character to a free adjacent space of their choice."
+    },
+    {
+      "id": "lightbearer-heroic-featherblade",
+      "name": "Featherblade Stance",
+      "class": "lightbearer",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": true,
+      "tags": [
+        "stance"
+      ],
+      "description": "Your **Attack Bonus** is increased by **1** and you have **Armor +1** *( max. 2 )* and an **Increased Focus Pool** (+3).\n\nYou can't perform more than one *Attack* **Action** in a round."
+    },
+    {
+      "id": "lightbearer-sanctuary",
+      "name": "Sanctuary",
+      "class": "lightbearer",
+      "rank": 1,
+      "cost": "1",
+      "focusCost": 1,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "spell"
+      ],
+      "description": "Perform **Sanctuary** only if it's your turn.\n\n**Sanctuary** doesn't trigger hostile **Reactions.**\n\nYou can't be the target of attacks this turn."
+    },
+    {
+      "id": "lightbearer-lightbound",
+      "name": "Lightbound",
+      "class": "lightbearer",
+      "rank": 1,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "If you cast a *Spell* this turn: Your *Movement* ignores Difficult Terrain."
+    },
+    {
+      "id": "lightbearer-flash",
+      "name": "Flash",
+      "class": "lightbearer",
+      "rank": 1,
+      "cost": "1",
+      "focusCost": 2,
+      "range": "Range 4",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "spell",
+        "limitround"
+      ],
+      "description": "Target hostile character makes a **Resistance Roll** or is **Blinded 2** until the end of their next turn."
+    },
+    {
+      "id": "lightbearer-guiding-bolt",
+      "name": "Guiding Bolt",
+      "class": "lightbearer",
+      "rank": 1,
+      "cost": "2",
+      "focusCost": 2,
+      "range": "Range 4",
+      "isAttack": true,
+      "damage": "4+[tier]",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "ranged",
+        "spell",
+        "attack",
+        "limitround"
+      ],
+      "description": "**On Hit:** The target becomes **Off Guard.**"
+    },
+    {
+      "id": "lightbearer-curewounds",
+      "name": "Cure Wounds",
+      "class": "lightbearer",
+      "rank": 2,
+      "cost": "2",
+      "focusCost": 3,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "support",
+        "spell",
+        "limitround"
+      ],
+      "description": "You or up to one allied character within **Range** receive [M]+2 **Healing.**"
+    },
+    {
+      "id": "lightbearer-retribution",
+      "name": "Retribution",
+      "class": "lightbearer",
+      "rank": 2,
+      "cost": "reaction",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "spell",
+        "reaction",
+        "limitround"
+      ],
+      "description": "**Condition**: A hostile character hits you with a *non-Spell Attack.*\n\n**Effect:** Choose one.\n- Each adjacent hostile character makes a **Resistance Roll** or suffers **3 Damage** and becomes **Blinded 2** until the end of their next turn.\n- You and adjacent allied characters receive 1 **Healing.**"
+    },
+    {
+      "id": "lightbearer-lightbomb",
+      "name": "Lightbomb",
+      "class": "lightbearer",
+      "rank": 2,
+      "cost": "2",
+      "focusCost": 2,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "support",
+        "spell",
+        "limitround"
+      ],
+      "description": "Choose a **Size 1 Area** in **Range.**\n- Up to one allied character in the area receives [M] **Healing.**\n\n- Up to one hostile character in the area makes a **Resistance Roll** or suffers [M] **DMG** and becomes **Off Guard.** A character that **Resists** suffers half the damage and isn't **Off Guard.**"
+    },
+    {
+      "id": "lightbearer-sunlightstrike",
+      "name": "Sunlight Strike",
+      "class": "lightbearer",
+      "rank": 3,
+      "cost": "1",
+      "focusCost": 3,
+      "range": "Melee",
+      "isAttack": true,
+      "damage": "[atk]+2",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "melee",
+        "spell",
+        "attack",
+        "limitround"
+      ],
+      "description": "**Flurry**\n\n**On Damage:** You or an adjacent allied character receives **Healing** equal to half the damage dealt. This **Healing** doesn't benefit from **Bonus Healing.**"
+    },
+    {
+      "id": "lightbearer-tactical-emergency",
+      "name": "Tactical Emergency",
+      "class": "lightbearer",
+      "rank": 3,
+      "cost": "reaction",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "movement",
+        "reaction",
+        "limitround"
+      ],
+      "description": "**Condition:** An allied character takes damage.\n\n**Effect:** Perform a *Basic* **Move Action** as part of this **Reaction.** This movement must move as close as possible to that character via the shortest available path."
+    },
+    {
+      "id": "lightbearer-lightoflife",
+      "name": "Light of Life",
+      "class": "lightbearer",
+      "rank": 3,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "aura"
+      ],
+      "description": "When an allied character within your *Aura* begins their turn, that character receives 1 **Healing.** *(Your Aura is a Size 1 Area centered on you.)*"
+    },
+    {
+      "id": "lightbearer-soltenebris",
+      "name": "Sol Tenebris",
+      "class": "lightbearer",
+      "rank": 4,
+      "cost": "2",
+      "focusCost": 3,
+      "range": "Range 3",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "spell",
+        "limitround"
+      ],
+      "description": "Target hostile character makes a **Resistance Roll** or becomes **Blinded 6** until the end of their next turn. A character that fails the **Resistance Roll** can't be targeted by **Sol Tenebris** again this encounter."
+    },
+    {
+      "id": "lightbearer-sunlightblade",
+      "name": "Sunlight Blade",
+      "class": "lightbearer",
+      "rank": 4,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "bound"
+      ],
+      "description": "**Bind** to a non-Spell *Attack* **Action**.\n\nThe **Bound** *Attack* has **1/Round,** **Focus Cost +1,** and **On Damage:** You or an adjacent allied character receives **Healing** equal to half the damage dealt. This **Healing** doesn't benefit from **Bonus Healing.**"
+    },
+    {
+      "id": "lightbearer-fountain",
+      "name": "Fountain of Light",
+      "class": "lightbearer",
+      "rank": 4,
+      "cost": "2",
+      "focusCost": 3,
+      "range": "Range 4",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "support",
+        "spell",
+        "limitencounter"
+      ],
+      "description": "Create a **Fountain of Light**. It occupies a tile within **Range,** but does not obstruct that tile. It has three **Charges** and disappears when the last charge is consumed.\n\nWhile adjacent to the **Fountain of Light,** you and allied characters have the **Ambrosia** Reaction."
+    },
+    {
+      "id": "lightbearer-fountain-special",
+      "name": "Fountain of Light: Ambrosia",
+      "class": "lightbearer",
+      "rank": 4,
+      "cost": "reaction",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "reaction",
+        "limitturn"
+      ],
+      "description": "**Condition:** You would be dealt damage or forced to make a **Resistance Roll.**\n\n**Effect:** Consume a charge from the **Fountain.** You gain **+3 Barrier** before taking that damage or gain **+1 Advantage on the Resistance Roll.**",
+      "parent": "lightbearer-fountain"
+    },
+    {
+      "id": "lightbearer-wingsofhope",
+      "name": "Wings of Hope",
+      "class": "lightbearer",
+      "rank": 5,
+      "cost": "1",
+      "focusCost": 3,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "movement",
+        "spell",
+        "limitencounter"
+      ],
+      "description": "Until the start of your next turn, you are **Immobilized** and **Flying.** During this time, you also have **Damage Resistance** and the **Rise Up Through The Night** Reaction."
+    },
+    {
+      "id": "lightbearer-wingsofhope-special",
+      "name": "Rise Up Through The Night",
+      "class": "lightbearer",
+      "rank": 5,
+      "cost": "reaction",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "reaction",
+        "movement",
+        "limitencounter"
+      ],
+      "description": "**Condition:** Your turn begins.\n\n**Effect:** **Move 12**. **During this movement:** You are **Flying,** ignore **Reactions**, and can't change direction. **At the end of this movement,** you confer [mag] **Healing** to adjacent allied characters.",
+      "parent": "lightbearer-wingsofhope"
+    },
+    {
+      "id": "lightbearer-scour",
+      "name": "Scour",
+      "class": "lightbearer",
+      "rank": 5,
+      "cost": "3",
+      "focusCost": 5,
+      "range": "Range 4",
+      "isAttack": true,
+      "damage": "2[atk]+2",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "ranged",
+        "spell",
+        "attack"
+      ],
+      "description": "**On Hit:** Adjacent hostile characters suffer half the damage dealt to the primary target. *(No roll.)*\n\nApply half the total damage dealt to all hostile characters by this spell as **Healing,** increased by bonuses to your **Healing** and divided as you choose among yourself and allied characters within **Range 4.** This **Healing** doesn't benefit from **Bonus Healing**."
     }
   ],
   "classes": [
@@ -8621,7 +9705,8 @@
         "arcanimist-heroic-meteor",
         "arcanimist-heroic-manaward",
         "arcanimist-heroic-enochian",
-        "arcanimist-heroic-dip"
+        "arcanimist-heroic-dip",
+        "arcanimist-blast-2"
       ]
     },
     {
@@ -8909,6 +9994,93 @@
         "heroic-generic-supreme-resolve",
         "heroic-generic-ranger",
         "heroic-generic-swiftcast"
+      ]
+    },
+    {
+      "id": "masquerade",
+      "name": "Masquerade",
+      "description": "You should take levels in this class if: your character is an agile battledancer, performing artist, or braggart; or you prefer to inflict disruptive statuses, synergize with allies, and evade attacks rather than generate pure damage.",
+      "stats": {
+        "atk": "d6",
+        "mag": "d6",
+        "def": 10,
+        "spd": 4,
+        "armor": 0,
+        "focusPool": 9,
+        "maxHP": 8
+      },
+      "abilities": [
+        "masquerade-stance",
+        "masquerade-stance-special",
+        "masquerade-en-avant",
+        "masquerade-ultimate",
+        "masquerade-heroic-pawn",
+        "masquerade-heroic-fortune",
+        "masquerade-heroic-afteryou",
+        "masquerade-heroic-misdirection",
+        "masquerade-heroic-techstep",
+        "masquerade-feint",
+        "masquerade-dash",
+        "masquerade-inspiringstrike",
+        "masquerade-performance",
+        "masquerade-cascade",
+        "masquerade-flair",
+        "masquerade-silhouette",
+        "masquerade-closedposition",
+        "masquerade-bravura",
+        "masquerade-flyby",
+        "masquerade-syncopate",
+        "masquerade-petaldance",
+        "masquerade-improvisation",
+        "masquerade-restage",
+        "masquerade-virtuoso",
+        "masquerade-improvisation-special-1",
+        "masquerade-improvisation-special-2",
+        "masquerade-improvisation-special-3",
+        "masquerade-improvisation-special-4"
+      ]
+    },
+    {
+      "id": "lightbearer",
+      "name": "Lightbearer",
+      "description": "You should take levels in this class if: you want to support allies with direct healing without losing tempo in battle, you aren't afraid to get close to the enemy, or your character is a battle cleric, wields light, or is inspired by angels or Valkyrie.",
+      "stats": {
+        "atk": "d6",
+        "mag": "d4",
+        "def": 11,
+        "spd": 4,
+        "armor": 1,
+        "focusPool": 8,
+        "maxHP": 8
+      },
+      "abilities": [
+        "lightbearer-motes",
+        "lightbearer-searing-ray",
+        "lightbearer-radiant-touch",
+        "lightbearer-ultimate",
+        "lightbearer-ultimate-special",
+        "lightbearer-heroic-celestialblast",
+        "lightbearer-heroic-higher",
+        "lightbearer-heroic-fountain",
+        "lightbearer-heroic-icariantrip",
+        "lightbearer-heroic-featherblade",
+        "lightbearer-sanctuary",
+        "lightbearer-lightbound",
+        "lightbearer-flash",
+        "lightbearer-guiding-bolt",
+        "lightbearer-curewounds",
+        "lightbearer-retribution",
+        "lightbearer-lightbomb",
+        "lightbearer-sunlightstrike",
+        "lightbearer-tactical-emergency",
+        "lightbearer-lightoflife",
+        "lightbearer-soltenebris",
+        "lightbearer-sunlightblade",
+        "lightbearer-fountain",
+        "lightbearer-fountain-special",
+        "lightbearer-wingsofhope",
+        "lightbearer-wingsofhope-special",
+        "lightbearer-scour"
       ]
     }
   ]
