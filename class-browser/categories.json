@@ -4,7 +4,7 @@
     "label": "Deck of Towers",
     "description": "Durable frontline classes that excel in guardianship and disruption.",
     "color": "#5297ff",
-    "classes": ["paladin","avenger","warrior","towers"]
+    "classes": ["paladin","avenger","warrior","warden","towers"]
   },
   {
     "id": "blades",
@@ -32,6 +32,6 @@
     "label": "Bonus Content: Sulphire",
     "description": "Extended classes from the Soliloquy document.",
     "color": "#5ba81d",
-    "classes": ["masquerade","lightbearer"]
+    "classes": ["masquerade","lightbearer","warden"]
   }
 ]
