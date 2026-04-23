@@ -1078,7 +1078,7 @@
         "attack",
         "limitround"
       ],
-      "description": "**Bash** has **+1 Advantage** against **Slowed, Prone, or Immobilized** characters and deals +3 **Bonus Damage** to those characters."
+      "description": "**On Attack:** If the target is **Slowed, Prone, or Immobilized**, Bash has **+1 Advantage** and deals **+3 Bonus Damage** on a hit."
     },
     {
       "id": "warrior-duelist-parry",
@@ -3370,7 +3370,7 @@
         "weapon",
         "stance"
       ],
-      "description": "You have **+1 Attack**. Your *Basic* *Attack* **Action** is *Ranged* and has **Range 3.** Your **Actions** with **Range** have a **Maximum Range** of **3.**\n\nYou don't suffer **Disadvantage** for performing ***non-Spell*** *Ranged* **Attack Actions** against adjacent targets. Your *Ranged* **Attack Actions** ignore cover."
+      "description": "You have **+1 Attack**. Your *Basic* *Attack* **Action** is *Ranged* and has **Range 3.** Your **Actions** with **Range** have a **Maximum Range** of **3.**\n\nYou don't suffer **Disadvantage** for performing *Ranged* **Attack Actions** while hostile characters are adjacent. Your *Ranged* **Attack Actions** ignore cover."
     },
     {
       "id": "marksman-rupturing-shot",
@@ -3421,11 +3421,11 @@
     },
     {
       "id": "marksman-luciform-eye",
-      "name": "Luciform Eye",
+      "name": "Parting Shot",
       "class": "marksman",
       "rank": 5,
-      "cost": "passive",
-      "focusCost": 0,
+      "cost": "2",
+      "focusCost": 1,
       "range": "",
       "isAttack": false,
       "damage": "",
@@ -3435,8 +3435,11 @@
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [],
-      "description": "Your *Attack* **Actions** with non-*Melee* **Range** have +2 **Range.**"
+      "tags": [
+        "movement",
+        "limitround"
+      ],
+      "description": "Perform the *Basic* **Evade** Action as a part of this Action. You **fly** when you **Evade** this way. Then, as a part of this **Action**: Perform a Ranged Attack **Action** that costs (?) or less with **+1 Advantage** targeting an enemy your **Evade** moved you further away from."
     },
     {
       "id": "glyphs-generic-focus",
@@ -3910,7 +3913,7 @@
       "focusCost": 4,
       "range": "Line 8",
       "isAttack": false,
-      "damage": "",
+      "damage": "2d6+4",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": true,
@@ -3922,7 +3925,7 @@
         "ranged",
         "limitround"
       ],
-      "description": "Hostile characters in the **Line** make a **Resistance Roll** or suffer **2d6+3 Damage**, taking **half damage** on a **Resist**."
+      "description": "Hostile characters in the **Line** make a **Resistance Roll** or suffer **2d6+4 Damage**, taking **half damage** on a **Resist**."
     },
     {
       "id": "arcanimist-perfected-fuels",
@@ -4476,7 +4479,7 @@
         "heroic",
         "aura"
       ],
-      "description": "Allied characters within your *Aura* have **+1 Advantage** with *Ranged* **Attack Actions.**"
+      "description": "Allied characters within your *Aura* have **+1 Advantage** with *Ranged* **Attack Actions.** Additionally, your *Ranged* *Weapon* **Actions** have **+2 Range**."
     },
     {
       "id": "marksman-heroic-arcane",
@@ -4497,7 +4500,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "While you aren't in a *Ranged Weapon Stance*: You can perform *Ranged Weapon* **Actions** in any *Stance*.\nIf the **Focus Cost** of those **Actions** is lower than the **AP Cost** of those **Actions**, the **Focus Cost** becomes the **AP Cost**.\nAny [atk] in the damage profile of those **Actions** becomes [mag]."
+      "description": "You can perform *Ranged Weapon* **Actions** in any Stance, and your *Ranged Spell Attack* **Actions** gain the *Weapon* tag. The **Focus Cost** of your non-*Basic* *Ranged* **Actions** becomes equal to their **AP Cost** unless higher. Your *Ranged* **Actions** use [M] instead of [A]."
     },
     {
       "id": "marksman-heroic-animal-companion",
