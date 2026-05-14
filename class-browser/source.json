@@ -9817,7 +9817,7 @@
       "focusCost": 2,
       "range": "Melee",
       "isAttack": true,
-      "damage": "2[atk]",
+      "damage": "[tier]",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": false,
@@ -9826,7 +9826,8 @@
       "isHeroicTalent": false,
       "tags": [
         "melee",
-        "attack"
+        "attack",
+        "limitround"
       ],
       "description": "- **Backswing Cut** deals no **Bonus Damage**.\n- **On Hit:** The target is **Dazed 1**.\n- ***Passive***: Your other *Melee Weapon* **Actions** that cost (**2 AP**) or less have **On Hit:** As a part of this **Action**, you may perform **Backswing Cut** on your target as a **Reaction**. *( You still pay its Focus Cost and obey its 1/Round limit. )*"
     },
