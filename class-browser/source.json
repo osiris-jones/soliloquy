@@ -588,23 +588,28 @@
       "description": "Whenever **Barrier, Damage Resistance, or Invulnerability** affects the amount of damage you take: Recover **1 Focus**."
     },
     {
-      "id": "paladin-aegis",
+      "id": "paladin-lionheart",
       "name": "Aegis",
       "class": "paladin",
       "rank": 4,
       "cost": "passive",
-      "focusCost": 0,
-      "range": "",
-      "isAttack": false,
-      "damage": "",
+      "focusCost": 1,
+      "range": "Melee",
+      "isAttack": true,
+      "damage": "2[atk]+1",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": false,
       "resistanceDV": "10",
       "isInnate": false,
       "isHeroicTalent": false,
-      "tags": [],
-      "description": "**Under Construction**."
+      "tags": [
+        "melee",
+        "weapon",
+        "shield",
+        "attack"
+      ],
+      "description": "**On Attack:** The target is **Marked** by your **Lionheart** until the end of your next turn.\n\nWhenever damage is dealt to your **Barrier**, up to one character marked by your **Lionheart** takes that much **Piercing Damage**."
     },
     {
       "id": "paladin-smite",
@@ -627,7 +632,7 @@
         "spell",
         "reaction"
       ],
-      "description": "**Condition:** An allied character makes a successful attack against a hostile character adjacent to you.\n**Effect - Focus Cost 2:** Choose one:\n- The attack does [tier]+2 **Bonus Damage**.\n- The attacker receives [tier]+2 **Healing**."
+      "description": "**Condition:** An allied character makes a successful attack against a hostile character adjacent to you.\n**Effect - Focus Cost 1:** Choose one:\n- The attack does [tier]+2 **Bonus Damage**.\n- The attacker receives [tier]+2 **Healing**."
     },
     {
       "id": "paladin-rampart",
@@ -692,7 +697,7 @@
       "tags": [
         "melee"
       ],
-      "description": "Target hostile character makes a **Resistance Roll** or suffers **Push 2** and becomes **Prone.**\r\n**Resist:** **Push 1**."
+      "description": "Target character makes a **Resistance Roll** or suffers **Push 2** and becomes **Prone.** If the character **Resists** or is an allied character, **Push 1** instead."
     },
     {
       "id": "towers-generic-toughness",
@@ -737,25 +742,28 @@
       "description": "You can perform *Shield* **Actions**. You have a **Block Rating** equal to 4+[tier] and the **Raise Shield** *Special* **Action**."
     },
     {
-      "id": "towers-generic-grapple",
-      "name": "Grapple",
+      "id": "towers-generic-ensnare",
+      "name": "Ensnare",
       "class": "towers",
       "rank": 2,
-      "cost": "1",
-      "focusCost": 0,
+      "cost": "reaction",
+      "focusCost": 1,
       "range": "Melee",
       "isAttack": true,
       "damage": "0",
       "hasGraze": false,
       "grazeDamage": "0",
-      "hasResistance": false,
-      "resistanceDV": "10",
+      "hasResistance": true,
+      "resistanceDV": "10+[tier]",
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "melee"
+        "melee",
+        "weapon",
+        "reaction",
+        "limitround"
       ],
-      "description": "**On Hit**: You are **Grappling**, and the target is **Restrained**. *(They're special Statuses that exist in a pair.)*\n- The **Grappling** character can't perform **Grapple**, and can't perform more than one *Movement* **Action** in a turn. That character can clear this status as a **Free Action**.\n- The **Restrained** character is **Immobilized** and mirrors the **Grappling** character's movement as involuntary movement. That character has (**1AP**) **Resistance Roll (10):** Clear the status.\nThe status is cleared any time the characters are no longer adjacent, either character is reduced to 0 HP, or there is a difference in elevation between the characters."
+      "description": "**Condition:** An adjacent hostile character begins movement as part of a *Movement* **Action**.\n**Effect:** The triggering character becomes **Off Guard** and makes a **Resistance Roll** or is **Dazed +1**."
     },
     {
       "id": "towers-generic-stampede",
@@ -1055,7 +1063,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** An hostile character within **Range** of a  *Melee Attack* **Action** that costs **2 AP** or less performs a *Movement* **Action**.\r\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character before the triggering **Action**."
+      "description": "**Condition:** An hostile character within **Range** of a  *Melee Attack* **Action** that costs **2 AP** or less begins movement as part of a *Movement* **Action**.\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character before the triggering **Action**."
     },
     {
       "id": "warrior-bash",
@@ -1081,15 +1089,15 @@
       "description": "**On Attack:** If the target is **Slowed, Prone, or Immobilized**, Bash has **+1 Advantage** and deals **+3 Bonus Damage** on a hit."
     },
     {
-      "id": "warrior-duelist-parry",
-      "name": "Duelist's Parry",
+      "id": "warrior-battering-ram",
+      "name": "Battering Ram",
       "class": "warrior",
       "rank": 2,
       "cost": "1",
       "focusCost": 1,
       "range": "",
-      "isAttack": false,
-      "damage": "",
+      "isAttack": true,
+      "damage": "0",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": false,
@@ -1097,10 +1105,12 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "weapon",
+        "melee",
+        "shield",
+        "attack",
         "limitround"
       ],
-      "description": "Perform this **Action** only while in a non-*Shield Stance*.\r\nUntil the start of your next turn, you have **DEF +1**."
+      "description": "**On Attack:** Gain [T]+1 **Barrier.**\n\n**On Hit:** **Battering Ram** deals **Bonus Damage** equal to your **Block Rating.** **Push 1**. If the target is **Pushed** one or more spaces, you **Fly** that many spaces toward that character."
     },
     {
       "id": "warrior-battle-charge",
@@ -1121,7 +1131,7 @@
       "tags": [
         "movement"
       ],
-      "description": "Move up to twice your **Speed**.\r\nDuring this *Movement:* You can't change directions, have **Damage Resistance**, and ignore **Difficult Terrain**.\r\nAt the end of this *Movement:* Adjacent hostile characters are **Slowed 1**. *(No roll.)*"
+      "description": "Move up to twice your **Speed**. During this *Movement*, you can't change directions, have **Damage Resistance**, and ignore **Difficult Terrain**. At the end of the *Movement*, adjacent hostile characters are **Slowed 1** and take **[T] Piercing Damage**."
     },
     {
       "id": "warrior-battle-high",
@@ -1164,7 +1174,7 @@
         "melee",
         "weapon"
       ],
-      "description": "Your next **Attack Action** has **On Hit:** Target makes a **Resistance Roll** or becomes **Sundered 1**."
+      "description": "Your next **Attack Action** has **On Hit:** Up to one target makes a **Resistance Roll** or becomes **Sundered 1**."
     },
     {
       "id": "warrior-shockwave",
@@ -1284,7 +1294,7 @@
       "focusCost": 0,
       "range": "Melee",
       "isAttack": true,
-      "damage": "3[atk]+5",
+      "damage": "3[atk]+8",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": true,
@@ -1447,7 +1457,7 @@
       "tags": [
         "reaction"
       ],
-      "description": "**Condition:** A hostile character within the range of your *Basic* **Study Action** deals damage to you or an allied character adjacent to you.\r\n**Effect:** Perform the *Basic* **Study Action** against the triggering character as part of this **Reaction.**"
+      "description": "**Condition:** A hostile character within the range of your *Basic* **Study Action** deals damage to you or an allied character adjacent to you.\n**Effect:** Perform the *Basic* **Study Action** on the triggering character as part of this **Reaction.**"
     },
     {
       "id": "avenger-crisis-core",
@@ -1489,10 +1499,10 @@
       "tags": [
         "battered"
       ],
-      "description": "**While Battered:** You have **+1 Speed.**"
+      "description": "**1/Round:** While **Battered**, you may **Evade** as a **Free Action (0 AP)**. This **Evade** ignores **Difficult Terrain**."
     },
     {
-      "id": "avenger-heavy-stance",
+      "id": "blades-heavy-stance",
       "name": "Heavy Stance",
       "class": "avenger",
       "rank": 2,
@@ -1514,7 +1524,7 @@
       "description": "You have **+1 Attack** and **All In**."
     },
     {
-      "id": "avenger-heavy-stance-special",
+      "id": "blades-heavy-stance-special",
       "name": "Heavy Stance: All In",
       "class": "avenger",
       "rank": 2,
@@ -1535,7 +1545,8 @@
         "weapon",
         "attack"
       ],
-      "description": ""
+      "description": "",
+      "parent": "blades-heavy-stance"
     },
     {
       "id": "avenger-revenge",
@@ -1558,8 +1569,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** A hostile character within the **Range** of an available *Melee Attack* **Action** inflicts a harmful **Condition** on you.\r\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character before the **Condition** is inflicted.",
-      "parent": "avenger-heavy-stance"
+      "description": "**Condition:** A hostile character within the **Range** of a *Melee Attack* **Action** that costs **(2 AP)** or less inflicts a **Condition** on you or knocks you **Prone**.\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character."
     },
     {
       "id": "avenger-hatred",
@@ -2165,7 +2175,7 @@
         "weapon",
         "attack"
       ],
-      "description": "The **Attack Roll** has **+1 Disadvantage**.\n\n**On Hit:** The target makes a **Resistance Roll** or is **Bleeding**. If the attack is a **Critical**, that character automatically fails the roll."
+      "description": "**On Attack:** You become **Off Guard**.\n\n**On Hit:** The target makes a **Resistance Roll** or is **Bleeding**. If the attack is a **Critical**, that character automatically fails the roll."
     },
     {
       "id": "blademaster-true-strike",
@@ -2189,15 +2199,15 @@
       "description": "The first **Attack Roll** you make for the first *Weapon Attack* **Action** you perform during each of your turns has **+1 Advantage**."
     },
     {
-      "id": "blademaster-heavy-stance",
+      "id": "blademaster-no-respite",
       "name": "Heavy Stance",
       "class": "blademaster",
       "rank": 2,
-      "cost": "passive",
+      "cost": "2",
       "focusCost": 0,
       "range": "",
-      "isAttack": false,
-      "damage": "",
+      "isAttack": true,
+      "damage": "2[atk]",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": false,
@@ -2205,17 +2215,18 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
+        "melee",
         "weapon",
-        "stance"
+        "attack"
       ],
-      "description": "You have **+1 Attack** and **All In**."
+      "description": "**On Hit:** If there are no hostile characters adjacent to the target, **No Respite** deals **4 Bonus Damage**. Otherwise, the hostile characters adjacent to the target take **4 Damage**."
     },
     {
-      "id": "blademaster-heavy-stance-special",
+      "id": "blademaster-counterattack",
       "name": "Heavy Stance: All In",
       "class": "blademaster",
       "rank": 2,
-      "cost": "2",
+      "cost": "reaction",
       "focusCost": 0,
       "range": "Melee",
       "isAttack": true,
@@ -2227,16 +2238,15 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "special",
-        "melee",
         "weapon",
-        "attack"
+        "attack",
+        "reaction",
+        "limitround"
       ],
-      "description": "",
-      "parent": "blademaster-heavy-stance"
+      "description": "**1/Round � Condition:** A hostile character performs a *Melee Attack* **Action** that targets you.\n\n**Effect:** **Gamble 4**. If you win, perform a *non-Spell Attack* **Action** that targets the triggering character as part of this **Reaction.**"
     },
     {
-      "id": "blademaster-reprisal",
+      "id": "blademaster-reprisal-deprecated",
       "name": "Reprisal",
       "class": "blademaster",
       "rank": 2,
@@ -2277,7 +2287,7 @@
       "tags": [
         "bound"
       ],
-      "description": "**Bind** to an *Attack** **Action**.\n\nThe **Bound** *Attack* has **Focus Cost +1** and **On Hit**: The target makes a **Resistance Roll** or is **Bleeding**. If the attack is a **Critical**, that character automatically fails the roll."
+      "description": "**Bind** to an *Attack** **Action**.\n\nThe **Bound** *Attack* has **Focus Cost +2** and **On Hit**: The target makes a **Resistance Roll** or is **Bleeding**. If the attack is a **Critical**, that character automatically fails the roll."
     },
     {
       "id": "blademaster-flickerstep",
@@ -2414,7 +2424,7 @@
       "class": "blademaster",
       "rank": 4,
       "cost": "2",
-      "focusCost": 1,
+      "focusCost": 2,
       "range": "Melee",
       "isAttack": true,
       "damage": "2[atk]",
@@ -2719,7 +2729,7 @@
         "special",
         "limitround"
       ],
-      "description": "Your first *Melee Weapon Attack* **Action** each round has **On Hit:** Perform a *Basic Attack* **Action** with **+1 Advantage.** It's a **Free Action** (?) and deals half damage on a hit.",
+      "description": "Your first *Combo* **Action** each round has **On Hit:** Perform a *Basic Attack* **Action** with **+1 Advantage.** It's a **Free Action** (**0 AP**).",
       "parent": "scoundrel-dual-stance"
     },
     {
@@ -2768,7 +2778,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** An adjacent hostile character is damaged by an allied character.\n**Effect** - **Focus Cost** 1: Perform a *Basic Attack* **Action** on the damaged character. It deals half damage and has **On Hit:** The target is **Poisoned +1**."
+      "description": "**Condition:** An adjacent hostile character is damaged by an allied character.\n**Effect** - **Focus Cost** 1: Perform a *Basic Attack* **Action** targeting the damaged character as a part of this **Reaction**. It has **On Hit:** The target is **Poisoned +1**."
     },
     {
       "id": "scoundrel-violent-delights",
@@ -3063,7 +3073,7 @@
         "special",
         "reaction"
       ],
-      "description": "**Condition:** A hostile character moves into your **Reactive Shot.**\r\n**Effect:** Perform a *Ranged Attack* **Action** that costs or less targeting that character.",
+      "description": "**Condition:** A hostile character moves into a space within your **Reactive Shot.**\n**Effect:** Perform a *Ranged Attack* **Action** that costs or less targeting that character.",
       "parent": "marksman-reactive-shot"
     },
     {
@@ -3129,7 +3139,7 @@
       "tags": [
         "spell"
       ],
-      "description": "This turn, your *Ranged Weapon Attack* **Actions** each inflict **Poisoned +1** or **Slowed 1** to up to one target **On Hit**."
+      "description": "Until the start of your next turn, your *Ranged Weapon Attack* **Actions** each inflict **Poisoned +1** or **Slowed 1** to up to one target **On Hit**."
     },
     {
       "id": "marksman-smoke-trap",
@@ -3453,7 +3463,7 @@
         "movement",
         "limitround"
       ],
-      "description": "Perform the *Basic* **Evade** Action as a part of this Action. You **fly** when you **Evade** this way. Then, as a part of this **Action**: Perform a Ranged Attack **Action** that costs (?) or less with **+1 Advantage** targeting an enemy your **Evade** moved you further away from."
+      "description": "Perform the *Basic* **Evade** Action as a part of this Action. You **fly** when you **Evade** this way. Then, as a part of this **Action**: Perform a Ranged Attack **Action** that costs (**1 AP**) or less with **+1 Advantage* and **+1 Range** targeting an enemy your **Evade** moved you further away from."
     },
     {
       "id": "glyphs-generic-focus",
@@ -4253,7 +4263,7 @@
     },
     {
       "id": "heroic-generic-precision",
-      "name": "Precision",
+      "name": "Heroic: Precision",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4274,7 +4284,7 @@
     },
     {
       "id": "heroic-generic-signature-move",
-      "name": "Signature Move",
+      "name": "Heroic: Signature Move",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4295,7 +4305,7 @@
     },
     {
       "id": "heroic-generic-skirmisher",
-      "name": "Skirmisher",
+      "name": "Heroic: Skirmisher",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4316,7 +4326,7 @@
     },
     {
       "id": "heroic-generic-prototrophize",
-      "name": "Prototrophize",
+      "name": "Heroic: Prototrophize",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4338,7 +4348,7 @@
     },
     {
       "id": "heroic-generic-diehard",
-      "name": "Diehard",
+      "name": "Heroic: Diehard",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4360,7 +4370,7 @@
     },
     {
       "id": "heroic-generic-supreme-resolve",
-      "name": "Supreme Resolve",
+      "name": "Heroic: Supreme Resolve",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4380,8 +4390,8 @@
       "description": "The *Basic* **Refocus Action** restores 1/2 of your maximum **Focus** instead of 1/3."
     },
     {
-      "id": "heroic-generic-ranger",
-      "name": "Ranged Stance",
+      "id": "heroic-generic-ranger-stance",
+      "name": "Heroic - Ranger: Ranged Stance",
       "class": "heroic",
       "rank": 0,
       "cost": "passive",
@@ -4401,11 +4411,12 @@
         "weapon",
         "stance"
       ],
-      "description": "In **Ranged Stance,** you can perform *Ranged Weapon Attack* **Actions.** Your *Basic* **Attack Action** is *Ranged* and has **Range 4.**"
+      "description": "In **Ranged Stance,** you can perform *Ranged Weapon Attack* **Actions.** Your *Basic* **Attack Action** is *Ranged* and has **Range 4.**",
+      "parent": "heroic-generic-ranger"
     },
     {
       "id": "heroic-generic-swiftcast",
-      "name": "Swiftcast",
+      "name": "Heroic: Swiftcast",
       "class": "heroic",
       "rank": 0,
       "cost": "reaction",
@@ -4425,7 +4436,7 @@
         "reaction",
         "limitencounter"
       ],
-      "description": "**Condition:** Another character's turn ends.\r\n\r\n**Effect:** Spend 1 **Inspiration**. Perform a *Spell* **Action** with a **Base AP Cost** of **2 AP** or less as part of this **Reaction**. You still pay all other costs of that **Action**."
+      "description": "**Condition:** Another character's turn ends.\n\n**Effect:** Spend 1 **Inspiration**. Perform a *Spell* **Action** with a **Base AP Cost** of **2 AP** or less as part of this **Reaction**. You still pay all other costs of that **Action**."
     },
     {
       "id": "marksman-heroic-demolitionist",
@@ -6624,7 +6635,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "Increases **Focus Pool.** (+1)\r\n\r\nYou gain an additional **Reaction** during each other character's turn. Use this **Reaction** only to perform a *Spell* Reaction."
+      "description": "You gain an additional **Reaction** during each other character's turn. Use this **Reaction** only to perform a *Spell* Reaction."
     },
     {
       "id": "occultist-heroic-dilettante",
@@ -8821,8 +8832,8 @@
       "cost": "1",
       "focusCost": 0,
       "range": "Range 5",
-      "isAttack": false,
-      "damage": "",
+      "isAttack": true,
+      "damage": "0",
       "hasGraze": true,
       "grazeDamage": "1",
       "hasResistance": false,
@@ -8833,7 +8844,7 @@
         "ranged",
         "attack"
       ],
-      "description": "**Flurry**\n\nAs an additional cost, choose a **Mote of Light** with a value above \"1\". The base damage is equal to **1** + that **Mote of Light's** value. That **Mote of Light's** value becomes \"1\". You may repeat the attack against the same target or different targets any number of times, until all **Motes of Light** have values of \"1\".\n\n**Searing Ray** doesn't deal **Bonus Damage**, can't be **Bound**, and doesn't trigger **Reactions**."
+      "description": "**Flurry**\n\nAs an additional cost, choose a **Mote of Light** with a value above \"1\". The base damage is equal to **1** + that **Mote of Light's** value. That **Mote of Light's** value becomes \"1\". You may repeat the attack against the same target or different targets any number of times, until all **Motes of Light** have values of \"1\".\n\n**Searing Ray** doesn't deal **Bonus Damage**, can't be **Bound**, and doesn't trigger **Reactions**.\n\n**On Miss:** Graze 1."
     },
     {
       "id": "lightbearer-radiant-touch",
@@ -9063,7 +9074,7 @@
         "spell",
         "limitround"
       ],
-      "description": "Target hostile character makes a **Resistance Roll** or is **Blinded 2** until the end of their next turn."
+      "description": "Target hostile character makes a **Resistance Roll** or is **Blinded 3** until the end of their next turn."
     },
     {
       "id": "lightbearer-guiding-bolt",
@@ -9310,6 +9321,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
+        "special",
         "reaction",
         "limitturn"
       ],
@@ -9356,11 +9368,12 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
+        "special",
         "reaction",
         "movement",
         "limitencounter"
       ],
-      "description": "**Condition:** Your turn begins.\n\n**Effect:** **Move 12**. **During this movement:** You are **Flying,** ignore **Reactions**, and can't change direction. **At the end of this movement,** you confer [mag] **Healing** to adjacent allied characters.",
+      "description": "**Condition:** Your turn begins.\n\n**Effect:** **Move 12**. **During this movement:** You are **Flying** and don't trigger hostile **Reactions**. **At the end of this movement,** you confer [mag] **Healing** to adjacent allied characters.",
       "parent": "lightbearer-wingsofhope"
     },
     {
@@ -9406,7 +9419,7 @@
         "weapon",
         "stance"
       ],
-      "description": "In **Sentinel Stance**, you may perform *Melee Weapon* **Actions** as though they had **Range 2** instead of any other **Range Profile**."
+      "description": "In **Sentinel Stance**:\n- You may perform *Melee Weapon* **Actions** as though they had **Range 2** instead of any other **Range Profile**.\n\n- You have **+1 Advangage** on *Melee Attack* **Actions** while it isn't your turn."
     },
     {
       "id": "warden-thick-of-the-fight",
@@ -9483,7 +9496,7 @@
       "range": "Line 99",
       "isAttack": true,
       "damage": "2[atk]",
-      "hasGraze": false,
+      "hasGraze": true,
       "grazeDamage": "[atk]",
       "hasResistance": false,
       "resistanceDV": "10",
@@ -9496,7 +9509,7 @@
         "weapon",
         "attack"
       ],
-      "description": "**Lance of Longinus's Line 99 Range Profile** is drawn from any map edge, ignoring **line of effect**, though it must pass through you. All characters **within** or **adjacent to the line** become targets.\n\nYou and allied characters in the area aren't attacked. Instead, you gain **Barrier** [tier].\n\nAfter attacking, each character that was successfully hit makes a **Resistance Roll** or chooses:\n- That character is **Disarmed 1** and **Weakened 1**, or:\n- That character is **Silenced 1** and **Vulnerable 1**."
+      "description": "**Lance of Longinus's Line 99 Range Profile** is drawn from any map edge, ignoring **line of effect**, though it must pass through you. All characters **within** or **adjacent to the line** become targets. The attack has **+ 1 Advantage**.\n\nYou and allied characters in the area aren't attacked. Instead, you gain **Barrier** [tier].\n\nAfter attacking, each character that was successfully hit makes a **Resistance Roll** or chooses:\n- That character is **Disarmed 1** and **Weakened 1**, or:\n- That character is **Silenced 1** and **Vulnerable 1**.\n\n**On Miss:** **Graze** [A]."
     },
     {
       "id": "warden-heroic-mimir",
@@ -9601,7 +9614,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "If all hostile characters are within **Range** of your *Basic* **Attack Action**, increase the **Flow of Battle** by 1."
+      "description": "You have a Tyranny Die, 1d6 starting at 1. \n\n(**3 AP**): For each hostile character within *Range* of your *Basic* **Attack Action**, increase your **Tyranny Die** by 1. Then, if your **Tyranny Die** is 6: Increase the **Flow of Battle** by 1 and reset your **Tyranny Die** to 1."
     },
     {
       "id": "warden-rebalance",
@@ -9800,9 +9813,9 @@
       "isHeroicTalent": false,
       "tags": [
         "movement",
-        "limitencounter"
+        "limitround"
       ],
-      "description": "**Fly** up to your **Speed**.\n\nAt the end of this *Movement*: Adjacent hostile characters make a **Resistance Roll** or are **Dazed** +1."
+      "description": "Perform **Vault** only if you didn't perform **Vault** during your previous turn.\n\n**Fly** up to your **Speed**. During this *Movement*, you may pass through hostile characters.\n\nAt the end of this *Movement*: Adjacent hostile characters make a **Resistance Roll** or are **Dazed** +1."
     },
     {
       "id": "warden-outmaneuver",
@@ -9953,7 +9966,51 @@
         "reaction",
         "limitround"
       ],
-      "description": "- **Condition:** A hostile character within the **Range** of your *Basic* **Attack Action** clears **Prone** or performs **Refocus**.\n- **Effect:** Perform your *Basic* **Attack Action** on the triggering character as part of this **Reaction.**"
+      "description": "- **Condition:** A hostile character within the **Range** of your *Basic* **Attack Action** clears **Prone** or performs **Refocus**.\n- **Effect:** Perform your *Basic* **Attack Action** targeting the triggering character as part of this **Reaction.**"
+    },
+    {
+      "id": "avenger-reprisal",
+      "name": "Reprisal",
+      "class": "avenger",
+      "rank": 2,
+      "cost": "2",
+      "focusCost": 2,
+      "range": "Melee",
+      "isAttack": true,
+      "damage": "2[atk]+2",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "melee",
+        "weapon",
+        "attack"
+      ],
+      "description": "**On Hit**: The character is **Marked** by your **Reprisal** until the end of that character's next turn. When the character **Marked** by your **Reprisal** forces you to make a **Resistance Roll** or performs an *Attack* **Action** that targets you, that character takes **2 Piercing Damage**."
+    },
+    {
+      "id": "heroic-generic-ranger",
+      "name": "Heroic: Ranger",
+      "class": "heroic",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "heroic"
+      ],
+      "description": "Your *Ranged Attacks* don't suffer **+1 Disadvantage** from adjacency to a hostile character, and you have **Ranged Stance.**"
     }
   ],
   "classes": [
@@ -9974,7 +10031,7 @@
         "towers-generic-shove",
         "towers-generic-toughness",
         "towers-generic-shield-stance",
-        "towers-generic-grapple",
+        "towers-generic-ensnare",
         "towers-generic-stampede",
         "towers-generic-toughness-2",
         "towers-generic-armor",
@@ -10013,7 +10070,7 @@
         "paladin-fortify",
         "paladin-formation-fighting",
         "paladin-indefatigable",
-        "paladin-aegis",
+        "paladin-lionheart",
         "paladin-smite",
         "paladin-rampart",
         "paladin-blessed-armor",
@@ -10049,7 +10106,7 @@
         "warrior-shield-stagger",
         "warrior-opportunity",
         "warrior-bash",
-        "warrior-duelist-parry",
+        "warrior-battering-ram",
         "warrior-battle-charge",
         "warrior-battle-high",
         "warrior-sunder",
@@ -10089,8 +10146,7 @@
         "avenger-the-greatest-teacher",
         "avenger-crisis-core",
         "avenger-fight-or-flight",
-        "avenger-heavy-stance",
-        "avenger-heavy-stance-special",
+        "avenger-reprisal",
         "avenger-revenge",
         "avenger-hatred",
         "avenger-menace",
@@ -10124,7 +10180,8 @@
         "blades-generic-deadly",
         "blades-generic-flanking",
         "blades-generic-assault",
-        "blades-generic-battlestance",
+        "blades-heavy-stance",
+        "blades-heavy-stance-special",
         "blades-generic-staggeringblow",
         "blades-generic-foolsgambit",
         "blades-generic-sneak",
@@ -10158,9 +10215,8 @@
         "blademaster-whirlwind-strike",
         "blademaster-reckless-slash",
         "blademaster-true-strike",
-        "blademaster-heavy-stance",
-        "blademaster-heavy-stance-special",
-        "blademaster-reprisal",
+        "blademaster-no-respite",
+        "blademaster-counterattack",
         "blademaster-savage-blade",
         "blademaster-flickerstep",
         "blademaster-versatile-stance",
@@ -10583,6 +10639,7 @@
         "heroic-generic-diehard",
         "heroic-generic-supreme-resolve",
         "heroic-generic-ranger",
+        "heroic-generic-ranger-stance",
         "heroic-generic-swiftcast"
       ]
     },
