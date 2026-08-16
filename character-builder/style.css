@@ -702,6 +702,89 @@ body {
   border-radius: 3px;
 }
 
+/* ── Auto-granted (read-only) ability cards ────────────────── */
+.picker-ability-card.auto-granted {
+  background: rgba(255,253,245,0.6);
+  border-style: dashed;
+}
+.picker-ability-card.auto-granted .ab-name { color: var(--text-muted); }
+
+.auto-badge {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 3px 11px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Floating ability tooltip ──────────────────────────────── */
+/* Clickable summary rows */
+.summary-ability[data-ability-id] {
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.summary-ability[data-ability-id]:hover {
+  background: rgba(122,53,0,0.09);
+}
+
+#ability-tooltip {
+  position: fixed;
+  z-index: 300;            /* above #top-bar (200) */
+  width: max-content;
+  max-width: 340px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 10px 14px 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  font-size: 0.84rem;
+}
+#ability-tooltip[hidden] { display: none; }
+
+.tt-header {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.tt-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+  line-height: 1.3;
+}
+.tt-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+.tt-origin {
+  margin-top: 6px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.tt-empty {
+  font-style: italic;
+  color: var(--text-muted);
+}
+.tt-children {
+  margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--border);
+}
+
 /* ── Responsive ────────────────────────────────────────────── */
 @media (max-width: 680px) {
   #summary-panel { display: none; }

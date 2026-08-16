@@ -69,6 +69,14 @@ async function init() {
   document.getElementById("add-level-btn").addEventListener("click", onAddLevel);
   document.getElementById("export-btn").addEventListener("click", exportBuild);
 
+  // Dismiss the floating ability tooltip on anything that moves or supersedes
+  // it. (Clicks are handled by the delegated listener further down.)
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") hideAbilityTooltip();
+  });
+  window.addEventListener("scroll", hideAbilityTooltip, true);  // capture: any scroller
+  window.addEventListener("resize", hideAbilityTooltip);
+
   render();
 }
 
@@ -238,6 +246,7 @@ function jumpToStep(stepIndex) {
 // ── Main render ──────────────────────────────────────────────────────────────
 
 function render() {
+  hideAbilityTooltip();   // the anchor rows are about to be replaced
   renderSummary();
   renderStep();
   updateButtons();
@@ -283,9 +292,9 @@ function renderSummary() {
     sec.className = "summary-innates";
     sec.innerHTML = `<div class="summary-innate-label">Innate</div>`;
     innates.forEach(ab => {
-      sec.appendChild(summaryAbEl("· " + ab.name, "innate"));
+      sec.appendChild(summaryAbEl("· " + ab.name, "innate", ab.id));
       getSpecialChildren(ab.id).forEach(c =>
-        sec.appendChild(summaryAbEl("  · " + c.name, "innate"))
+        sec.appendChild(summaryAbEl("  · " + c.name, "innate", c.id))
       );
     });
     list.appendChild(sec);
@@ -323,9 +332,9 @@ function buildSummaryLevel(levelNum) {
   if (levelNum === 1) {
     // Auto-granted basics
     getBasicAbilities(STATE.baseClassId).forEach(ab => {
-      abList.appendChild(summaryAbEl("· " + ab.name, "auto"));
+      abList.appendChild(summaryAbEl("· " + ab.name, "auto", ab.id));
       getSpecialChildren(ab.id).forEach(c =>
-        abList.appendChild(summaryAbEl("  · " + c.name, "auto-child"))
+        abList.appendChild(summaryAbEl("  · " + c.name, "auto-child", c.id))
       );
     });
     // Level-1 chosen picks
@@ -333,9 +342,9 @@ function buildSummaryLevel(levelNum) {
       if (!p.abilityId) return;
       const ab = ABILITY_MAP[p.abilityId];
       if (!ab) return;
-      abList.appendChild(summaryAbEl("● " + ab.name, "chosen"));
+      abList.appendChild(summaryAbEl("● " + ab.name, "chosen", ab.id));
       getSpecialChildren(ab.id).forEach(c =>
-        abList.appendChild(summaryAbEl("  · " + c.name, "granted-child"))
+        abList.appendChild(summaryAbEl("  · " + c.name, "granted-child", c.id))
       );
     });
     for (let i = STATE.level1Picks.length; i < 2; i++) {
@@ -346,9 +355,9 @@ function buildSummaryLevel(levelNum) {
     if (lv?.abilityId) {
       const ab = ABILITY_MAP[lv.abilityId];
       if (ab) {
-        abList.appendChild(summaryAbEl("● " + ab.name, "chosen"));
+        abList.appendChild(summaryAbEl("● " + ab.name, "chosen", ab.id));
         getSpecialChildren(ab.id).forEach(c =>
-          abList.appendChild(summaryAbEl("  · " + c.name, "granted-child"))
+          abList.appendChild(summaryAbEl("  · " + c.name, "granted-child", c.id))
         );
       }
     } else if (classId) {
@@ -358,7 +367,12 @@ function buildSummaryLevel(levelNum) {
     if (isHeroic) {
       if (lv?.heroicTalentId) {
         const ht = ABILITY_MAP[lv.heroicTalentId];
-        if (ht) abList.appendChild(summaryAbEl("★ " + ht.name, "heroic-chosen"));
+        if (ht) {
+          abList.appendChild(summaryAbEl("★ " + ht.name, "heroic-chosen", ht.id));
+          getSpecialChildren(ht.id).forEach(c =>
+            abList.appendChild(summaryAbEl("  · " + c.name, "granted-child", c.id))
+          );
+        }
       } else if (classId) {
         abList.appendChild(summaryAbEl("★ — pick a heroic talent —", "heroic-placeholder"));
       }
@@ -369,10 +383,15 @@ function buildSummaryLevel(levelNum) {
   return el;
 }
 
-function summaryAbEl(text, type) {
+// `abilityId`, when given, makes the row clickable for the floating detail tooltip.
+function summaryAbEl(text, type, abilityId = null) {
   const el = document.createElement("div");
   el.className = `summary-ability summary-ab-${type}`;
   el.textContent = text;
+  if (abilityId) {
+    el.dataset.abilityId = abilityId;
+    el.title = "Click for details";
+  }
   return el;
 }
 
@@ -456,26 +475,14 @@ function buildStep1() {
       </div>
     </div>`;
 
-  // Auto-granted basics (display only)
+  // Auto-granted basics — read-only cards, but expandable like the pickers below
   if (basics.length > 0) {
     html += `<div class="step-section-label">Auto-granted Basic abilities</div>
       <div class="ability-picker">
-        <div class="picker-rank-group">`;
-    basics.forEach(ab => {
-      const children = getSpecialChildren(ab.id);
-      html += `
-        <div class="picker-ability-card">
-          <div class="ab-row-header" style="opacity:0.65;cursor:default">
-            <span class="ab-caret"></span>
-            <span class="ab-name">${ab.name}</span>
-            <span class="cost-badge cost-passive">Auto</span>
-          </div>
-          ${children.length ? `<div class="picker-children">${
-            children.map(c => `<div class="child-ability">↳ <em>${c.name}</em> <span class="child-hint">(reaction)</span></div>`).join("")
-          }</div>` : ""}
-        </div>`;
-    });
-    html += `</div></div>`;
+        <div class="picker-rank-group">
+          ${basics.map(ab => buildPickerCard(ab, null, false, { selectable: false })).join("")}
+        </div>
+      </div>`;
   }
 
   const slot1Done = STATE.level1Picks.length >= 1;
@@ -658,7 +665,13 @@ function buildHeroicPicker(abilities, pickerId) {
   return html + `</div>`;
 }
 
-function buildPickerCard(ab, pickerId, isHeroic) {
+/**
+ * One ability card. `opts.selectable === false` renders a read-only card
+ * (auto-granted abilities): no "Choose" button, an "Auto" marker in its place,
+ * but the same caret + .ab-details expansion as a selectable card.
+ */
+function buildPickerCard(ab, pickerId, isHeroic, opts = {}) {
+  const selectable = opts.selectable !== false;
   const cost    = ab.cost ?? "1";
   const costCls = { passive: "cost-passive", reaction: "cost-reaction", "0": "cost-free" }[cost] ?? "cost-ap";
   const costTxt = costLabel(cost);
@@ -671,7 +684,8 @@ function buildPickerCard(ab, pickerId, isHeroic) {
     .filter(t => !DISPLAY_TAGS.has(t))
     .map(t => {
       const tag = TAG_MAP[t];
-      return `<span class="ab-tag">${tag?.name ?? t}</span>`;
+      const tip = tag?.description ? ` title="${tag.description}"` : "";
+      return `<span class="ab-tag"${tip}>${tag?.name ?? t}</span>`;
     }).join("");
 
   const classBadge = isHeroic && ab.class && !new Set(CLASS_MAP["heroic"]?.abilities ?? []).has(ab.id)
@@ -691,8 +705,14 @@ function buildPickerCard(ab, pickerId, isHeroic) {
         }).join("")
       }</div>` : "";
 
+  const actionHTML = selectable
+    ? `<button class="select-btn" data-picker="${pickerId}" data-abilityid="${ab.id}">
+          ${isHeroic ? "★ Choose" : "Choose"}
+        </button>`
+    : `<span class="auto-badge">Auto</span>`;
+
   return `
-    <div class="picker-ability-card">
+    <div class="picker-ability-card${selectable ? "" : " auto-granted"}">
       <div class="ab-row-header ${hasDesc ? "has-desc" : ""}">
         <span class="ab-caret">${hasDesc ? "▶" : ""}</span>
         <span class="ab-name">${ab.name}</span>
@@ -701,9 +721,7 @@ function buildPickerCard(ab, pickerId, isHeroic) {
         ${focusBadge}
         ${rangeBadge}
         <span class="ab-tags">${tagsHTML}</span>
-        <button class="select-btn" data-picker="${pickerId}" data-abilityid="${ab.id}">
-          ${isHeroic ? "★ Choose" : "Choose"}
-        </button>
+        ${actionHTML}
       </div>
       ${hasDesc  ? `<div class="ab-details" hidden>${details}</div>` : ""}
       ${childHTML}
@@ -730,9 +748,137 @@ function dRow(label, value) {
   return `<div class="d-row"><span class="d-label">${label}</span><span>${value}</span></div>`;
 }
 
+// ── Floating ability tooltip ─────────────────────────────────────────────────
+//
+// A single transient panel, anchored to a summary-panel ability row, so past
+// levels' abilities can be read without leaving the builder. Only one exists at
+// a time; any interaction outside it dismisses it.
+
+const TOOLTIP_GAP    = 8;    // px between the anchor row and the tooltip
+const TOOLTIP_MARGIN = 8;    // px minimum clearance from the viewport edges
+
+let tooltipEl     = null;
+let tooltipAnchor = null;   // the row the visible tooltip belongs to
+
+function buildAbilityTooltipHTML(ab) {
+  const cost    = ab.cost ?? "1";
+  const costCls = { passive: "cost-passive", reaction: "cost-reaction", "0": "cost-free" }[cost] ?? "cost-ap";
+
+  const focusBadge = ab.focusCost > 0 ? `<span class="focus-badge">${ab.focusCost}F</span>` : "";
+  const rangeBadge = ab.range        ? `<span class="range-badge">${ab.range}</span>`       : "";
+
+  const tagsHTML = (ab.tags ?? []).map(t => {
+    const tag = TAG_MAP[t];
+    const tip = tag?.description ? ` title="${tag.description}"` : "";
+    return `<span class="ab-tag"${tip}>${tag?.name ?? t}</span>`;
+  }).join("");
+
+  // Provenance: rank, and the owning class unless it's a universal innate.
+  const origin = [];
+  if (ab.isHeroicTalent)     origin.push("Heroic Talent");
+  else if (ab.rank === 0)    origin.push("Basic");
+  else if (ab.rank)          origin.push(`Rank ${ab.rank}`);
+  if (ab.isInnate)           origin.push("Innate");
+  if (ab.class && CLASS_MAP[ab.class]) origin.push(CLASS_MAP[ab.class].name);
+  if (ab.parent && ABILITY_MAP[ab.parent])
+    origin.push(`granted by ${ABILITY_MAP[ab.parent].name}`);
+
+  const children  = getSpecialChildren(ab.id);
+  const childHTML = children.length
+    ? `<div class="tt-children">${
+        children.map(c => `<div class="child-ability">↳ <em>${c.name}</em>
+          <span class="child-hint">(${costLabel(c.cost ?? "reaction")}, also granted)</span></div>`).join("")
+      }</div>`
+    : "";
+
+  const details = buildDetailsHTML(ab);
+
+  return `
+    <div class="tt-header">
+      <div class="tt-name">${ab.name}</div>
+      <div class="tt-badges">
+        <span class="cost-badge ${costCls}">${costLabel(cost)}</span>
+        ${focusBadge}
+        ${rangeBadge}
+        ${tagsHTML}
+      </div>
+      ${origin.length ? `<div class="tt-origin">${origin.join(" · ")}</div>` : ""}
+    </div>
+    ${details || `<div class="tt-empty">No further details recorded.</div>`}
+    ${childHTML}`;
+}
+
+function showAbilityTooltip(abilityId, anchorEl) {
+  const ab = ABILITY_MAP[abilityId];
+  if (!ab) return;
+
+  if (!tooltipEl) {
+    tooltipEl = document.createElement("div");
+    tooltipEl.id = "ability-tooltip";
+    document.body.appendChild(tooltipEl);
+  }
+
+  tooltipEl.innerHTML = buildAbilityTooltipHTML(ab);
+  tooltipEl.hidden    = false;
+  tooltipAnchor       = anchorEl;
+
+  positionTooltip(anchorEl);
+}
+
+// Is the tooltip currently open for this exact row?
+function isTooltipOpenFor(anchorEl) {
+  return !!tooltipEl && !tooltipEl.hidden && tooltipAnchor === anchorEl;
+}
+
+// position:fixed, so viewport coordinates from getBoundingClientRect apply
+// directly — no scroll-offset math, and no clipping by the sidebar's overflow.
+function positionTooltip(anchorEl) {
+  const anchor = anchorEl.getBoundingClientRect();
+  const tip    = tooltipEl.getBoundingClientRect();
+
+  // Prefer the right of the row; flip to the left if it would overflow.
+  let left = anchor.right + TOOLTIP_GAP;
+  if (left + tip.width > window.innerWidth - TOOLTIP_MARGIN) {
+    left = anchor.left - TOOLTIP_GAP - tip.width;
+  }
+  left = Math.max(TOOLTIP_MARGIN,
+                  Math.min(left, window.innerWidth - tip.width - TOOLTIP_MARGIN));
+
+  // Top-align with the row, then lift it up if it would run off the bottom.
+  let top = anchor.top;
+  if (top + tip.height > window.innerHeight - TOOLTIP_MARGIN) {
+    top = window.innerHeight - tip.height - TOOLTIP_MARGIN;
+  }
+  top = Math.max(TOOLTIP_MARGIN, top);
+
+  tooltipEl.style.left = `${left}px`;
+  tooltipEl.style.top  = `${top}px`;
+}
+
+function hideAbilityTooltip() {
+  if (tooltipEl) tooltipEl.hidden = true;
+  tooltipAnchor = null;
+}
+
 // ── Event delegation ─────────────────────────────────────────────────────────
 
 document.addEventListener("click", e => {
+  // Interacting inside the tooltip leaves it open.
+  if (e.target.closest("#ability-tooltip")) return;
+
+  // Any other click dismisses it first; a click on a summary ability row then
+  // re-opens it for that ability — unless that row's tooltip was already the
+  // one showing, in which case the second click just closes it. Handled here
+  // rather than with per-row listeners so it survives re-renders and can't
+  // race the dismissal.
+  const abRow  = e.target.closest(".summary-ability[data-ability-id]");
+  const toggle = abRow && isTooltipOpenFor(abRow);
+  hideAbilityTooltip();
+  if (abRow) {
+    if (!toggle) showAbilityTooltip(abRow.dataset.abilityId, abRow);
+    return;
+  }
+
   // Buttons with data-action
   const actionBtn = e.target.closest("button[data-action]");
   if (actionBtn) {
