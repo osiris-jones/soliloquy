@@ -1,0 +1,205 @@
+[
+ {
+  "id": "melee",
+  "name": "Melee",
+  "description": "*Melee* **Actions**  typically target only adjacent characters.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "ranged",
+  "name": "Ranged",
+  "description": "**Effect:** *Ranged* actions are affected by cover and have **+1 Disadvantage** against adjacent characters.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "spell",
+  "name": "Spell",
+  "description": "*Spell* actions are magical in nature.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "weapon",
+  "name": "Weapon",
+  "description": "**Effect:** *Weapon* **Actions** require an active *Stance* with the *Weapon* tag.*Ranged Weapon* **Actions** require an active *Stance* with the *Ranged Weapon* tag.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "shield",
+  "name": "Shield",
+  "description": "**Effect:** *Shield* actions require a **Stance** with the *Shield* tag.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "stance",
+  "name": "Stance",
+  "description": "*Stances* affect the types of actions your character can perform. You have all benefits of an active *Stance.*",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "special",
+  "name": "Special",
+  "description": "*Special* actions typically have unique restrictions or are granted by other actions.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "heroic",
+  "name": "Heroic",
+  "description": "Under construction.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "aura",
+  "name": "Aura",
+  "description": "**Effect:** Your *Aura* affects a **Size 1 Area** centered on you.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "movement",
+  "name": "Movement",
+  "description": "**Effect:** You can't perform *Movement* **Actions** while **Immobilized**.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "charged",
+  "name": "Charged",
+  "description": "**Effect:** You can only peform a *Charged* **Action** while it has a charge; it loses its charge when used.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "support",
+  "name": "Support",
+  "description": "*Support* **Actions** typically assist other characters.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "reaction",
+  "name": "Reaction",
+  "description": "*Reactions* are typically performed on another character's turn.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "attack",
+  "name": "Attack",
+  "description": "**Effect:** *Attack* **Actions** require an **Attack Roll**.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "summon",
+  "name": "Summon",
+  "description": "*Summon* **Actions** typically summon characters under your control.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "legendary",
+  "name": "Legendary",
+  "description": "**Effect:** You can't control more than one *Legendary Summon.*",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "passive",
+  "name": "Passive",
+  "description": "*Passive* abilities have ongoing effects.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "stealth",
+  "name": "Stealth",
+  "description": "*Stealth* **Actions** typically confer **Concealment**.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "combo",
+  "name": "Combo",
+  "description": "**Effect:** When you perform a *Combo* **Action**, until the end of your next turn, your next *Finisher* **Action** benefits from **Finisher** effects.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "finisher",
+  "name": "Finisher",
+  "description": "**Effect:** This **Action** has additional *Finisher* properties if you performed a *Combo* **Action** since your last turn.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "trap",
+  "name": "Trap",
+  "description": "**Effect:** A *Trap* modifies a tile. Once armed, a *Trap* is *Triggered* when a character becomes adjacent during *Movement*.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "limitround",
+  "name": "1/Round",
+  "description": "**Effect:** Perform this **Action** only once per round, refreshing at the start of your second turn and on each of your subsequent turns. *Passive* and other special abilities with this property trigger or take effect no more than once per round.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "limitencounter",
+  "name": "1/Encounter",
+  "description": "**Effect:** **Actions** with this property can be performed only once per encounter. *Passive* and other special abilities with this property can only be used, trigger, or take effect once per encounter.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "bound",
+  "name": "Bound",
+  "description": "Bound Passives modify other Actions.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "ultimate",
+  "name": "Ultimate",
+  "description": "A character's ultimate ability.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "accurate",
+  "name": "Accurate",
+  "description": "Accurate",
+  "advantageBonus": 1,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "inaccurate",
+  "name": "Inaccurate",
+  "description": "Inaccurate",
+  "advantageBonus": 0,
+  "disadvantageBonus": 1
+ },
+ {
+  "id": "limitturn",
+  "name": "1/Turn",
+  "description": "**Effect:** You can't perform this ability more than once during any character's turn; this ability can't take effect more than once per turn.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ },
+ {
+  "id": "battered",
+  "name": "Battered",
+  "description": "**Effect:** This ability can only be performed (or this passive only takes effect) while at half of your maximum HP or lower.",
+  "advantageBonus": 0,
+  "disadvantageBonus": 0
+ }
+]

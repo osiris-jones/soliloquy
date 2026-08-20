@@ -1,0 +1,44 @@
+[
+  {
+    "id": "classes",
+    "label": "NPC Classes",
+    "description": "Statted enemy chassis \u2014 pick one as the base for an NPC.",
+    "color": "#7a3500",
+    "entries": [
+      "npc-class-minion",
+      "npc-class-assassin",
+      "npc-class-medic",
+      "npc-class-beast",
+      "npc-class-guardian",
+      "npc-class-sentinel",
+      "npc-class-executioner",
+      "npc-class-scourge",
+      "npc-class-spider",
+      "npc-class-mindflayer",
+      "npc-class-angel",
+      "npc-class-invoker",
+      "npc-class-aberration",
+      "npc-class-duelist",
+      "npc-class-phantasm",
+      "npc-class-sharpshooter",
+      "npc-class-displacer"
+    ]
+  },
+  {
+    "id": "templates",
+    "label": "Templates",
+    "description": "Modifiers layered onto an NPC class to change its role.",
+    "color": "#4a2d7a",
+    "entries": [
+      "npc-template-brute",
+      "npc-template-large",
+      "npc-template-leader",
+      "npc-template-ghost",
+      "npc-template-ranger",
+      "npc-template-heckler",
+      "npc-template-howlpack",
+      "npc-template-trickster",
+      "npc-template-elite"
+    ]
+  }
+]

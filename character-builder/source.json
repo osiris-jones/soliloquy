@@ -442,7 +442,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** An hostile character within **Range** of a  *Melee Attack* **Action** that costs **2 AP** or less performs an *Action* targeting a character other than you.\r\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character before the triggering **Action**."
+      "description": "- **Condition:** An hostile character within **Range** of a  *Melee Attack* **Action** that costs **2 AP** or less performs an *Action* targeting a character other than you.\n- **Effect:** Perform that *Melee Attack* **Action** on the triggering character before the triggering **Action**."
     },
     {
       "id": "paladin-shield-charge",
@@ -717,7 +717,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "**Passive:** +2 Maximum HP."
+      "description": "**Passive:** +2 Maximum HP.",
+      "modifiers": [
+        {
+          "target": "hp.max",
+          "value": 2,
+          "label": "Max HP"
+        }
+      ]
     },
     {
       "id": "towers-generic-shield-stance",
@@ -804,7 +811,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "**Passive:** +4 Maximum HP."
+      "description": "**Passive:** +4 Maximum HP.",
+      "modifiers": [
+        {
+          "target": "hp.max",
+          "value": 4,
+          "label": "Max HP"
+        }
+      ]
     },
     {
       "id": "towers-generic-armor",
@@ -823,7 +837,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "**Passive:** +1 Armor *(max. 2)*"
+      "description": "**Passive:** +1 Armor *(max. 2)*",
+      "modifiers": [
+        {
+          "target": "stats.armor",
+          "value": 1,
+          "label": "Armor"
+        }
+      ]
     },
     {
       "id": "towers-generic-ironskin",
@@ -1065,7 +1086,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** An hostile character within **Range** of a  *Melee Attack* **Action** that costs **2 AP** or less begins movement as part of a *Movement* **Action**.\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character before the triggering **Action**."
+      "description": "- **Condition:** An hostile character within **Range** of a  *Melee Attack* **Action** that costs **2 AP** or less begins movement as part of a *Movement* **Action**.\n- **Effect:** Perform that *Melee Attack* **Action** on the triggering character before the triggering **Action**."
     },
     {
       "id": "warrior-bash",
@@ -1571,7 +1592,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** A hostile character within the **Range** of a *Melee Attack* **Action** that costs **(2 AP)** or less inflicts a **Condition** on you or knocks you **Prone**.\n**Effect:** Perform that *Melee Attack* **Action** on the triggering character."
+      "description": "- **Condition:** A hostile character within the **Range** of a *Melee Attack* **Action** that costs **(2 AP)** or less inflicts a **Condition** on you or knocks you **Prone**.\n- **Effect:** Perform that *Melee Attack* **Action** on the triggering character."
     },
     {
       "id": "avenger-hatred",
@@ -2030,7 +2051,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "**+1 Speed.**"
+      "description": "**+1 Speed.**",
+      "modifiers": [
+        {
+          "target": "stats.spd",
+          "value": 1,
+          "label": "SPD"
+        }
+      ]
     },
     {
       "id": "blademaster-truecharge",
@@ -3484,7 +3512,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Increased **Focus Pool** (+2)."
+      "description": "Increased **Focus Pool** (+2).",
+      "modifiers": [
+        {
+          "target": "focus.max",
+          "value": 2,
+          "label": "Focus Pool"
+        }
+      ]
     },
     {
       "id": "glyphs-generic-healer",
@@ -3604,7 +3639,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Increased **Focus Pool** (+2)."
+      "description": "Increased **Focus Pool** (+2).",
+      "modifiers": [
+        {
+          "target": "focus.max",
+          "value": 2,
+          "label": "Focus Pool"
+        }
+      ]
     },
     {
       "id": "glyphs-generic-condemnation",
