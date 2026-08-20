@@ -231,7 +231,7 @@
     },
     {
       "id": "paladin-raise-shield",
-      "name": "Raise Shield",
+      "name": "Guardian's Shield",
       "class": "paladin",
       "rank": 0,
       "cost": "1",
@@ -248,11 +248,11 @@
       "tags": [
         "shield"
       ],
-      "description": "Until the start of your next turn, attacks against you have **+1 Disadvantage** and you have the **Block Reaction**."
+      "description": "Until the start of your next turn, you have **cover** from **ranged attacks** and you have the **Block Reaction**."
     },
     {
       "id": "paladin-block",
-      "name": "Raise Shield: Block",
+      "name": "Guardian's Shield: Block",
       "class": "paladin",
       "rank": 0,
       "cost": "reaction",
@@ -271,7 +271,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** You are targeted by an **Attack** that gains **+1 Disadvantage** from **Raise Shield**.\r\n**Effect:** Gain **Barrier** equal to your **Block Rating**. If you have no **Barrier** remaining after the attack, you can't use this *Reaction* for the rest of the encounter."
+      "description": "**Condition:** You are targeted by an **Attack** that would deal 1 or more damage.\n**Effect:** Gain **Barrier** equal to your **Block Rating**. If you have no **Barrier** remaining after the attack, you can't use this *Reaction* for the rest of the encounter."
     },
     {
       "id": "paladin-entrenched",
@@ -585,14 +585,14 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Whenever **Barrier, Damage Resistance, or Invulnerability** affects the amount of damage you take: Recover **1 Focus**."
+      "description": "**1/Turn:** When you are dealt a source of damage while you have **Barrier,** **Damage Resistance**, or **Invulnerability,** recover **1 Focus**. *(You gain Focus even if zero damage is dealt.)*"
     },
     {
       "id": "paladin-lionheart",
-      "name": "Aegis",
+      "name": "Lionheart",
       "class": "paladin",
       "rank": 4,
-      "cost": "passive",
+      "cost": "1",
       "focusCost": 1,
       "range": "Melee",
       "isAttack": true,
@@ -674,6 +674,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
+        "shield",
         "limitround"
       ],
       "description": "**Condition:** You are hit by an *Attack* for the first time in a round.\n**Effect � Focus Cost 1:** Gain **Damage Resistance** against the triggering *Attack*."
@@ -872,7 +873,7 @@
       "rank": 0,
       "cost": "passive",
       "focusCost": 0,
-      "range": "",
+      "range": "Range 6",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -886,7 +887,7 @@
         "weapon",
         "stance"
       ],
-      "description": "In **Ranged Stance**, you can perform *Ranged Weapon Attack* **Actions**. Your *Basic* **Attack Action** is *Ranged* and has **Range 4**."
+      "description": "In **Ranged Stance**, you can perform *Ranged Weapon Attack* **Actions**. Your *Basic* **Attack Action** is *Ranged* and has **Range 6**."
     },
     {
       "id": "warrior-stance-shield",
@@ -955,12 +956,12 @@
       "description": "Gain **1 AP**. It can't be spent on *Spell* **Actions**. Gain **Barrier** ***x***, where ***x*** is half your maximum HP. This **Barrier** isn't lost as turns end. Clear **Prone.** Clear any number of **Conditions** of your choice. For each adjacent character, choose: that character falls **Prone** or suffers **Push 1**.\r\n**For the rest of the encounter:** You can perform an additional **Reaction** during each character's turn, and you have **Start of Turn:** Gain **1 AP**. It can't be spent on *Spell* **Actions**."
     },
     {
-      "id": "warrior-second-wind",
-      "name": "Second Wind",
+      "id": "warrior-opening-rush",
+      "name": "Opening Rush",
       "class": "warrior",
       "rank": 1,
-      "cost": "passive",
-      "focusCost": 0,
+      "cost": "1",
+      "focusCost": 2,
       "range": "",
       "isAttack": false,
       "damage": "",
@@ -971,9 +972,10 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
+        "movement",
         "limitencounter"
       ],
-      "description": "**Passive:** Increased **Focus Pool (+1)**.\r\n\r\n**1/Encounter:** When you **Refocus**, apply **Healing** to yourself equal to half your maximum HP."
+      "description": "Perform **Opening Rush** only with **Initiative**.\n\nMove **Speed +2** as close as possible to a hostile character that has not taken a turn this encounter. Gain **Barrier 2**."
     },
     {
       "id": "warrior-focus-attack",
@@ -1018,7 +1020,7 @@
       "tags": [
         "bound"
       ],
-      "description": "**Bind** to a *non-Spell Attack* **Action**.\nThe **Bound** *Attack* has **+1 Disadvantage**, **+1 Bonus Damage**, and **On Hit:** **Push 1**."
+      "description": "**Bind** to a *non-Spell Attack* **Action**.\nThe **Bound** *Attack* has **+1 Disadvantage**, and **On Hit:** **Push 1** and **+2 Bonus Damage**."
     },
     {
       "id": "warrior-shield-stagger",
@@ -1040,7 +1042,7 @@
         "shield",
         "limitturn"
       ],
-      "description": "**While you're in a** *Shield* **Stance:** **1/Turn** when an adjacent hostile character damages your **Barrier**, that character suffers **Push 1** and **Off Guard**."
+      "description": "When an adjacent hostile character deals damage to your **Barrier**, if you�re in a *Shield* **Stance**: that character suffers **Push 1** and **Off Guard**. This effect occurs no more than **1/Turn**."
     },
     {
       "id": "warrior-opportunity",
@@ -1759,7 +1761,7 @@
         "melee",
         "attack"
       ],
-      "description": "*(During your turn, Attack **Actions** have **+1 Disadvantage** for each other Attack **Action** performed this turn. An Attack **Action** with the **Flurry** property is exempt from this characteristic.)*"
+      "description": "*(During your turn, Attack* **Actions** *have* **+1 Disadvantage** *for each other Attack* **Action** *performed this turn. An Attack* **Action** *with the* **Flurry** *property is exempt from this characteristic.)*"
     },
     {
       "id": "core-move",
@@ -1780,7 +1782,7 @@
       "tags": [
         "movement"
       ],
-      "description": "**Choose one:** **Move** **Speed**, or clear **Prone**."
+      "description": "**Choose one:** **Move** up to your **Speed** *(min. 1 tile)*, or clear **Prone**."
     },
     {
       "id": "core-aid",
@@ -1801,7 +1803,7 @@
       "tags": [
         "limitround"
       ],
-      "description": "While you are adjacent to an allied character, you can **Aid** that character. **Choose one:**\r\n- **Describe how you aid that character. At the GM's discretion: **Make an **Action Resolution** (DV 10). If you succeed, that character's next **Action Resolution** that benefits from your aid **during their next turn** has **+1 Advantage.** *(This effect does not stack with repeated uses of the Aid action from a single character or with Aid actions from multiple characters.)*\r\n- That character may clear **Prone** as a **Reaction**.\r\n- That character clears **Staggered.**"
+      "description": "While you are adjacent to an allied character, you can **Aid** that character. **Choose one:**\n- **Describe how you aid that character. At the GM's discretion:** Make an **Action Resolution** (DV 10). If you succeed, that character's next **Action Resolution** that benefits from your aid **during their next turn** has **+1 Advantage.** *(This effect does not stack with repeated uses of the Aid action from a single character or with Aid actions from multiple characters.)*\n- That character may clear **Prone** as a **Reaction**.\n- That character clears **Staggered.**"
     },
     {
       "id": "core-study",
@@ -1820,7 +1822,7 @@
       "isInnate": true,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Target a character within **Range 4.** Choose one of the following:\r\n� You learn that character's remaining HP and defenses.\r\n� You learn the character's attacks and abilities.\r\n� At the GM's discretion, you learn a piece of useful information about the character."
+      "description": "Target a character within **Range 4.** Choose one of the following:\n- You learn that character's remaining HP and defenses.\n- You learn the character's attacks and abilities.\n- At the GM's discretion, you learn a piece of useful information about the character."
     },
     {
       "id": "core-evade",
@@ -1841,7 +1843,7 @@
       "tags": [
         "movement"
       ],
-      "description": "**Move 1. **Performing **Evade** doesn't trigger hostile **Reactions.**"
+      "description": "**Move 1.**\n\n**Evade** doesn't trigger hostile **Reactions.**"
     },
     {
       "id": "core-refocus",
@@ -1860,7 +1862,7 @@
       "isInnate": true,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Recover one third of your maximum **Focus.** Clear **Off Guard.**"
+      "description": "Recover one third of your maximum **Focus.** \n\nClear **Off Guard**, **Staggered**, and **Bleeding**."
     },
     {
       "id": "blades-generic-deadly",
@@ -2009,7 +2011,7 @@
         "stealth",
         "limitround"
       ],
-      "description": "Perform **Sneak** only if you're not adjacent to any hostile characters, and only while adjacent to cover or terrain that grants cover.\r\nYou gain **Concealment 3.** It lasts until you take damage or perform any **Action** or **Reaction.**"
+      "description": "Perform **Sneak** only if you're not adjacent to any hostile characters.\nYou gain **Concealment 3.** It lasts until the end of your next turn, or until you take damage."
     },
     {
       "id": "blades-generic-fleetfoot",
@@ -2133,7 +2135,7 @@
     },
     {
       "id": "blademaster-whirlwind-strike",
-      "name": "Whirlwind Strike",
+      "name": "Whirlwind Attack",
       "class": "blademaster",
       "rank": 1,
       "cost": "2",
@@ -2504,7 +2506,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Your first *Attack* **Action** each turn has **+1 Advantage** against characters adjacent to one or more of your allies."
+      "description": "Your first *Attack* **Action** each turn has **+1 Advantage** against characters adjacent to one or more of your allies **or** while you are the only character adjacent to the target."
     },
     {
       "id": "scoundrel-skirmisher",
@@ -2544,11 +2546,11 @@
       "tags": [
         "stealth"
       ],
-      "description": "Perform **Shadow Walk** only if you're not adjacent to any hostile characters, and only while adjacent to cover or a source of cover.\r\nYou have the **Hide Reaction** until the start of your next turn."
+      "description": "Perform **Shadow Walk** only while no enemy within **Range 6** can draw **Line of Effect** to you, or if you have **cover** from those enemies.\n\nYou gain **Concealment 3**. You lose all **Concealment** at the end of your next turn or when you take damage."
     },
     {
       "id": "scoundrel-sneak-special",
-      "name": "Shadow Walk: Hide",
+      "name": "Deprecated",
       "class": "scoundrel",
       "rank": 0,
       "cost": "reaction",
@@ -2569,8 +2571,7 @@
         "stealth",
         "limitround"
       ],
-      "description": "**Condition:** A hostile character begins their turn, and you used **Shadow Walk** on your most recent turn.\r\n**Effect:** The character makes a **Resistance Roll**. A character that fails can't target you with **Actions** this turn unless those **Actions** could target multiple characters.",
-      "parent": "scoundrel-sneak"
+      "description": "This should no longer appear."
     },
     {
       "id": "scoundrel-ultimate",
@@ -2642,8 +2643,8 @@
       "description": "**On Hit:** The target is **Slowed** 1."
     },
     {
-      "id": "scoundrel-cheapshot",
-      "name": "Cheap Shot",
+      "id": "scoundrel-slice-and-dice",
+      "name": "Slice and Dice",
       "class": "scoundrel",
       "rank": 1,
       "cost": "2",
@@ -2652,7 +2653,7 @@
       "isAttack": true,
       "damage": "[atk]",
       "hasGraze": true,
-      "grazeDamage": "1+[tier]",
+      "grazeDamage": "2+[tier]",
       "hasResistance": false,
       "resistanceDV": "10",
       "isInnate": false,
@@ -2664,7 +2665,7 @@
         "attack",
         "limitround"
       ],
-      "description": "**Flurry**\n**Finisher - On Hit:** Target is **Dazed +1**. As part of this **Action**, you perform a *Basic* **Move Action** that doesn't trigger hostile **Reactions**.\n**Finisher - On Miss:** Graze 1+[tier]"
+      "description": "**Flurry**\n\n**Finisher - On Hit:** **Cheap Shot** deals **+2 Bonus Damage** and the target becomes **Off Guard**. As part of this **Action**, you perform a *Basic* **Move Action** that doesn't trigger hostile **Reactions**.\n**Finisher - On Miss:** Graze **2 + Tier**."
     },
     {
       "id": "scoundrel-quickstep",
@@ -2759,9 +2760,9 @@
     },
     {
       "id": "scoundrel-opportunity",
-      "name": "Follow Up",
+      "name": "Cheap Shot",
       "class": "scoundrel",
-      "rank": 2,
+      "rank": 3,
       "cost": "reaction",
       "focusCost": 1,
       "range": "",
@@ -2774,11 +2775,12 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
+        "weapon",
         "attack",
         "reaction",
         "limitround"
       ],
-      "description": "**Condition:** An adjacent hostile character is damaged by an allied character.\n**Effect** - **Focus Cost** 1: Perform a *Basic Attack* **Action** targeting the damaged character as a part of this **Reaction**. It has **On Hit:** The target is **Poisoned +1**."
+      "description": "**Condition:** An adjacent hostile character would pass a **Resistance Roll**.\n**Effect:** Perform a *Basic Attack* **Action** targeting the triggering character as part of this **Reaction**. It has **On Hit:** The triggering character rerolls that **Resistance Roll**."
     },
     {
       "id": "scoundrel-violent-delights",
@@ -2800,10 +2802,10 @@
       "description": "Your *Finisher* **Actions** have **Finisher - On Hit:** Recover 1 **Focus.**"
     },
     {
-      "id": "scoundrel-knife-juggler",
-      "name": "Knife Juggler",
+      "id": "scoundrel-envenom",
+      "name": "Envenom",
       "class": "scoundrel",
-      "rank": 3,
+      "rank": 2,
       "cost": "passive",
       "focusCost": 0,
       "range": "",
@@ -2818,7 +2820,7 @@
       "tags": [
         "bound"
       ],
-      "description": "Bind to a *Melee* *Attack* **Action**.\n\nThe **Bound** *Attack* has **Range 3** instead of any other **Range Profile**. It deals half damage and has **On Hit:** Up to one target of the attack is **Poisoned 2**."
+      "description": "- Bind to a non-*Basic* *Attack* **Action**.\n- The **Bound** *Attack* has **Focus Cost +1**.\n- If the **Bound** *Attack* would deal **Bonus Damage**, it instead inflicts **Poisoned** ***x***, where ***x*** is that **Bonus Damage**."
     },
     {
       "id": "deprecated-knife-juggler-special",
@@ -3018,7 +3020,7 @@
       "rank": 0,
       "cost": "passive",
       "focusCost": 0,
-      "range": "",
+      "range": "Range 6",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -3032,7 +3034,7 @@
         "weapon",
         "stance"
       ],
-      "description": "In **Ranged Stance,** you can perform *Ranged Weapon Attack* **Actions.** Your *Basic* **Attack Action** is *Ranged* and has **Range 4.**"
+      "description": "In **Ranged Stance,** you can perform *Ranged Weapon Attack* **Actions.** Your *Basic* **Attack Action** is *Ranged* and has **Range 6.**"
     },
     {
       "id": "marksman-reactive-shot",
@@ -3159,9 +3161,9 @@
       "isHeroicTalent": false,
       "tags": [
         "trap",
-        "limitencounter"
+        "limitround"
       ],
-      "description": "A **Smoke Trap** is armed at the start of your next turn and activates when a hostile character becomes adjacent while armed.\r\n- **Effect:** The **Trap** detonates in a **Size 1 Area** centered on its tile, which lasts until the end of your next turn. Characters in that area have **Concealment 3.**"
+      "description": "A **Smoke Trap** is armed at the start of your next turn and activates when a hostile character becomes adjacent while armed. You can't place more than one **Smoke Trap** at a time.\n- **Effect:** The **Trap** detonates in a **Size 1 Area** centered on its tile, which lasts until the end of your next turn. Characters in that area have **Concealment 3.**"
     },
     {
       "id": "marksman-steady-aim",
@@ -3182,7 +3184,7 @@
       "tags": [
         "limitround"
       ],
-      "description": "This turn, your *Ranged Attack* **Actions** ignore cover."
+      "description": "Your *Ranged Attack* **Actions** ignore **cover** until end of turn."
     },
     {
       "id": "marksman-first-aid",
@@ -3233,7 +3235,7 @@
       "rank": 2,
       "cost": "2",
       "focusCost": 0,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "2[atk]+2",
       "hasGraze": false,
@@ -3256,7 +3258,7 @@
       "rank": 2,
       "cost": "1",
       "focusCost": 2,
-      "range": "",
+      "range": "Range 4",
       "isAttack": false,
       "damage": "2[mag]+4",
       "hasGraze": false,
@@ -3311,7 +3313,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "**Each round,** the first **Attack Roll** you make as part of a *Ranged Weapon Attack* **Action** has **On Damage:** Deal **3 Damage** to up to one hostile character of your choice adjacent to one target of the attack. *(No roll.)*"
+      "description": "**Each round,** the first **Attack Roll** you make as part of a *Ranged Weapon Attack* **Action** has **On Damage:** Deal **2 Piercing Damage** to up to one hostile character of your choice adjacent to one target of the attack. *(No roll.)*"
     },
     {
       "id": "marksman-lock-on",
@@ -3403,7 +3405,7 @@
       "rank": 5,
       "cost": "1",
       "focusCost": 2,
-      "range": "",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "[atk]+2",
       "hasGraze": false,
@@ -3677,7 +3679,7 @@
       "rank": 0,
       "cost": "2",
       "focusCost": 2,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "[mag]+1",
       "hasGraze": false,
@@ -3700,7 +3702,7 @@
       "rank": 0,
       "cost": "3",
       "focusCost": 2,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "2[mag]+2",
       "hasGraze": false,
@@ -3803,7 +3805,7 @@
       "rank": 1,
       "cost": "2",
       "focusCost": 3,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -3826,7 +3828,7 @@
       "rank": 2,
       "cost": "1",
       "focusCost": 2,
-      "range": "Range 5",
+      "range": "Range 8",
       "isAttack": true,
       "damage": "[mag]",
       "hasGraze": true,
@@ -4001,7 +4003,7 @@
       "rank": 4,
       "cost": "3",
       "focusCost": 5,
-      "range": "Range 6",
+      "range": "Range 8",
       "isAttack": true,
       "damage": "2[mag]+4",
       "hasGraze": false,
@@ -4059,7 +4061,7 @@
         "spell",
         "passive"
       ],
-      "description": "You have the **Conservation Law** *Special* **Passive** and the **Paradox** *Special* **Action**.\r\n\r\n**Conservation Law — Special Passive**\r\nEach round, the first non-*Paradox* *Spell* **Action** you perform that deals damage has the following properties:\r\n- The damage the **Spell** deals to each character is reduced by **5**. It deals no **Bonus Damage**.\r\n- **On Damage:** At the beginning of the next round, **Charge Paradox**.\r\n- At the end of any round, if **Paradox** is **Charged:** **Discharge Paradox**."
+      "description": "You have the **Conservation Law** *Special* **Passive** and the **Paradox** *Special* **Action**.\n\nEach round, the first non-*Paradox* *Spell* **Action** you perform that deals damage has the following properties:\n- The damage the **Spell** deals to each character is reduced by **5**. It deals no **Bonus Damage**.\n- **On Damage:** At the beginning of the next round, you become **Marked by Paradox**.\n- At the end of each round, if you are **Marked by Paradox**, you are no longer **Marked by Paradox**."
     },
     {
       "id": "arcanimist-paradox-special",
@@ -4071,8 +4073,8 @@
       "range": "Range 5",
       "isAttack": true,
       "damage": "5",
-      "hasGraze": false,
-      "grazeDamage": "",
+      "hasGraze": true,
+      "grazeDamage": "5",
       "hasResistance": false,
       "resistanceDV": "10",
       "isInnate": false,
@@ -4081,11 +4083,10 @@
         "special",
         "spell",
         "attack",
-        "charged",
         "ranged",
         "limitround"
       ],
-      "description": "*(Perform this Action only while it's Charged.)*\r\n- **Flurry.**\r\n- **On Attack, Discharge Paradox:** Recover **5 Focus**.",
+      "description": "(Perform **Paradox** only while **Marked by Paradox**.)\n- **Flurry.**\n- **On Attack:** Recover **5 Focus**. You are no longer **Marked by Paradox**.\n- **On Miss:** **Graze 5**.",
       "parent": "arcanimist-paradox"
     },
     {
@@ -4116,7 +4117,7 @@
       "rank": 1,
       "cost": "2",
       "focusCost": 2,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "[mag]+2",
       "hasGraze": true,
@@ -4182,7 +4183,7 @@
       "rank": 2,
       "cost": "2",
       "focusCost": 2,
-      "range": "Range 5",
+      "range": "Range 8",
       "isAttack": false,
       "damage": "[mag]",
       "hasGraze": false,
@@ -4366,7 +4367,7 @@
         "heroic",
         "limitencounter"
       ],
-      "description": "If you would be **Downed**, **1/Encounter:** **Gamble** 4. On a success, you remain at 1 HP.\n\nWhen you become **Staggered**, you become **Blessed**."
+      "description": "- You have **+1 Tenacity.**\n- You have **Damage Resistance** while you're **Staggered**.\n- Your *Attack* **Actions** have **On Critical Hit:** You may spend 1 **Tenacity** to **get a Second Wind**."
     },
     {
       "id": "heroic-generic-supreme-resolve",
@@ -4396,7 +4397,7 @@
       "rank": 0,
       "cost": "passive",
       "focusCost": 0,
-      "range": "",
+      "range": "Range 6",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -4411,7 +4412,7 @@
         "weapon",
         "stance"
       ],
-      "description": "In **Ranged Stance,** you can perform *Ranged Weapon Attack* **Actions.** Your *Basic* **Attack Action** is *Ranged* and has **Range 4.**",
+      "description": "In **Ranged Stance,** you can perform *Ranged Weapon Attack* **Actions.** Your *Basic* **Attack Action** is *Ranged* and has **Range 6.**",
       "parent": "heroic-generic-ranger"
     },
     {
@@ -4466,7 +4467,7 @@
       "rank": 0,
       "cost": "2",
       "focusCost": 0,
-      "range": "Range 7",
+      "range": "Range 10",
       "isAttack": true,
       "damage": "3[atk]",
       "hasGraze": true,
@@ -4661,8 +4662,8 @@
       "description": "When **Barrier, Damage Resistance,** or **Invulnerability** from your **Reaction** prevents your **HP** from being reduced to **0:** Increase the **Flow of Battle** by 1."
     },
     {
-      "id": "warrior-heroic-maneuver",
-      "name": "Maneuver Specialist",
+      "id": "warrior-heroic-action-surge",
+      "name": "Action Surge",
       "class": "warrior",
       "rank": 0,
       "cost": "passive",
@@ -4679,7 +4680,7 @@
       "tags": [
         "reaction"
       ],
-      "description": "- You have the **Grapple** and **Shove Abilities** from the **Deck of Towers Generic Abilities.**\r\n- **1/Encounter, when a hostile character makes a Resistance Roll against your Grapple or Shove, Spend 1 Inspiration**: That character automatically fails."
+      "description": "You have **+1 Tenacity.**\n\nWhen you **get a Second Wind**, gain **1 AP.** *( You can spend this AP on your next turn if it isn't your turn. )*"
     },
     {
       "id": "warrior-heroic-leap",
@@ -5000,28 +5001,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "If you would inflict **Poisoned** on a character, inflict that much **Poisoned** plus one instead."
-    },
-    {
-      "id": "deprecated-heroic-daredevil-special",
-      "name": "Deprecated",
-      "class": "scoundrel",
-      "rank": 0,
-      "cost": "1",
-      "focusCost": 0,
-      "range": "",
-      "isAttack": false,
-      "damage": "",
-      "hasGraze": false,
-      "grazeDamage": "",
-      "hasResistance": false,
-      "resistanceDV": "10",
-      "isInnate": false,
-      "isHeroicTalent": true,
-      "tags": [
-        "heroic"
-      ],
-      "description": "This shouldn't appear."
+      "description": "Hostile characters within **Range 6** have **+1 Disadvantage** on **Resistance Rolls** to clear **Poisoned** at end of turn.\n\nIf you would inflict **Poisoned** on a character, inflict that much **Poisoned** plus one instead."
     },
     {
       "id": "scoundrel-heroic-invisible-blade",
@@ -5042,7 +5022,7 @@
       "tags": [
         "heroic"
       ],
-      "description": "When you **Refocus**, gain  **Concealment 2**. It lasts until the end of your next turn or until you take damage.\n\n*Attack* **Actions** you perform while you have **Concealment** have **+1 Advantage.**\n\n**1/Round** when your *Attack* deals damage to a hostile character while you have **Concealment**, that character makes a **Resistance Roll** or is **Stunned +1**."
+      "description": "Each round, while you have **Concealment**, your first *Attack* **Action** has **+1 Advantage** and **On Hit:** Up to one target makes a **Resistance Roll** or is **Stunned +1**.\n\nWhen you **Refocus, gain **Concealment 3**. This effect ends at the end of your next turn or when you take damage."
     },
     {
       "id": "scoundrel-heroic-elegant-finisher",
@@ -5136,7 +5116,7 @@
       "rank": 0,
       "cost": "3",
       "focusCost": 8,
-      "range": "Range 8",
+      "range": "Range 10",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -5369,8 +5349,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Condition**: You are targeted by an *Attack* that would deal 1 or more damage.\r\n\r\n**Effect - Focus Cost 1:** Gain **Barrier** equal to your **Block Rating.** If you have no **Barrier** remaining after damage is dealt, you are **Stunned +1.**",
-      "parent": "tactician-heroic-magicshield"
+      "description": "**Condition**: You are targeted by an *Attack* that would deal 1 or more damage.\r\n\r\n**Effect - Focus Cost 1:** Gain **Barrier** equal to your **Block Rating.** If you have no **Barrier** remaining after damage is dealt, you are **Stunned +1.**"
     },
     {
       "id": "tactician-heroic-warcaster",
@@ -5391,7 +5370,8 @@
       "tags": [
         "heroic"
       ],
-      "description": "If you would perform an *Attack* **Action** as a **Reaction,** you may perform a *Spell* **Action** that could target the triggering character instead, and you may **Spend 1 Inspiration** rather than paying the **Focus Cost** for this *Spell* **Action.**"
+      "description": "If you would perform an *Attack* **Action** as part of a **Reaction,** you may perform a *Spell* **Action** that could target the triggering character instead, and you may **Spend 1 Inspiration** rather than paying the **Focus Cost** for this *Spell* **Action.**",
+      "parent": "tactician-heroic-magicshield"
     },
     {
       "id": "tactician-heroic-contingency",
@@ -5438,8 +5418,7 @@
         "trap",
         "reaction"
       ],
-      "description": "**Condition:** An eligible target of the chosen spell moves onto or becomes adjacent to your **Glyph** or begins their turn on or adjacent to your **Glyph.**\r\n\r\n**Effect:** The triggering character triggers your **Glyph.** Destroy the **Glyph** and perform that *Spell* **Action** on the triggering character as a **Reaction** with no **Focus** cost. If it has a range profile, the range profile is drawn from the **Glyph's** tile.",
-      "parent": "tactician-heroic-contingency"
+      "description": "**Condition:** An eligible target of the chosen spell moves onto or becomes adjacent to your **Glyph** or begins their turn on or adjacent to your **Glyph.**\r\n\r\n**Effect:** The triggering character triggers your **Glyph.** Destroy the **Glyph** and perform that *Spell* **Action** on the triggering character as a **Reaction** with no **Focus** cost. If it has a range profile, the range profile is drawn from the **Glyph's** tile."
     },
     {
       "id": "tactician-heroic-simulation",
@@ -5460,7 +5439,8 @@
       "tags": [
         "heroic"
       ],
-      "description": "When a hostile character's effect causes you to move, including by forcing you to perform a *Movement* **Action**: You may **Move** 1 before or after that movement. While moving this way, you can move diagonally, don't trigger hostile reactions, and ignore difficult terrain."
+      "description": "When a hostile character's effect causes you to move, including by forcing you to perform a *Movement* **Action**: You may **Move** 1 before or after that movement. While moving this way, you can move diagonally, don't trigger hostile reactions, and ignore difficult terrain.",
+      "parent": "tactician-heroic-contingency"
     },
     {
       "id": "tactician-disciplined-tactician",
@@ -5553,10 +5533,10 @@
       "class": "tactician",
       "rank": 2,
       "cost": "3",
-      "focusCost": 3,
-      "range": "Range 5",
+      "focusCost": 4,
+      "range": "Range 6",
       "isAttack": true,
-      "damage": "2[mag]+4",
+      "damage": "2[mag]+2",
       "hasGraze": false,
       "grazeDamage": "",
       "hasResistance": false,
@@ -5568,7 +5548,7 @@
         "spell",
         "attack"
       ],
-      "description": "**On Hit:** **Push 1**."
+      "description": "**On Hit:** **Push 1** and **Dazed 1**."
     },
     {
       "id": "tactician-shock",
@@ -5639,7 +5619,7 @@
     },
     {
       "id": "tactician-celerity",
-      "name": "Celerity",
+      "name": "Haste",
       "class": "tactician",
       "rank": 3,
       "cost": "1",
@@ -5657,7 +5637,7 @@
         "support",
         "spell"
       ],
-      "description": "You or up to one adjacent allied character gain **Haste:** At the beginning of your turn, gain **1 AP**.\r\n\r\n**Haste** lasts until the end of the encounter, or until the affected character ends a turn with no AP remaining. *(It's a special Status.)*"
+      "description": "You or up to one character in **Range** gets **Haste.** It's a special status with **Start of Turn:** Gain **1 AP**.\n\n**Haste** lasts until the end of the encounter, or until the hasted character ends a turn with no AP remaining."
     },
     {
       "id": "tactician-divine-eye",
@@ -5666,7 +5646,7 @@
       "rank": 3,
       "cost": "passive",
       "focusCost": 0,
-      "range": "",
+      "range": "Range 1",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -5678,7 +5658,7 @@
       "tags": [
         "limitround"
       ],
-      "description": "**1/Round**: When you **Study** a hostile character, that character becomes **Off Guard.**"
+      "description": "**1/Round**: When you **Study** a hostile character, you may have that character become **Off Guard**."
     },
     {
       "id": "tactician-mind-palace",
@@ -5780,7 +5760,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Create **Visual Calculus.** It's a **Size 1 Area** centered on target tile.\r\n\r\n**For the rest of the encounter:** Hostile characters in the area are **Sundered** and can't perform *Stealth* **Actions** or benefit from **Concealment.**\r\n\r\nYou have **1 AP:** Move **Visual Calculus** to target tile within **Range** 5."
+      "description": "Create **Visual Calculus**. It�s a **Size 1 Area** centered on target tile within **Range** and lasts for the rest of the encounter or until you perform this **Action** again. Hostile characters in the area are **Sundered** and can�t perform *Stealth* **Actions** or benefit from **Concealment**.\nYou can (**2 AP**): Move **Visual Calculus** to target space within **Range 5**."
     },
     {
       "id": "transmuter-elemental-shift",
@@ -5927,8 +5907,7 @@
         "heroic",
         "limitencounter"
       ],
-      "description": "**1/Encounter — Spend 1 Inspiration:** Teleport yourself or an allied character within **Range** to a target free tile within **Range.**",
-      "parent": "transmuter-heroic-adept-of-motion"
+      "description": "**1/Encounter — Spend 1 Inspiration:** Teleport yourself or an allied character within **Range** to a target free tile within **Range.**"
     },
     {
       "id": "transmuter-heroic-spikes",
@@ -5949,7 +5928,8 @@
       "tags": [
         "heroic"
       ],
-      "description": "When a character becomes affected by **Difficult Terrain** you created: That character suffers **1 Piercing Damage.** A character can only take this damage **1/Round.** *(No roll. A character becomes affected by Difficult Terrain when it causes them to spend additional movement.)*"
+      "description": "When a character becomes affected by **Difficult Terrain** you created: That character suffers **1 Piercing Damage.** A character can only take this damage **1/Round.** *(No roll. A character becomes affected by Difficult Terrain when it causes them to spend additional movement.)*",
+      "parent": "transmuter-heroic-adept-of-motion"
     },
     {
       "id": "transmuter-heroic-master-controller",
@@ -6014,8 +5994,7 @@
         "heroic",
         "limitencounter"
       ],
-      "description": "**1/Encounter:** Create a **Wall** in a target free tile within **Range.** It's a **Destructible Obstruction** with [tier]+8 HP and **Elevation 3.**",
-      "parent": "transmuter-heroic-master-of-boundaries"
+      "description": "**1/Encounter:** Create a **Wall** in a target free tile within **Range.** It's a **Destructible Obstruction** with [tier]+8 HP and **Elevation 3.**"
     },
     {
       "id": "transmuter-mold-earth",
@@ -6036,7 +6015,8 @@
       "tags": [
         "spell"
       ],
-      "description": "Choose one:\n- Create **Difficult Terrain** in up to one tile in **Range** that doesn't contain a character or obstruction.\n- Target tile in **Range** that contains **Difficult Terrain** becomes normal terrain.\n\nThe effect lasts for the rest of the encounter."
+      "description": "Choose one:\n- Create **Difficult Terrain** in up to one tile in **Range** that doesn't contain a character or obstruction.\n- Target tile in **Range** that contains **Difficult Terrain** becomes normal terrain.\n\nThe effect lasts for the rest of the encounter.",
+      "parent": "transmuter-heroic-master-of-boundaries"
     },
     {
       "id": "transmuter-explosive-runes",
@@ -6108,7 +6088,7 @@
       "rank": 2,
       "cost": "2",
       "focusCost": 3,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "[mag]+1",
       "hasGraze": false,
@@ -6155,7 +6135,7 @@
       "rank": 2,
       "cost": "1",
       "focusCost": 1,
-      "range": "Range 3",
+      "range": "Range 4",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -6176,7 +6156,7 @@
       "rank": 3,
       "cost": "2",
       "focusCost": 3,
-      "range": "Range 5",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "[mag]+3",
       "hasGraze": false,
@@ -6220,7 +6200,7 @@
       "rank": 3,
       "cost": "2",
       "focusCost": 4,
-      "range": "Range 3",
+      "range": "Range 4",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -6316,8 +6296,7 @@
         "special",
         "reaction"
       ],
-      "description": "**2/Encounter — Condition:** A hostile character attempts to move into a free tile within **Range 2.**\r\n\r\n**Effect:** Create a **Wall,** a **Destructible Obstruction** with [tier]+8 HP in that tile. A tile obstructed this way has **Elevation 3.** The triggering movement is prevented, and any movement remaining from that effect is lost.",
-      "parent": "transmuter-erupting-earth"
+      "description": "**2/Encounter — Condition:** A hostile character attempts to move into a free tile within **Range 2.**\r\n\r\n**Effect:** Create a **Wall,** a **Destructible Obstruction** with [tier]+8 HP in that tile. A tile obstructed this way has **Elevation 3.** The triggering movement is prevented, and any movement remaining from that effect is lost."
     },
     {
       "id": "transmuter-reflecting-pool",
@@ -6340,7 +6319,8 @@
         "spell",
         "limitencounter"
       ],
-      "description": "Create a **Reflecting Pool,** a **Size 1 Area** centered on target tile. It lasts for the rest of the encounter.\n\nWhile in a **Reflecting Pool,** allied characters have:\n\n**(1 AP) - 1/Round:** Perform the last non-Ultimate, non-Summon, non-Reflecting Pool **Action** you performed. It's a **Free Action (0ap)** with **Focus Cost 0** that deals half damage, deals no bonus damage, and can't generate AP or reduce AP Costs. It has **Flurry** if it's an **Attack** and is considered to be charged if it's a **Charged** ability. Any **Inspiration Cost** must still be paid. Usage limits are ignored. *(Such as x/turn, x/round, or x/encounter.)*"
+      "description": "Create a **Reflecting Pool,** a **Size 1 Area** centered on target tile. It lasts for the rest of the encounter.\n\nWhile in a **Reflecting Pool,** allied characters have:\n\n**(1 AP) - 1/Round:** Perform the last non-Ultimate, non-Summon, non-Reflecting Pool **Action** you performed. It's a **Free Action (0ap)** with **Focus Cost 0** that deals half damage, deals no bonus damage, and can't generate AP or reduce AP Costs. It has **Flurry** if it's an **Attack**. Requirements such as *Charged* or **Mark** are considered to be met. Any **Inspiration Cost** must still be paid. Usage limits are ignored. *(Such as x/turn, x/round, or x/encounter.)*",
+      "parent": "transmuter-erupting-earth"
     },
     {
       "id": "transmuter-crystal-of-light",
@@ -6387,8 +6367,7 @@
         "reaction",
         "limitturn"
       ],
-      "description": "**1/Turn — Condition:** You become the target of a **Ranged Action** that targets only one character.\r\n\r\n**Effect:** Change the target of that **Action** to a character of your choice within **Range 4** of the **Crystal of Light.** The **Crystal of Light** takes **1 Piercing Chaos Damage.**",
-      "parent": "transmuter-crystal-of-light"
+      "description": "**1/Turn — Condition:** You become the target of a **Ranged Action** that targets only one character.\r\n\r\n**Effect:** Change the target of that **Action** to a character of your choice within **Range 4** of the **Crystal of Light.** The **Crystal of Light** takes **1 Piercing Chaos Damage.**"
     },
     {
       "id": "occultist-dimensional-bolt",
@@ -6397,7 +6376,7 @@
       "rank": 0,
       "cost": "2",
       "focusCost": 1,
-      "range": "Range 4",
+      "range": "Range 6",
       "isAttack": true,
       "damage": "[mag]+1",
       "hasGraze": false,
@@ -6411,7 +6390,8 @@
         "spell",
         "attack"
       ],
-      "description": "**Flurry**\r\n\r\n**On Hit:** Until the start of your next turn, if your **Summon** would deal damage to the target, it deals [tier] **Bonus Damage.**"
+      "description": "**Flurry**\r\n\r\n**On Hit:** Until the start of your next turn, if your **Summon** would deal damage to the target, it deals [tier] **Bonus Damage.**",
+      "parent": "transmuter-crystal-of-light"
     },
     {
       "id": "occultist-the-art",
@@ -6500,8 +6480,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**1/Round — Condition:** You or an allied character within **Range 5** would fail a **Resistance Roll,** take any amount of damage, or die.\r\n\r\n**Effect:** Sacrifice a **Summon.** If you do, ignore the effect that triggered **Death Erasure** and reduce any incoming damage to 0.",
-      "parent": "occultist-ultimate"
+      "description": "**1/Round — Condition:** You or an allied character within **Range 5** would fail a **Resistance Roll,** take any amount of damage, or die.\r\n\r\n**Effect:** Sacrifice a **Summon.** If you do, ignore the effect that triggered **Death Erasure** and reduce any incoming damage to 0."
     },
     {
       "id": "occultist-heroic-master-summoner",
@@ -6522,7 +6501,8 @@
       "tags": [
         "heroic"
       ],
-      "description": "You can control two **Legendary Summons,** as long as you control no other **Summons** and they aren't two of the same **Legendary Summon.**\n\nYour **Summons** can move diagonally. The first time you **Conjure** a **Legendary Summon** each encounter, if it's your turn, gain **(1ap).**\n\n**1/Quest:** When you **Conjure** a **Legendary Summon, Spend 1 Inspiration:** That **Legendary Summon** gains **Focus Pool 6** (max. 6), has all non-Summon, non-Basic **Spell Actions** available to you, and can perform them using your AP. It also has **Start of Turn:** Recover 1 Focus."
+      "description": "You can control two **Legendary Summons,** as long as you control no other **Summons** and they aren't two of the same **Legendary Summon.**\n\nYour **Summons** can move diagonally. The first time you **Conjure** a **Legendary Summon** each encounter, if it's your turn, gain **(1ap).**\n\n**1/Quest:** When you **Conjure** a **Legendary Summon, Spend 1 Inspiration:** That **Legendary Summon** gains **Focus Pool 6** (max. 6), has all non-Summon, non-Basic **Spell Actions** available to you, and can perform them using your AP. It also has **Start of Turn:** Recover 1 Focus.",
+      "parent": "occultist-ultimate"
     },
     {
       "id": "occultist-heroic-the-abyss",
@@ -6567,8 +6547,7 @@
         "heroic",
         "spell"
       ],
-      "description": "**Spend 1 Inspiration:** Characters adjacent to one or more of your **Summons** make a **Resistance Roll** or take **2[mag] Damage.** A character that **Resists** takes half as much damage.",
-      "parent": "occultist-heroic-the-abyss"
+      "description": "**Spend 1 Inspiration:** Characters adjacent to one or more of your **Summons** make a **Resistance Roll** or take **2[mag] Damage.** A character that **Resists** takes half as much damage."
     },
     {
       "id": "occultist-heroic-the-ritual",
@@ -6590,7 +6569,8 @@
         "heroic",
         "limitround"
       ],
-      "description": "**1/Round,** when you **Sacrifice** a **Summon** during your turn, **Spend 1 Inspiration:** Gain **1 AP.**"
+      "description": "**1/Round,** when you **Sacrifice** a **Summon** during your turn, **Spend 1 Inspiration:** Gain **1 AP.**",
+      "parent": "occultist-heroic-the-abyss"
     },
     {
       "id": "occultist-heroic-the-ritual-special",
@@ -6613,8 +6593,7 @@
         "heroic",
         "spell"
       ],
-      "description": "**Sacrifice** a **Summon:** Gain **2 Focus.** *(You can't exceed the maximum in your Focus Pool.)*",
-      "parent": "occultist-heroic-the-ritual"
+      "description": "**Sacrifice** a **Summon:** Gain **2 Focus.** *(You can't exceed the maximum in your Focus Pool.)*"
     },
     {
       "id": "occultist-heroic-the-hourglass",
@@ -6635,7 +6614,8 @@
       "tags": [
         "heroic"
       ],
-      "description": "You gain an additional **Reaction** during each other character's turn. Use this **Reaction** only to perform a *Spell* Reaction."
+      "description": "You gain an additional **Reaction** during each other character's turn. Use this **Reaction** only to perform a *Spell* Reaction.",
+      "parent": "occultist-heroic-the-ritual"
     },
     {
       "id": "occultist-heroic-dilettante",
@@ -6748,7 +6728,7 @@
         "reaction",
         "limitturn"
       ],
-      "description": "**1/Turn — Condition:** A hostile character within the **Range** of a **Melee Attack** action available to your **Summon** performs a **Movement Action.**\r\n\r\n**Effect:** Your **Summon** uses that **Melee Attack Action** on the triggering character before the triggering **Action.** Each **Summon** can attack this way no more than **1/Round.**"
+      "description": "**1/Turn - Condition:** A hostile character within the **Range** of a **Melee Attack** action available to your **Summon** moves as part of a **Movement Action.**\n\n**Effect:** Your **Summon** uses that **Melee Attack Action** on the triggering character before the triggering **Action.** Each **Summon** can attack this way no more than **1/Round.**"
     },
     {
       "id": "occultist-fortified-conjurations",
@@ -6767,7 +6747,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "Your **Summons** have **Max HP: +4.**"
+      "description": "Your **Summons** have **Max HP +2.**"
     },
     {
       "id": "occultist-conjure-dantalion",
@@ -6791,7 +6771,7 @@
         "legendary",
         "limitround"
       ],
-      "description": "Conjure **Dantalion** in an adjacent empty tile. **Dantalion** can perform *Basic* **Move, Attack,** and **Evade** using your AP.\r\n\r\n**ATK:** Yours | **MAG:** 1d8 | **HP:** [tier]+4 | **Armor:** 0 | **DEF:** 10 | **SPD:** 3 | **FP:** 0\r\n\r\n**Dantalion** is **Legendary** and has the **Tome** Reaction, which uses your Reaction. *(You can't control more than one Legendary Summon.)*"
+      "description": "Conjure **Dantalion** in an adjacent empty tile. **Dantalion** can perform *Basic* **Move, Attack,** and **Evade** using your AP.\n\n**ATK:** Yours | **MAG:** 1d8 | **HP:** [tier]+4 | **Armor:** 0 | **DEF:** 10 | **SPD:** 3 | **FP:** 0\n\n**Dantalion** is **Legendary** and has the **Tome** Reaction, which uses your Reaction. *(You can't control more than one Legendary Summon.)*"
     },
     {
       "id": "occultist-the-tome",
@@ -6814,8 +6794,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**1/Round — Condition:** An allied character other than the summoner attacks a hostile target within **Range 6** of **Dantalion** during their turn.\r\n\r\n**Effect:** *Ranged Spell Attack* — **Range:** 6 | **DMG:** [mag]+[tier]\r\n\r\nThis attack targets the hostile target. It treats obstructions as cover as long as any unobstructed path to the target exists.",
-      "parent": "occultist-conjure-dantalion"
+      "description": "**1/Round � Condition:** An allied character other than the summoner attacks a hostile target within **Range 6** of **Dantalion** during their turn. *(This Range ignores Line of Effect.)*\n\n**Effect:** *Ranged Spell Attack* — **Range:** 6 | **DMG:** [mag]+[tier]\n\nThis attack targets the hostile target. It treats obstructions as cover as long as any unobstructed path to the target exists."
     },
     {
       "id": "occultist-conjure-paimon",
@@ -6839,7 +6818,8 @@
         "legendary",
         "limitround"
       ],
-      "description": "Conjure **Paimon** in an adjacent empty tile. **Paimon** can perform *Basic* **Move, Attack,** and **Evade** using your AP.\n\n- **Paimon** is **Flying** and deals all damage as **Chaos Damage.**\n- **Paimon's** movement doesn't trigger hostile **Reactions.**\n\n**ATK:** 1 | **MAG:** 1 | **HP:** [tier]+5 | **DEF:** 10 | **SPD:** 3 | **FP:** 0\n\n**Paimon** is **Legendary** and has the **Cure** Reaction, which uses your Reaction. *(You can't control more than one Legendary Summon.)*"
+      "description": "Conjure **Paimon** in an adjacent empty tile. **Paimon** can perform *Basic* **Move, Attack,** and **Evade** using your AP.\n\n- **Paimon** is **Flying** and deals all damage as **Chaos Damage.**\n- **Paimon's** movement doesn't trigger hostile **Reactions.**\n\n**ATK:** 1 | **MAG:** 1 | **HP:** [tier]+5 | **DEF:** 10 | **SPD:** 3 | **FP:** 0\n\n**Paimon** is **Legendary** and has the **Cure** Reaction, which uses your Reaction. *(You can't control more than one Legendary Summon.)*",
+      "parent": "occultist-conjure-dantalion"
     },
     {
       "id": "occultist-the-cure",
@@ -6861,8 +6841,7 @@
         "special",
         "reaction"
       ],
-      "description": "**Condition:** An allied character moves adjacent to or begins their turn adjacent to **Paimon.**\r\n\r\n**Effect:** **Paimon** suffers **2 Chaos Damage.** The allied character clears up to one non-self-inflicted **Condition** and may become **Blessed** or gain **Barrier 2.** *(Their choice.)* This **Barrier** isn't lost as turns end.",
-      "parent": "occultist-conjure-paimon"
+      "description": "**Condition:** An allied character moves adjacent to or begins their turn adjacent to **Paimon.**\r\n\r\n**Effect:** **Paimon** suffers **2 Chaos Damage.** The allied character clears up to one non-self-inflicted **Condition** and may become **Blessed** or gain **Barrier 2.** *(Their choice.)* This **Barrier** isn't lost as turns end."
     },
     {
       "id": "occultist-the-concept",
@@ -6885,7 +6864,8 @@
         "spell",
         "limitround"
       ],
-      "description": "Recover one third of your maximum **Focus.**"
+      "description": "Recover one third of your maximum **Focus.**",
+      "parent": "occultist-conjure-paimon"
     },
     {
       "id": "occultist-the-boundary",
@@ -6904,7 +6884,7 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [],
-      "description": "**Beginning of Encounter:** Perform a *Summon Spell* **Action** as a **Free Reaction** before any character takes a turn. *(You still pay its costs.)*"
+      "description": "**Beginning of Encounter:** Perform a *Summon Spell* **Action** as a **Free Reaction** before any character takes a turn. *(You still pay its other costs.)*"
     },
     {
       "id": "occultist-the-curse",
@@ -6928,7 +6908,7 @@
         "attack",
         "limitround"
       ],
-      "description": "**On Attack:** At the beginning of your next turn — up to one **Summon** you control performs **The Curse** as a **Free Action (0ap)** with no **Focus Cost.**"
+      "description": "**On Attack:** At the beginning of your next turn, up to one **Summon** you control performs **The Curse** as a **Free Action (0ap)** with no **Focus Cost.**"
     },
     {
       "id": "occultist-the-pattern",
@@ -6983,7 +6963,7 @@
       "class": "occultist",
       "rank": 4,
       "cost": "1",
-      "focusCost": 2,
+      "focusCost": 0,
       "range": "",
       "isAttack": false,
       "damage": "",
@@ -7067,8 +7047,7 @@
         "special",
         "passive"
       ],
-      "description": "**Nightmare's** first **Melee Attack Action** each turn has **On Hit:** Target makes a **Resistance Roll** or suffers **Push 2** and **Dazed +1.** The character suffers **Push 1** on a **Resist.**",
-      "parent": "occultist-the-nightmare"
+      "description": "**Nightmare's** first **Melee Attack Action** each turn has **On Hit:** Target makes a **Resistance Roll** or suffers **Push 2** and **Dazed +1.** The character suffers **Push 1** on a **Resist.**"
     },
     {
       "id": "occultist-nightmare-the-end",
@@ -7114,7 +7093,8 @@
       "tags": [
         "limitround"
       ],
-      "description": "**1/Round:** Deal **[tier]+1 Piercing Chaos Damage** to up to one hostile character within **Range.**\n\nThis damage can't be prevented or resisted. It doesn't target the chosen character and ignores the effects of all abilities, statuses, and conditions. **Certain Doom** doesn't trigger **Reactions** and can never deal bonus damage or increased damage."
+      "description": "**1/Round:** Deal **[tier]+1 Piercing Chaos Damage** to up to one hostile character within **Range.**\n\nThis damage can't be prevented or resisted. It doesn't target the chosen character and ignores the effects of all abilities, statuses, and conditions. **Certain Doom** doesn't trigger **Reactions** and can never deal bonus damage or increased damage.",
+      "parent": "occultist-the-nightmare"
     },
     {
       "id": "seer-oracles-path",
@@ -7202,8 +7182,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**1/Round — Condition:** An **Action Resolution** is rolled and a result is determined.\r\n\r\n**Effect:** Change one of the **Action Resolution** dice to a **1** or **6,** possibly changing the outcome of the **Action Resolution.**\r\n\r\n**Adjudicate** is a **Free Reaction.** Additionally, you can't be prevented from taking this **Reaction,** except for by its own **1/Round** limit. *(For example, you can use it while under the effects of harmful Conditions that prevent the use of Reactions. You can use it if you've already performed other Reactions this turn. You can use it while staggered, downed, unconscious, dead, unable to perform actions, or if you are somehow no longer present in the scene.)*",
-      "parent": "seer-ultimate"
+      "description": "**1/Round — Condition:** An **Action Resolution** is rolled and a result is determined.\r\n\r\n**Effect:** Change one of the **Action Resolution** dice to a **1** or **6,** possibly changing the outcome of the **Action Resolution.**\r\n\r\n**Adjudicate** is a **Free Reaction.** Additionally, you can't be prevented from taking this **Reaction,** except for by its own **1/Round** limit. *(For example, you can use it while under the effects of harmful Conditions that prevent the use of Reactions. You can use it if you've already performed other Reactions this turn. You can use it while staggered, downed, unconscious, dead, unable to perform actions, or if you are somehow no longer present in the scene.)*"
     },
     {
       "id": "seer-heroic-time-manipulation",
@@ -7226,7 +7205,8 @@
         "spell",
         "limitencounter"
       ],
-      "description": "**1/Encounter — Spend 1 Inspiration:** Your next **Action** has **-1 AP Cost** *(min. 0).*"
+      "description": "**1/Encounter — Spend 1 Inspiration:** Your next **Action** has **-1 AP Cost** *(min. 0).*",
+      "parent": "seer-ultimate"
     },
     {
       "id": "seer-heroic-haruspex",
@@ -7270,8 +7250,7 @@
         "heroic",
         "spell"
       ],
-      "description": "While adjacent to a hostile character with **0 HP:** Pay half your maximum HP as an additional cost. If you do, remove that character from play and increase the **Flow of Battle** by 1.",
-      "parent": "seer-heroic-haruspex"
+      "description": "While adjacent to a hostile character with **0 HP:** Pay half your maximum HP as an additional cost. If you do, remove that character from play and increase the **Flow of Battle** by 1."
     },
     {
       "id": "seer-heroic-limitless-willpower",
@@ -7292,7 +7271,8 @@
       "tags": [
         "heroic"
       ],
-      "description": "If you would pay a **Focus** cost, you may instead **Spend 1 Inspiration.**"
+      "description": "If you would pay a **Focus** cost, you may instead **Spend 1 Inspiration.**",
+      "parent": "seer-heroic-haruspex"
     },
     {
       "id": "seer-heroic-foresight",
@@ -7421,7 +7401,7 @@
     },
     {
       "id": "seer-manipulate-fate",
-      "name": "Manipulate Fate",
+      "name": "Unseen Strings",
       "class": "seer",
       "rank": 2,
       "cost": "1",
@@ -7440,7 +7420,7 @@
         "spell",
         "limitround"
       ],
-      "description": "An allied character in **Range** immediately performs a *Basic* **Move Action** as a **Free Reaction.**"
+      "description": "Up to one allied character in **Range** may perform a *Basic* **Move Action** as a **Free Reaction**. *(This movement is voluntary.)*"
     },
     {
       "id": "seer-prepared-heal",
@@ -7473,7 +7453,7 @@
       "rank": 1,
       "cost": "1",
       "focusCost": 2,
-      "range": "Range 3",
+      "range": "Range 4",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -7495,7 +7475,7 @@
       "rank": 3,
       "cost": "2",
       "focusCost": 3,
-      "range": "Range 5",
+      "range": "Range 4",
       "isAttack": false,
       "damage": "",
       "hasGraze": false,
@@ -7557,7 +7537,7 @@
     },
     {
       "id": "seer-conceal-reality",
-      "name": "Conceal Reality",
+      "name": "Veil",
       "class": "seer",
       "rank": 4,
       "cost": "2",
@@ -7576,7 +7556,7 @@
         "spell",
         "limitround"
       ],
-      "description": "Choose a **Size 1 Area** in **Range.**\r\n\r\nUntil the end of your next turn: Characters in that area have **Concealment 3.**\r\n\r\n**Sustain (2ap):** Move the area **2 tiles** in any direction."
+      "description": "Create a **Veil**, a **Size 1 Area** centered on a tile in **Range**. Allied characters in the area receive **Barrier +2**, which isn't lost as turns end. The Veil grants **Concealment 3** to characters in the area and lasts until the end of your next turn or until you perform **Veil** again.\nSustain (**1 AP**): You move the Veil **2 spaces** in any direction, and it lasts until the end of your next turn."
     },
     {
       "id": "seer-entelechy",
@@ -8401,11 +8381,11 @@
       "description": "The target makes a **Resistance Roll** or becomes **Off Guard**."
     },
     {
-      "id": "masquerade-dash",
-      "name": "Dash",
+      "id": "masquerade-acrobatics",
+      "name": "Acrobatics",
       "class": "masquerade",
       "rank": 1,
-      "cost": "1",
+      "cost": "reaction",
       "focusCost": 2,
       "range": "",
       "isAttack": false,
@@ -8418,9 +8398,10 @@
       "isHeroicTalent": false,
       "tags": [
         "movement",
+        "reaction",
         "limitround"
       ],
-      "description": "**Move** up to **Speed**+2. You become **Off Guard**."
+      "description": "- **1/Round � Condition**: An **Attack** misses you, and you are not in a *Shield* **Stance**.\n- **Effect � Focus Cost 2**: Perform the *Basic* **Evade Action** as part of this **Reaction**."
     },
     {
       "id": "masquerade-inspiringstrike",
@@ -8530,7 +8511,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "**Silhouette** doesn't trigger **Reactions**.\n- **Condition: An adjacent character performs a *Movement* **Action**.\n- **Effect (Focus Cost 2):** Perform the *Basic* **Evade Action** as part of this **Reaction**."
+      "description": "**Silhouette** doesn't trigger **Reactions**.\n- **Condition: An adjacent character performs a *Movement* **Action**.\n- **Effect (Focus Cost 2):** Perform the *Basic* **Move Action** as part of this **Reaction**."
     },
     {
       "id": "masquerade-closedposition",
@@ -8626,7 +8607,7 @@
       "name": "Falling Petals",
       "class": "masquerade",
       "rank": 4,
-      "cost": "reaction",
+      "cost": "passive",
       "focusCost": 3,
       "range": "Range 3",
       "isAttack": false,
@@ -8638,10 +8619,9 @@
       "isInnate": false,
       "isHeroicTalent": false,
       "tags": [
-        "weapon",
-        "reaction"
+        "limitencounter"
       ],
-      "description": "**Condition:** You finish performing an **Action** that inflicts **Dazed, Off Guard, or Blinded** on a hostile character.\n\n**Effect** **(Focus Cost 3)**: Each hostile character within **Range** makes a **Resistance Roll** or suffers each **Condition** inflicted by the triggering **Action**."
+      "description": "**1/Encounter:** As you finish performing an **Action** that inflicts **Dazed**, **Off Guard**, or **Blinded** on a hostile character, you may spend **3 Focus** to force each hostile character within **Range 3** to make a **Resistance Roll** or suffer each **Condition** inflicted by the triggering **Action**."
     },
     {
       "id": "masquerade-improvisation",
@@ -8687,8 +8667,7 @@
         "attack",
         "limitround"
       ],
-      "description": "Perform only as a part of **Inspiration.**\n\n**On Hit:** The target is **Blinded** 3.",
-      "parent": "masquerade-improvisation"
+      "description": "Perform only as a part of **Inspiration.**\n\n**On Hit:** The target is **Blinded** 3."
     },
     {
       "id": "masquerade-improvisation-special-2",
@@ -8782,7 +8761,8 @@
         "spell",
         "reaction"
       ],
-      "description": "**Condition:** A turn ends.\n\n**Effect (Focus Cost 3):** Up to one hostile character within **Range** suffers **+1** to each incremental **Condition** that character suffered this turn. Then, that character makes a **Resistance Roll** with **+1 Disadvantage** or suffers ***x*** **Piercing Chaos Damage**, where ***x*** is half the total amount of damage that character suffered this turn."
+      "description": "**Condition:** A turn ends.\n\n**Effect (Focus Cost 3):** Up to one hostile character within **Range 3** makes a **Resistance Roll** or suffers ***x*** **Piercing Chaos Damage**, where ***x*** is half the total damage that character suffered this turn. Then, that character is **Dazed +1** if they became **Dazed** this turn � repeat this process for **Stunned**, **Poisoned**, and **Blinded**.",
+      "parent": "masquerade-improvisation"
     },
     {
       "id": "masquerade-virtuoso",
@@ -9325,8 +9305,7 @@
         "reaction",
         "limitturn"
       ],
-      "description": "**Condition:** You would be dealt damage or forced to make a **Resistance Roll.**\n\n**Effect:** Consume a charge from the **Fountain.** You gain **+3 Barrier** before taking that damage or gain **+1 Advantage on the Resistance Roll.**",
-      "parent": "lightbearer-fountain"
+      "description": "**Condition:** You would be dealt damage or forced to make a **Resistance Roll.**\n\n**Effect:** Consume a charge from the **Fountain.** You gain **+3 Barrier** before taking that damage or gain **+1 Advantage on the Resistance Roll.**"
     },
     {
       "id": "lightbearer-wingsofhope",
@@ -9349,7 +9328,8 @@
         "spell",
         "limitencounter"
       ],
-      "description": "Until the start of your next turn, you are **Immobilized** and **Flying.** During this time, you also have **Damage Resistance** and the **Rise Up Through The Night** Reaction."
+      "description": "Until the start of your next turn, you are **Immobilized** and **Flying.** During this time, you also have **Damage Resistance** and the **Rise Up Through The Night** Reaction.",
+      "parent": "lightbearer-fountain"
     },
     {
       "id": "lightbearer-wingsofhope-special",
@@ -9373,8 +9353,7 @@
         "movement",
         "limitencounter"
       ],
-      "description": "**Condition:** Your turn begins.\n\n**Effect:** **Move 12**. **During this movement:** You are **Flying** and don't trigger hostile **Reactions**. **At the end of this movement,** you confer [mag] **Healing** to adjacent allied characters.",
-      "parent": "lightbearer-wingsofhope"
+      "description": "**Condition:** Your turn begins.\n\n**Effect:** **Move 12**. **During this movement:** You are **Flying** and don't trigger hostile **Reactions**. **At the end of this movement,** you confer [mag] **Healing** to adjacent allied characters."
     },
     {
       "id": "lightbearer-scour",
@@ -9397,7 +9376,8 @@
         "spell",
         "attack"
       ],
-      "description": "**On Hit:** Adjacent hostile characters suffer half the damage dealt to the primary target. *(No roll.)*\n\nApply half the total damage dealt to all hostile characters by this spell as **Healing,** increased by bonuses to your **Healing** and divided as you choose among yourself and allied characters within **Range 4.** This **Healing** doesn't benefit from **Bonus Healing**."
+      "description": "**On Hit:** Adjacent hostile characters suffer half the damage dealt to the primary target. *(No roll.)*\n\nApply half the total damage dealt to all hostile characters by this spell as **Healing,** increased by bonuses to your **Healing** and divided as you choose among yourself and allied characters within **Range 4.** This **Healing** doesn't benefit from **Bonus Healing**.",
+      "parent": "lightbearer-wingsofhope"
     },
     {
       "id": "warden-sentinel-stance",
@@ -9748,8 +9728,7 @@
         "reaction",
         "limitround"
       ],
-      "description": "- **Condition:** A turn ends.\n- **Effect:** Perform the *Basic* **Attack** **Action**.",
-      "parent": "warden-fangs-bared"
+      "description": "- **Condition:** A turn ends.\n- **Effect:** Perform the *Basic* **Attack** **Action**."
     },
     {
       "id": "warden-trip-attack",
@@ -9770,7 +9749,8 @@
       "tags": [
         "bound"
       ],
-      "description": "The **Bound** *Attack* deals half damage, deals no **Bonus Damage**, and has **On Hit:** The target makes a **Resistance Roll** or becomes **Prone**. A character that **Resists** can't become **Prone** this way this round."
+      "description": "The **Bound** *Attack* deals half damage, deals no **Bonus Damage**, and has **On Hit:** The target makes a **Resistance Roll** or becomes **Prone**. A character that **Resists** can't become **Prone** this way this round.",
+      "parent": "warden-fangs-bared"
     },
     {
       "id": "warden-heavy-strike",
@@ -10011,6 +9991,160 @@
         "heroic"
       ],
       "description": "Your *Ranged Attacks* don't suffer **+1 Disadvantage** from adjacency to a hostile character, and you have **Ranged Stance.**"
+    },
+    {
+      "id": "towers-generic-raise-shield",
+      "name": "Raise Shield",
+      "class": "towers",
+      "rank": 0,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "shield"
+      ],
+      "description": "Until the start of your next turn, you have the **Block Reaction**.",
+      "parent": "towers-generic-shield-stance"
+    },
+    {
+      "id": "towers-generic-block",
+      "name": "Raise Shield: Block",
+      "class": "towers",
+      "rank": 0,
+      "cost": "reaction",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "special",
+        "shield",
+        "reaction",
+        "limitround"
+      ],
+      "description": "**Condition:** You are targeted by an **Attack** that would deal 1 or more damage.\n**Effect:** Gain **Barrier** equal to your **Block Rating**. If you have no **Barrier** remaining after the attack, you can't use this *Reaction* for the rest of the encounter.",
+      "parent": "towers-generic-shield-stance"
+    },
+    {
+      "id": "blades-generic-dash",
+      "name": "Dash",
+      "class": "blades",
+      "rank": 1,
+      "cost": "1",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "attack",
+        "movement",
+        "limitround"
+      ],
+      "description": "**Move** with **+2 Speed**. You become **Off Guard**.\n\n*(During your turn, Attack Actions have +1 Disadvantage for each other Attack Action performed this turn.)*"
+    },
+    {
+      "id": "magi-generic-fog-cloud",
+      "name": "Fog Cloud",
+      "class": "magi",
+      "rank": 1,
+      "cost": "2",
+      "focusCost": 3,
+      "range": "Range 4",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "support",
+        "spell",
+        "limitround"
+      ],
+      "description": "Create **Fog Cloud**, a **Size 1 Area** centered on target tile within **Range 4**.\n\nCharacters in the area have **Concealment 2**. **Fog Cloud** lasts until the start of your next turn, or until you perform this **Action** again."
+    },
+    {
+      "id": "towers-generic-second-wind",
+      "name": "Second Wind",
+      "class": "towers",
+      "rank": 1,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "**1/Encounter**: When you **Refocus**, you can expend this *Passive* to **get a Second Wind** instead of paying **1 Tenacity**. You additionally become **Blessed**."
+    },
+    {
+      "id": "glyphs-generic-shift",
+      "name": "Shift",
+      "class": "glyphs",
+      "rank": 1,
+      "cost": "1",
+      "focusCost": 1,
+      "range": "Range 4",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [
+        "support",
+        "limitround"
+      ],
+      "description": "Up to one allied character in **Range** may perform a *Basic* **Evade Action** as a **Free Reaction**."
+    },
+    {
+      "id": "seer-far-sight",
+      "name": "Far Sight",
+      "class": "seer",
+      "rank": 0,
+      "cost": "passive",
+      "focusCost": 0,
+      "range": "",
+      "isAttack": false,
+      "damage": "",
+      "hasGraze": false,
+      "grazeDamage": "",
+      "hasResistance": false,
+      "resistanceDV": "10",
+      "isInnate": false,
+      "isHeroicTalent": false,
+      "tags": [],
+      "description": "Your *Support Spells* with **Range** have **+1 Range**."
     }
   ],
   "classes": [
@@ -10031,11 +10165,14 @@
         "towers-generic-shove",
         "towers-generic-toughness",
         "towers-generic-shield-stance",
+        "towers-generic-raise-shield",
+        "towers-generic-block",
         "towers-generic-ensnare",
         "towers-generic-stampede",
         "towers-generic-toughness-2",
         "towers-generic-armor",
-        "towers-generic-ironskin"
+        "towers-generic-ironskin",
+        "towers-generic-second-wind"
       ]
     },
     {
@@ -10049,7 +10186,7 @@
         "spd": 3,
         "armor": 2,
         "focusPool": 7,
-        "maxHP": 10
+        "maxHP": 12
       },
       "abilities": [
         "paladin-stance",
@@ -10092,15 +10229,17 @@
         "spd": 4,
         "armor": 1,
         "focusPool": 6,
-        "maxHP": 10
+        "maxHP": 12
       },
       "abilities": [
         "warrior-stance-gladiator",
         "warrior-stance-ranged",
         "warrior-stance-shield",
+        "towers-generic-raise-shield",
+        "towers-generic-block",
         "warrior-rearm",
         "warrior-ultimate",
-        "warrior-second-wind",
+        "warrior-opening-rush",
         "warrior-focus-attack",
         "warrior-mighty-attack",
         "warrior-shield-stagger",
@@ -10116,7 +10255,7 @@
         "warrior-onslaught",
         "warrior-demolish",
         "warrior-demolish-special",
-        "warrior-heroic-maneuver",
+        "warrior-heroic-action-surge",
         "warrior-heroic-leap",
         "warrior-heroic-armsmaster",
         "warrior-heroic-combat-reflexes",
@@ -10134,7 +10273,7 @@
         "spd": 3,
         "armor": 1,
         "focusPool": 8,
-        "maxHP": 11
+        "maxHP": 13
       },
       "abilities": [
         "avenger-shadowbringer",
@@ -10185,7 +10324,8 @@
         "blades-generic-staggeringblow",
         "blades-generic-foolsgambit",
         "blades-generic-sneak",
-        "blades-generic-fleetfoot"
+        "blades-generic-fleetfoot",
+        "blades-generic-dash"
       ]
     },
     {
@@ -10199,7 +10339,7 @@
         "spd": 4,
         "armor": 0,
         "focusPool": 7,
-        "maxHP": 10
+        "maxHP": 11
       },
       "abilities": [
         "blademaster-heroic-sword-summoner",
@@ -10236,7 +10376,7 @@
       "stats": {
         "atk": "d6",
         "mag": "d4",
-        "def": 11,
+        "def": 10,
         "spd": 4,
         "armor": 0,
         "focusPool": 8,
@@ -10255,14 +10395,13 @@
         "scoundrel-ultimate",
         "scoundrel-lightfoot",
         "scoundrel-rip",
-        "scoundrel-cheapshot",
+        "scoundrel-slice-and-dice",
         "scoundrel-quickstep",
         "scoundrel-dual-stance",
         "scoundrel-dual-stance-special",
         "scoundrel-impaler",
-        "scoundrel-opportunity",
         "scoundrel-violent-delights",
-        "scoundrel-knife-juggler",
+        "scoundrel-opportunity",
         "scoundrel-cloak-of-shadows",
         "scoundrel-cripple",
         "scoundrel-adrenaline",
@@ -10282,7 +10421,7 @@
         "spd": 4,
         "armor": 0,
         "focusPool": 6,
-        "maxHP": 8
+        "maxHP": 10
       },
       "abilities": [
         "marksman-ranged-stance",
@@ -10366,7 +10505,7 @@
         "spd": 4,
         "armor": 1,
         "focusPool": 8,
-        "maxHP": 10
+        "maxHP": 11
       },
       "abilities": [
         "tactician-sign",
@@ -10418,7 +10557,8 @@
         "magi-generic-addle",
         "magi-generic-blink",
         "magi-generic-supreme-calamity",
-        "magi-generic-signature-spell"
+        "magi-generic-signature-spell",
+        "magi-generic-fog-cloud"
       ]
     },
     {
@@ -10442,7 +10582,8 @@
         "glyphs-generic-cleric-stance",
         "glyphs-generic-healer-2",
         "glyphs-generic-focus-2",
-        "glyphs-generic-condemnation"
+        "glyphs-generic-condemnation",
+        "glyphs-generic-shift"
       ]
     },
     {
@@ -10503,7 +10644,7 @@
         "spd": 3,
         "armor": 0,
         "focusPool": 10,
-        "maxHP": 7
+        "maxHP": 8
       },
       "abilities": [
         "mender-life-essence",
@@ -10650,11 +10791,11 @@
       "stats": {
         "atk": "d6",
         "mag": "d6",
-        "def": 10,
+        "def": 11,
         "spd": 4,
         "armor": 0,
         "focusPool": 9,
-        "maxHP": 8
+        "maxHP": 9
       },
       "abilities": [
         "masquerade-stance",
@@ -10667,7 +10808,7 @@
         "masquerade-heroic-misdirection",
         "masquerade-heroic-techstep",
         "masquerade-feint",
-        "masquerade-dash",
+        "masquerade-acrobatics",
         "masquerade-inspiringstrike",
         "masquerade-performance",
         "masquerade-cascade",
@@ -10741,7 +10882,7 @@
         "spd": 4,
         "armor": 1,
         "focusPool": 8,
-        "maxHP": 8
+        "maxHP": 10
       },
       "abilities": [
         "warden-sentinel-stance",
