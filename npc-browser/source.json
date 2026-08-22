@@ -255,7 +255,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>1/Round. <strong>Condition:</strong> A hostile character within <strong>Range 4</strong> makes an <strong>Action Resolution</strong> where the dice show exactly two &quot;1&quot;s.<br><strong>Effect:</strong> Consult the other number shown on the dice. For the rest of the encounter or until the Aberration is defeated � that character treats that value on any die they roll (including an Action Resolution, Advantage, Disadvantage, or damage die) as a 0.</p>",
+        "effect": "<p>1/Round. <strong>Condition:</strong> A hostile character within <strong>Range 4</strong> makes an <strong>Action Resolution</strong> where the dice show exactly two &quot;1&quot;s.<br><strong>Effect:</strong> Consult the other number shown on the dice. For the rest of the encounter or until the Aberration is defeated — that character treats that value on any die they roll (including an Action Resolution, Advantage, Disadvantage, or damage die) as a 0.</p>",
         "_tagIds": [
           "reaction",
           "limitround"
@@ -431,7 +431,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> An allied character within <strong>Principality</strong> is hit with an <em>Attack</em>.</p>\n<p>� <strong>Effect:</strong> That character has <strong>Damage Resistance</strong> to the triggering <em>Attack</em> and ignores up to one <strong>Condition</strong> caused by that <em>Attack.</em></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> An allied character within <strong>Principality</strong> is hit with an <em>Attack</em>.</p>\n<p>• <strong>Effect:</strong> That character has <strong>Damage Resistance</strong> to the triggering <em>Attack</em> and ignores up to one <strong>Condition</strong> caused by that <em>Attack.</em></p>",
         "_tagIds": [
           "support",
           "spell",
@@ -639,7 +639,7 @@
         "hasResistance": true,
         "resistanceDamage": "9+[tier]",
         "range": "",
-        "effect": "<p>Hostile characters within <strong>Principality</strong> make a <strong>Resistance Roll</strong> or suffer <strong>2[LV] Damage</strong> and <strong>Push 3.</strong> A character that <strong>Resists</strong> takes half damage and isn�t <strong>Pushed.</strong></p>",
+        "effect": "<p>Hostile characters within <strong>Principality</strong> make a <strong>Resistance Roll</strong> or suffer <strong>2[LV] Damage</strong> and <strong>Push 3.</strong> A character that <strong>Resists</strong> takes half damage and isn’t <strong>Pushed.</strong></p>",
         "_tagIds": [
           "spell"
         ]
@@ -1169,7 +1169,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>Perform <strong>Ragdoll</strong> only if a hostile character was <strong>Immobilized</strong> by <strong>Clamp</strong> at the beginning of the <strong>Beast�s</strong> turn. A character <strong>Immobilized</strong> by <strong>Clamp</strong> suffers <strong>Push 4</strong>, <strong>Stunned +1,</strong> and <strong>Chaos Damage</strong> equal to half their current <strong>HP.</strong> If it collides with another character, both characters become <strong>Prone.</strong></p>",
+        "effect": "<p>Perform <strong>Ragdoll</strong> only if a hostile character was <strong>Immobilized</strong> by <strong>Clamp</strong> at the beginning of the <strong>Beast’s</strong> turn. A character <strong>Immobilized</strong> by <strong>Clamp</strong> suffers <strong>Push 4</strong>, <strong>Stunned +1,</strong> and <strong>Chaos Damage</strong> equal to half their current <strong>HP.</strong> If it collides with another character, both characters become <strong>Prone.</strong></p>",
         "_tagIds": []
       }
     },
@@ -1217,7 +1217,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Encounter:</strong> The <strong>Beast Moves x2 Speed.</strong> During this <em>Movement</em>: it can�t change directions, passes through hostile characters, has <strong>Damage Resistance</strong>, ignores <strong>Difficult Terrain,</strong> doesn�t trigger <strong>Reactions,</strong> and hostile characters it becomes adjacent to or passes through make a <strong>Resistance Roll,</strong> becoming <strong>Prone</strong> on a failure. At the end of this movement: the <strong>Beast</strong> can perform <strong>Clamp</strong> as a <strong>Free Action</strong> (?)<strong>.</strong></p>",
+        "effect": "<p><strong>1/Encounter:</strong> The <strong>Beast Moves x2 Speed.</strong> During this <em>Movement</em>: it can’t change directions, passes through hostile characters, has <strong>Damage Resistance</strong>, ignores <strong>Difficult Terrain,</strong> doesn’t trigger <strong>Reactions,</strong> and hostile characters it becomes adjacent to or passes through make a <strong>Resistance Roll,</strong> becoming <strong>Prone</strong> on a failure. At the end of this movement: the <strong>Beast</strong> can perform <strong>Clamp</strong> as a <strong>Free Action</strong> (?)<strong>.</strong></p>",
         "_tagIds": [
           "limitencounter"
         ]
@@ -1243,7 +1243,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>When the <strong>Beast�s Melee Attack</strong> hits a character <strong>Immobilized</strong> by <strong>Clamp:</strong> That character is <strong>Perpetually Sundered</strong> until they <strong>Refocus.</strong></p>",
+        "effect": "<p>When the <strong>Beast’s Melee Attack</strong> hits a character <strong>Immobilized</strong> by <strong>Clamp:</strong> That character is <strong>Perpetually Sundered</strong> until they <strong>Refocus.</strong></p>",
         "_tagIds": []
       }
     },
@@ -1294,7 +1294,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>For the rest of the encounter, the <strong>Beast</strong> has <strong>0 Armor</strong> and can�t receive <strong>Healing</strong> or be the target of <em>Support</em> <strong>Actions.</strong> It has <strong>+1 SPD</strong> and gains (?) at the beginning of each of its turns.</p>",
+        "effect": "<p>For the rest of the encounter, the <strong>Beast</strong> has <strong>0 Armor</strong> and can’t receive <strong>Healing</strong> or be the target of <em>Support</em> <strong>Actions.</strong> It has <strong>+1 SPD</strong> and gains (?) at the beginning of each of its turns.</p>",
         "_tagIds": []
       }
     },
@@ -1342,7 +1342,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Cleave 2",
-        "effect": "<p>� <strong>Cleaving Attack</strong> must target two hostile characters if able and gains <strong>+1 Disadvantage</strong> against more than one character.</p>\n<p>� <strong>On Hit:</strong> This turn, the <strong>Champion</strong> may perform <strong>Mark</strong> on the target as a <strong>Free Action.</strong></p>",
+        "effect": "<p>• <strong>Cleaving Attack</strong> must target two hostile characters if able and gains <strong>+1 Disadvantage</strong> against more than one character.</p>\n<p>• <strong>On Hit:</strong> This turn, the <strong>Champion</strong> may perform <strong>Mark</strong> on the target as a <strong>Free Action.</strong></p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -1370,7 +1370,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Range 10",
-        "effect": "<p><strong>1/Round:</strong> The <strong>Marked</strong> character makes a <strong>Resistance Roll</strong> or chooses � that character must either become <strong>Prone</strong> or perform the <em>Basic</em> <strong>Move Action</strong> as a <strong>Free Reaction</strong> in a direction of the <strong>Champion�s</strong> choice.</p>",
+        "effect": "<p><strong>1/Round:</strong> The <strong>Marked</strong> character makes a <strong>Resistance Roll</strong> or chooses — that character must either become <strong>Prone</strong> or perform the <em>Basic</em> <strong>Move Action</strong> as a <strong>Free Reaction</strong> in a direction of the <strong>Champion’s</strong> choice.</p>",
         "_tagIds": [
           "spell",
           "reaction",
@@ -1398,7 +1398,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> The <strong>Champion�s Marked</strong> character performs an <strong>Action</strong> that targets or affects the <strong>Champion�s</strong> allies, and the <strong>Champion</strong> is not included among the targeted or affected characters. The <strong>Effect</strong> is based on the <strong>Champion�s Mark.</strong></p>\n<p>o <strong>Guidance:</strong> The <strong>Marked</strong> character becomes <strong>Prone</strong> and <strong>Off Guard.</strong></p>\n<p>o <strong>Asceticism:</strong> The <strong>Marked</strong> character makes a <strong>Resistance Roll</strong> or becomes <strong>Silenced 1</strong> and <strong>Disarmed 1.</strong></p>\n<p>o <strong>Fear:</strong> The <strong>Marked</strong> character makes a <strong>Resistance Roll</strong> or becomes <strong>Immobilized 1.</strong></p>\n<p>o <strong>Pursuit:</strong> The <strong>Champion</strong> switches places with up to one target of the triggering <strong>Action;</strong> that character gains <strong>Damage Resistance</strong> to and clears up to one <strong>Condition</strong> caused by the triggering <strong>Action</strong>.</p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> The <strong>Champion’s Marked</strong> character performs an <strong>Action</strong> that targets or affects the <strong>Champion’s</strong> allies, and the <strong>Champion</strong> is not included among the targeted or affected characters. The <strong>Effect</strong> is based on the <strong>Champion’s Mark.</strong></p>\n<p>o <strong>Guidance:</strong> The <strong>Marked</strong> character becomes <strong>Prone</strong> and <strong>Off Guard.</strong></p>\n<p>o <strong>Asceticism:</strong> The <strong>Marked</strong> character makes a <strong>Resistance Roll</strong> or becomes <strong>Silenced 1</strong> and <strong>Disarmed 1.</strong></p>\n<p>o <strong>Fear:</strong> The <strong>Marked</strong> character makes a <strong>Resistance Roll</strong> or becomes <strong>Immobilized 1.</strong></p>\n<p>o <strong>Pursuit:</strong> The <strong>Champion</strong> switches places with up to one target of the triggering <strong>Action;</strong> that character gains <strong>Damage Resistance</strong> to and clears up to one <strong>Condition</strong> caused by the triggering <strong>Action</strong>.</p>",
         "_tagIds": []
       }
     },
@@ -1422,7 +1422,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p><strong>1/Round:</strong> Up to one hostile character within <strong>Range 3</strong> gains the <strong>Champion�s Mark</strong>. Only one character can be <strong>Marked</strong> by the <strong>Champion</strong> at a time; the <strong>Champion�s Mark</strong> is cleared from other characters at this time.</p>",
+        "effect": "<p><strong>1/Round:</strong> Up to one hostile character within <strong>Range 3</strong> gains the <strong>Champion’s Mark</strong>. Only one character can be <strong>Marked</strong> by the <strong>Champion</strong> at a time; the <strong>Champion’s Mark</strong> is cleared from other characters at this time.</p>",
         "_tagIds": [
           "spell",
           "limitround"
@@ -1449,7 +1449,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>Choose a <strong>Champion�s Mark</strong> when the <strong>Champion</strong> is created. The <strong>Mark</strong> is a special <strong>Condition.</strong></p>\n<p>� <strong>Guidance</strong> � Attacks against the <strong>Marked</strong> character have <strong>On Miss:</strong> Reroll the attack against that character.</p>\n<p>� <strong>Asceticism</strong> � When the <strong>Marked</strong> character spends <strong>Focus,</strong> the <strong>Champion</strong> gains <strong>Barrier</strong> +<em><strong>x</strong></em> equal to the <strong>Focus</strong> spent that isn�t lost as turns end.</p>\n<p>� <strong>Fear</strong> � The <strong>Marked</strong> character is <strong>Perpetually Dazed</strong> while within <strong>Range 3</strong> of the <strong>Champion.</strong></p>\n<p>� <strong>Pursuit</strong> � The <strong>Champion</strong> can <strong>Teleport</strong> to a free space within <strong>Range 3</strong> of the <strong>Marked</strong> character at the end of that character�s turn.</p>",
+        "effect": "<p>Choose a <strong>Champion’s Mark</strong> when the <strong>Champion</strong> is created. The <strong>Mark</strong> is a special <strong>Condition.</strong></p>\n<p>• <strong>Guidance</strong> — Attacks against the <strong>Marked</strong> character have <strong>On Miss:</strong> Reroll the attack against that character.</p>\n<p>• <strong>Asceticism</strong> — When the <strong>Marked</strong> character spends <strong>Focus,</strong> the <strong>Champion</strong> gains <strong>Barrier</strong> +<em><strong>x</strong></em> equal to the <strong>Focus</strong> spent that isn’t lost as turns end.</p>\n<p>• <strong>Fear</strong> — The <strong>Marked</strong> character is <strong>Perpetually Dazed</strong> while within <strong>Range 3</strong> of the <strong>Champion.</strong></p>\n<p>• <strong>Pursuit</strong> — The <strong>Champion</strong> can <strong>Teleport</strong> to a free space within <strong>Range 3</strong> of the <strong>Marked</strong> character at the end of that character’s turn.</p>",
         "_tagIds": []
       }
     },
@@ -1473,7 +1473,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Melee",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> An adjacent <strong>Marked</strong> character moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> Perform the following attack on the triggering character before the triggering <strong>Action �</strong> <em>Melee Weapon Attack,</em> <strong>Range:</strong> <em>Melee,</em> <strong>DMG:</strong> [LV]+1 <strong>Piercing</strong>, <strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or is <strong>Slowed.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> An adjacent <strong>Marked</strong> character moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> Perform the following attack on the triggering character before the triggering <strong>Action —</strong> <em>Melee Weapon Attack,</em> <strong>Range:</strong> <em>Melee,</em> <strong>DMG:</strong> [LV]+1 <strong>Piercing</strong>, <strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or is <strong>Slowed.</strong></p>",
         "_tagIds": [
           "attack",
           "reaction",
@@ -1707,7 +1707,7 @@
         "hasResistance": false,
         "resistanceDamage": "9+[tier]",
         "range": "Range 5",
-        "effect": "<p><strong>Condition:</strong> An allied character within <strong>Range</strong> is hit by an <em>Attack</em> as part of an <em>Attack</em> <strong>Action</strong>.</p>\n<p><strong>Effect:</strong> Interrupt the triggering <strong>Action</strong>�The attacked character gains <strong>Damage Resistance</strong> against the attack&#39;s damage, prevents all <strong>Conditions</strong> inflicted by the attack, and may <strong>Teleport 4</strong>.</p>",
+        "effect": "<p><strong>Condition:</strong> An allied character within <strong>Range</strong> is hit by an <em>Attack</em> as part of an <em>Attack</em> <strong>Action</strong>.</p>\n<p><strong>Effect:</strong> Interrupt the triggering <strong>Action</strong>—The attacked character gains <strong>Damage Resistance</strong> against the attack&#39;s damage, prevents all <strong>Conditions</strong> inflicted by the attack, and may <strong>Teleport 4</strong>.</p>",
         "_tagIds": [
           "support",
           "spell",
@@ -2052,7 +2052,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>Hostile characters adjacent to the <strong>Executioner</strong> can�t perform <em>Support</em> <strong>Actions</strong> and don�t benefit from allied <em>Support</em> <strong>Actions.</strong></p>",
+        "effect": "<p>Hostile characters adjacent to the <strong>Executioner</strong> can’t perform <em>Support</em> <strong>Actions</strong> and don’t benefit from allied <em>Support</em> <strong>Actions.</strong></p>",
         "_tagIds": []
       }
     },
@@ -2076,7 +2076,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character becomes adjacent to the <strong>Executioner</strong> during a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> That character ends their current <em>Movement,</em> losing all remaining <em>Movement</em> from the triggering <strong>Action.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character becomes adjacent to the <strong>Executioner</strong> during a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> That character ends their current <em>Movement,</em> losing all remaining <em>Movement</em> from the triggering <strong>Action.</strong></p>",
         "_tagIds": [
           "reaction"
         ]
@@ -2178,7 +2178,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Line 4",
-        "effect": "<p><strong>Charged:</strong> All hostile characters in a <strong>Line 4</strong> make a <strong>Resistance Roll</strong> or take <strong>[LV]+1 Piercing Damage</strong> and <strong>Push 1</strong> in a direction of the <strong>Executioner�s</strong> choice. A character that <strong>Resists</strong> takes half damage and isn�t moved. The <strong>Executioner</strong> may either create <strong>Difficult Terrain</strong> in the area or clear all <strong>Difficult Terrain</strong> in the area.</p>",
+        "effect": "<p><strong>Charged:</strong> All hostile characters in a <strong>Line 4</strong> make a <strong>Resistance Roll</strong> or take <strong>[LV]+1 Piercing Damage</strong> and <strong>Push 1</strong> in a direction of the <strong>Executioner’s</strong> choice. A character that <strong>Resists</strong> takes half damage and isn’t moved. The <strong>Executioner</strong> may either create <strong>Difficult Terrain</strong> in the area or clear all <strong>Difficult Terrain</strong> in the area.</p>",
         "_tagIds": []
       }
     },
@@ -2253,7 +2253,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Melee",
-        "effect": "<p>� <strong>+1 Advantage</strong></p>\n<p>� Perform <strong>Headsman�s Swing</strong> only with <strong>Initiative.</strong></p>\n<p>� <strong>On Hit: Headsman�s Swing</strong> deals <strong>Piercing Chaos Damage.</strong> The base damage is equal to half the target�s maximum HP.</p>\n<p>� <strong>On Miss: Graze</strong> [LV]+1.</p>",
+        "effect": "<p>• <strong>+1 Advantage</strong></p>\n<p>• Perform <strong>Headsman’s Swing</strong> only with <strong>Initiative.</strong></p>\n<p>• <strong>On Hit: Headsman’s Swing</strong> deals <strong>Piercing Chaos Damage.</strong> The base damage is equal to half the target’s maximum HP.</p>\n<p>• <strong>On Miss: Graze</strong> [LV]+1.</p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -2311,7 +2311,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p>� <strong>On Hit:</strong> Repeat the attack with <strong>Flurry</strong> against a different character within <strong>Range</strong> 3 of the previous target.</p>\n<p>� The <strong>On Hit</strong> effect can occur <strong>LV+1</strong> times.</p>",
+        "effect": "<p>• <strong>On Hit:</strong> Repeat the attack with <strong>Flurry</strong> against a different character within <strong>Range</strong> 3 of the previous target.</p>\n<p>• The <strong>On Hit</strong> effect can occur <strong>LV+1</strong> times.</p>",
         "_tagIds": [
           "ranged",
           "weapon",
@@ -2525,7 +2525,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character within the <strong>Range</strong> of <strong>Heavy Attack</strong> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> Perform <strong>Heavy Attack</strong> on the triggering character before the triggering <strong>Action.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character within the <strong>Range</strong> of <strong>Heavy Attack</strong> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> Perform <strong>Heavy Attack</strong> on the triggering character before the triggering <strong>Action.</strong></p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -2579,7 +2579,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> An adjacent allied character is reduced to 0 HP.</p>\n<p>� <strong>Effect:</strong> The <strong>Guardian</strong> gains <strong>Barrier [LV]</strong> and may perform an <strong>Action</strong> that costs (??) or less as part of this <strong>Reaction.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> An adjacent allied character is reduced to 0 HP.</p>\n<p>• <strong>Effect:</strong> The <strong>Guardian</strong> gains <strong>Barrier [LV]</strong> and may perform an <strong>Action</strong> that costs (??) or less as part of this <strong>Reaction.</strong></p>",
         "_tagIds": [
           "reaction",
           "limitencounter"
@@ -2707,7 +2707,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Charged</strong>: The <strong>Invoker�s</strong> next <strong>Flame Strike</strong> has <strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or becomes <strong>Prone.</strong></p>",
+        "effect": "<p><strong>Charged</strong>: The <strong>Invoker’s</strong> next <strong>Flame Strike</strong> has <strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or becomes <strong>Prone.</strong></p>",
         "_tagIds": []
       }
     },
@@ -2731,7 +2731,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 6",
-        "effect": "<p><strong>Charged: Teleport</strong> to a free tile within <strong>Range 6</strong>. <strong>Blink</strong> doesn�t provoke <strong>Reactions</strong>.</p>",
+        "effect": "<p><strong>Charged: Teleport</strong> to a free tile within <strong>Range 6</strong>. <strong>Blink</strong> doesn’t provoke <strong>Reactions</strong>.</p>",
         "_tagIds": [
           "movement",
           "spell"
@@ -2784,7 +2784,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 7",
-        "effect": "<p>� Perform <strong>Flame Strike</strong> only with <strong>Initiative.</strong></p>\n<p>� <strong>On Attack:</strong> The <strong>Invoker</strong> is <strong>Immobilized 1.</strong></p>\n<p><strong>Flame Strike</strong> targets all characters in two <strong>Size 1 Areas</strong> within range. The areas can�t overlap.</p>",
+        "effect": "<p>• Perform <strong>Flame Strike</strong> only with <strong>Initiative.</strong></p>\n<p>• <strong>On Attack:</strong> The <strong>Invoker</strong> is <strong>Immobilized 1.</strong></p>\n<p><strong>Flame Strike</strong> targets all characters in two <strong>Size 1 Areas</strong> within range. The areas can’t overlap.</p>",
         "_tagIds": [
           "ranged",
           "spell",
@@ -2860,7 +2860,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character performs an <em>Attack</em> targeting the <strong>Invoker</strong> from <strong>Range 6</strong> or further.</p>\n<p>� <strong>Effect:</strong> That character becomes <strong>Off Guard.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character performs an <em>Attack</em> targeting the <strong>Invoker</strong> from <strong>Range 6</strong> or further.</p>\n<p>• <strong>Effect:</strong> That character becomes <strong>Off Guard.</strong></p>",
         "_tagIds": []
       }
     },
@@ -2884,7 +2884,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 8",
-        "effect": "<p>� <strong>Flare</strong> targets all characters in a <strong>Size 1 Area</strong> within <strong>Range.</strong></p>\n<p>� <strong>On Attack:</strong> The target loses all <strong>Concealment.</strong></p>\n<p>� <strong>On Hit:</strong> The target is <strong>Off Guard.</strong></p>",
+        "effect": "<p>• <strong>Flare</strong> targets all characters in a <strong>Size 1 Area</strong> within <strong>Range.</strong></p>\n<p>• <strong>On Attack:</strong> The target loses all <strong>Concealment.</strong></p>\n<p>• <strong>On Hit:</strong> The target is <strong>Off Guard.</strong></p>",
         "_tagIds": [
           "ranged",
           "spell",
@@ -3326,7 +3326,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> The <strong>Mindflayer</strong> becomes the target of a <em>Ranged Attack</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> That <strong>Action</strong> gains <strong>Focus Cost +1.</strong> Prevent the <strong>Action�s Effects</strong> if the <strong>Focus Cost</strong> can�t be paid. The <strong>AP Cost</strong> is still paid, and other costs are refunded.</p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> The <strong>Mindflayer</strong> becomes the target of a <em>Ranged Attack</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> That <strong>Action</strong> gains <strong>Focus Cost +1.</strong> Prevent the <strong>Action’s Effects</strong> if the <strong>Focus Cost</strong> can’t be paid. The <strong>AP Cost</strong> is still paid, and other costs are refunded.</p>",
         "_tagIds": [
           "spell",
           "reaction"
@@ -3382,7 +3382,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Range 6",
-        "effect": "<p>� <strong>Charged</strong> � <strong>Range:</strong> 6</p>\n<p>� A <strong>Mindleech Trap</strong> deploys in a free space and is triggered by the hostile character that moves into that space.</p>\n<p>� <strong>Effect:</strong> The hostile character makes a <strong>Resistance Roll</strong> or loses [LV]+2 <strong>Focus.</strong> Whether or not that character <strong>Resists</strong>, they become <strong>Immobilized</strong> until the end of their next turn if they have less than half their maximum <strong>Focus</strong> remaining.</p>",
+        "effect": "<p>• <strong>Charged</strong> — <strong>Range:</strong> 6</p>\n<p>• A <strong>Mindleech Trap</strong> deploys in a free space and is triggered by the hostile character that moves into that space.</p>\n<p>• <strong>Effect:</strong> The hostile character makes a <strong>Resistance Roll</strong> or loses [LV]+2 <strong>Focus.</strong> Whether or not that character <strong>Resists</strong>, they become <strong>Immobilized</strong> until the end of their next turn if they have less than half their maximum <strong>Focus</strong> remaining.</p>",
         "_tagIds": [
           "spell"
         ]
@@ -3432,7 +3432,7 @@
         "hasResistance": true,
         "resistanceDamage": "9+[tier]",
         "range": "Range 6",
-        "effect": "<p><strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or�<strong>During the target&#39;s next turn:</strong> that character&#39;s <em>non-Basic</em> <strong>Actions</strong> have <strong>Focus Cost</strong> +1. (It&#39;s a Condition.)</p>",
+        "effect": "<p><strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or—<strong>During the target&#39;s next turn:</strong> that character&#39;s <em>non-Basic</em> <strong>Actions</strong> have <strong>Focus Cost</strong> +1. (It&#39;s a Condition.)</p>",
         "_tagIds": [
           "ranged",
           "spell",
@@ -3539,7 +3539,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>A character dealt damage by the <strong>Minion�s</strong> <em>Attack</em> <strong>Action</strong> makes a <strong>Resistance Roll</strong> or is <strong>Dazed 1.</strong></p>",
+        "effect": "<p>A character dealt damage by the <strong>Minion’s</strong> <em>Attack</em> <strong>Action</strong> makes a <strong>Resistance Roll</strong> or is <strong>Dazed 1.</strong></p>",
         "_tagIds": []
       }
     },
@@ -4354,7 +4354,7 @@
         "hasResistance": true,
         "resistanceDamage": "9+[tier]",
         "range": "Range 5",
-        "effect": "<p><strong>Charged:</strong> The <strong>Scourge</strong> may <strong>Teleport</strong> to a free space within <strong>Range.</strong> Then, characters adjacent to the <strong>Scourge</strong> make a <strong>Resistance</strong> <strong>Roll</strong> <strong>or take</strong> [tier] <strong>Damage</strong> and become <strong>Prone.</strong> A character that <strong>Resists</strong> takes half damage and isn�t <strong>Prone.</strong></p>",
+        "effect": "<p><strong>Charged:</strong> The <strong>Scourge</strong> may <strong>Teleport</strong> to a free space within <strong>Range.</strong> Then, characters adjacent to the <strong>Scourge</strong> make a <strong>Resistance</strong> <strong>Roll</strong> <strong>or take</strong> [tier] <strong>Damage</strong> and become <strong>Prone.</strong> A character that <strong>Resists</strong> takes half damage and isn’t <strong>Prone.</strong></p>",
         "_tagIds": [
           "movement",
           "charged"
@@ -4409,7 +4409,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The Scourge�s <strong>Emanation</strong> has <strong>On Hit</strong>: The target makes a <strong>Resistance Roll</strong> or suffers an additional property chosen at creation.</p>\n<ul>\n<li><strong>Venom</strong>: Poisoned [LV]</li>\n<li><strong>Earthshaking</strong>: Prone</li>\n<li><strong>Freezing</strong>: Slowed 1</li>\n<li><strong>Forceful</strong>: Push 1</li>\n</ul>",
+        "effect": "<p>The Scourge’s <strong>Emanation</strong> has <strong>On Hit</strong>: The target makes a <strong>Resistance Roll</strong> or suffers an additional property chosen at creation.</p>\n<ul>\n<li><strong>Venom</strong>: Poisoned [LV]</li>\n<li><strong>Earthshaking</strong>: Prone</li>\n<li><strong>Freezing</strong>: Slowed 1</li>\n<li><strong>Forceful</strong>: Push 1</li>\n</ul>",
         "_tagIds": []
       }
     },
@@ -4486,7 +4486,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>When performing <strong>Emanation</strong>, after targeting an area but before making the attack: the Scourge�s next turn is <strong>Delayed</strong>, and hostile characters become targets at the start of that turn. <strong>Emanation</strong> deals <strong>8 Bonus Damage</strong>.</p>",
+        "effect": "<p>When performing <strong>Emanation</strong>, after targeting an area but before making the attack: the Scourge’s next turn is <strong>Delayed</strong>, and hostile characters become targets at the start of that turn. <strong>Emanation</strong> deals <strong>8 Bonus Damage</strong>.</p>",
         "_tagIds": []
       }
     },
@@ -4510,7 +4510,7 @@
         "hasResistance": true,
         "resistanceDamage": "9+[tier]",
         "range": "",
-        "effect": "<p>The <strong>Scourge</strong> gains <strong>[LV] Barrier</strong> and <strong>Moves x2 Speed</strong>. During this <em>Movement</em>, it can�t change directions and can pass through hostile characters. It passes through <strong>Obstructions</strong> with HP less than or equal to <strong>LV x 10</strong>, destroying them in the process. Hostile characters the <strong>Scourge</strong> passes through make a <strong>Resistance Roll</strong> or become <strong>Prone</strong> and <strong>Slowed 1</strong> and are dragged to the <strong>Scourge</strong>�s destination where they are placed in a free space of the <strong>Scourge</strong>�s choice. Each subsequent <strong>Obstruction</strong> the <strong>Scourge</strong> collides with deals <strong>LV Chaos Damage</strong> to dragged characters.</p>",
+        "effect": "<p>The <strong>Scourge</strong> gains <strong>[LV] Barrier</strong> and <strong>Moves x2 Speed</strong>. During this <em>Movement</em>, it can’t change directions and can pass through hostile characters. It passes through <strong>Obstructions</strong> with HP less than or equal to <strong>LV x 10</strong>, destroying them in the process. Hostile characters the <strong>Scourge</strong> passes through make a <strong>Resistance Roll</strong> or become <strong>Prone</strong> and <strong>Slowed 1</strong> and are dragged to the <strong>Scourge</strong>’s destination where they are placed in a free space of the <strong>Scourge</strong>’s choice. Each subsequent <strong>Obstruction</strong> the <strong>Scourge</strong> collides with deals <strong>LV Chaos Damage</strong> to dragged characters.</p>",
         "_tagIds": [
           "movement",
           "limitencounter"
@@ -4537,7 +4537,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Charged:</strong> Characters in a <strong>Size 1 Area</strong> that contains a free space adjacent to the <strong>Scourge</strong> make a <strong>Resistance Roll</strong> or are <strong>Prone</strong> and suffer <strong>Push 2.</strong> A character that <strong>Resists</strong> suffers <strong>Push 1</strong> and isn�t <strong>Prone.</strong></p>",
+        "effect": "<p><strong>Charged:</strong> Characters in a <strong>Size 1 Area</strong> that contains a free space adjacent to the <strong>Scourge</strong> make a <strong>Resistance Roll</strong> or are <strong>Prone</strong> and suffer <strong>Push 2.</strong> A character that <strong>Resists</strong> suffers <strong>Push 1</strong> and isn’t <strong>Prone.</strong></p>",
         "_tagIds": []
       }
     },
@@ -4667,7 +4667,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Combat Reflexes</strong> (??) � <em>Special</em></p>\n<p>� The <strong>Sentinel</strong> has <strong>Max Speed: 1</strong> and is considered <strong>Slowed</strong> until <strong>Combat Reflexes</strong> is deactivated (??).</p>\n<p>� <strong>While active: Attack of Opportunity</strong> is <strong>1/Turn.</strong> <em>( Instead of</em> <em><strong>1/Round.</strong></em> <em>)</em></p>",
+        "effect": "<p><strong>Combat Reflexes</strong> (??) — <em>Special</em></p>\n<p>• The <strong>Sentinel</strong> has <strong>Max Speed: 1</strong> and is considered <strong>Slowed</strong> until <strong>Combat Reflexes</strong> is deactivated (??).</p>\n<p>• <strong>While active: Attack of Opportunity</strong> is <strong>1/Turn.</strong> <em>( Instead of</em> <em><strong>1/Round.</strong></em> <em>)</em></p>",
         "_tagIds": [
           "special"
         ]
@@ -4793,7 +4793,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character within the <strong>Range</strong> of <strong>Melee Attack</strong> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> Perform <strong>Melee Attack</strong> on the triggering character before the triggering <strong>Action.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character within the <strong>Range</strong> of <strong>Melee Attack</strong> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> Perform <strong>Melee Attack</strong> on the triggering character before the triggering <strong>Action.</strong></p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -4921,7 +4921,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>Perform <strong>Called Shot</strong> only during the <strong>Sharpshooter&#39;s</strong> turn. The <strong>Sharpshooter</strong> ends their turn.</p>\n<p>Until the <strong>Sharpshooter</strong> begins any movement, their next <strong>Ranged Attack</strong> has <strong>On Hit:</strong> The <strong>Sharpshooter</strong> chooses�the target becomes <strong>Blinded 3,</strong> <strong>Silenced 1</strong>, or <strong>Immobilized 1</strong>.</p>",
+        "effect": "<p>Perform <strong>Called Shot</strong> only during the <strong>Sharpshooter&#39;s</strong> turn. The <strong>Sharpshooter</strong> ends their turn.</p>\n<p>Until the <strong>Sharpshooter</strong> begins any movement, their next <strong>Ranged Attack</strong> has <strong>On Hit:</strong> The <strong>Sharpshooter</strong> chooses—the target becomes <strong>Blinded 3,</strong> <strong>Silenced 1</strong>, or <strong>Immobilized 1</strong>.</p>",
         "_tagIds": []
       }
     },
@@ -4972,7 +4972,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 8",
-        "effect": "<p>� <em>Replaces Ranged Attack.</em> <strong>Charged:</strong> The <strong>Sharpshooter</strong> can (??) <strong>Charge Loading Attack.</strong></p>\n<p>� <strong>On Hit: Push 1.</strong></p>",
+        "effect": "<p>• <em>Replaces Ranged Attack.</em> <strong>Charged:</strong> The <strong>Sharpshooter</strong> can (??) <strong>Charge Loading Attack.</strong></p>\n<p>• <strong>On Hit: Push 1.</strong></p>",
         "_tagIds": [
           "ranged",
           "weapon",
@@ -5000,7 +5000,7 @@
         "hasResistance": true,
         "resistanceDamage": "9+[tier]",
         "range": "Range 4",
-        "effect": "<p><strong>Charged:</strong> A <strong>Mancatcher Trap</strong> deploys in a free space within <strong>Range</strong>. It�s armed at the end of the <strong>Sharpshooter�s</strong> turn and triggered when a hostile character becomes adjacent to it.</p>\n<p>Effect: Hostile characters adjacent to the trap make a <strong>Resistance Roll</strong> or are <strong>Bleeding</strong> and <strong>Immobilized</strong>.</p>",
+        "effect": "<p><strong>Charged:</strong> A <strong>Mancatcher Trap</strong> deploys in a free space within <strong>Range</strong>. It’s armed at the end of the <strong>Sharpshooter’s</strong> turn and triggered when a hostile character becomes adjacent to it.</p>\n<p>Effect: Hostile characters adjacent to the trap make a <strong>Resistance Roll</strong> or are <strong>Bleeding</strong> and <strong>Immobilized</strong>.</p>",
         "_tagIds": [
           "trap"
         ]
@@ -5210,7 +5210,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Soldier�s Critical Hits</strong> deal <strong>4 Bonus Damage.</strong></p>",
+        "effect": "<p>The <strong>Soldier’s Critical Hits</strong> deal <strong>4 Bonus Damage.</strong></p>",
         "_tagIds": []
       }
     },
@@ -5258,7 +5258,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character that doesn�t have <strong>cover</strong> from the <strong>Soldier</strong> is hit by an allied character�s <em>Attack.</em></p>\n<p>� <strong>Effect:</strong> Perform <strong>Ranged Attack</strong> on that hostile character as part of this <strong>Reaction.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character that doesn’t have <strong>cover</strong> from the <strong>Soldier</strong> is hit by an allied character’s <em>Attack.</em></p>\n<p>• <strong>Effect:</strong> Perform <strong>Ranged Attack</strong> on that hostile character as part of this <strong>Reaction.</strong></p>",
         "_tagIds": [
           "attack",
           "reaction"
@@ -5313,7 +5313,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character within the <strong>Range</strong> of <strong>Melee Attack</strong> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> Perform <strong>Melee Attack</strong> on the triggering character before the triggering <strong>Action.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character within the <strong>Range</strong> of <strong>Melee Attack</strong> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> Perform <strong>Melee Attack</strong> on the triggering character before the triggering <strong>Action.</strong></p>",
         "_tagIds": [
           "attack",
           "reaction"
@@ -5638,7 +5638,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Start of Turn:</strong> Choose any number of <strong>Snares</strong>. For each chosen <strong>Snare,</strong> move that <strong>Snare</strong> to a tile within <strong>Range 2</strong> of that <strong>Snare.</strong> It�s not considered to cross the intervening distance and doesn�t trigger any effects on characters in intervening spaces.</p>",
+        "effect": "<p><strong>Start of Turn:</strong> Choose any number of <strong>Snares</strong>. For each chosen <strong>Snare,</strong> move that <strong>Snare</strong> to a tile within <strong>Range 2</strong> of that <strong>Snare.</strong> It’s not considered to cross the intervening distance and doesn’t trigger any effects on characters in intervening spaces.</p>",
         "_tagIds": []
       }
     },
@@ -5720,7 +5720,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p><strong>1/Encounter:</strong> Create <strong>Snare,</strong> a <strong>Size 1 Area</strong> centered on a tile within <strong>Range 3</strong>. It�s <strong>Difficult Terrain</strong> and doesn�t expire until the <strong>Spider</strong> is reduced to <strong>0 HP.</strong></p>",
+        "effect": "<p><strong>1/Encounter:</strong> Create <strong>Snare,</strong> a <strong>Size 1 Area</strong> centered on a tile within <strong>Range 3</strong>. It’s <strong>Difficult Terrain</strong> and doesn’t expire until the <strong>Spider</strong> is reduced to <strong>0 HP.</strong></p>",
         "_tagIds": [
           "limitencounter"
         ]
@@ -5826,7 +5826,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 4",
-        "effect": "<p>� <strong>Flurry</strong></p>\n<p>� <strong>On Attack:</strong> Mark the target�s space - the <strong>Brute</strong> is <strong>Perpetually Disarmed</strong> until they end a subsequent turn in or adjacent to that space.</p>\n<p>� <strong>On Hit:</strong> The target is <strong>Prone</strong>.</p>",
+        "effect": "<p>• <strong>Flurry</strong></p>\n<p>• <strong>On Attack:</strong> Mark the target’s space - the <strong>Brute</strong> is <strong>Perpetually Disarmed</strong> until they end a subsequent turn in or adjacent to that space.</p>\n<p>• <strong>On Hit:</strong> The target is <strong>Prone</strong>.</p>",
         "_tagIds": [
           "ranged",
           "weapon",
@@ -5981,7 +5981,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Elite�s</strong> maximum <strong>HP</strong> is increased by <strong>10,</strong> applied after other modifiers.</p>",
+        "effect": "<p>The <strong>Elite’s</strong> maximum <strong>HP</strong> is increased by <strong>10,</strong> applied after other modifiers.</p>",
         "_tagIds": []
       }
     },
@@ -6077,7 +6077,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>Charged: The Elite gains Concealment 3 until the end of its next turn. Cloak doesn�t trigger hostile Reactions.</p>",
+        "effect": "<p>Charged: The Elite gains Concealment 3 until the end of its next turn. Cloak doesn’t trigger hostile Reactions.</p>",
         "_tagIds": []
       }
     },
@@ -6101,7 +6101,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 6",
-        "effect": "<p><strong>1/Round:</strong> An allied character within <strong>Range 6</strong> with no <strong>Barrier</strong> gains <strong>Barrier [LV]+4</strong> that doesn�t end as turns end and is immune to <strong>Slowed</strong> and <strong>Immobilized</strong> while it has this <strong>Barrier.</strong></p>",
+        "effect": "<p><strong>1/Round:</strong> An allied character within <strong>Range 6</strong> with no <strong>Barrier</strong> gains <strong>Barrier [LV]+4</strong> that doesn’t end as turns end and is immune to <strong>Slowed</strong> and <strong>Immobilized</strong> while it has this <strong>Barrier.</strong></p>",
         "_tagIds": [
           "spell",
           "limitround"
@@ -6258,7 +6258,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>When moving voluntarily, the <strong>Esoteric Teleports</strong> and doesn�t provoke <strong>Reactions.</strong></p>",
+        "effect": "<p>When moving voluntarily, the <strong>Esoteric Teleports</strong> and doesn’t provoke <strong>Reactions.</strong></p>",
         "_tagIds": []
       }
     },
@@ -6282,7 +6282,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Esoteric</strong> loses all <strong>Armor</strong> and gains <strong>1 +</strong> that much <strong>Barrier,</strong> which isn�t lost as turns end.</p>",
+        "effect": "<p>The <strong>Esoteric</strong> loses all <strong>Armor</strong> and gains <strong>1 +</strong> that much <strong>Barrier,</strong> which isn’t lost as turns end.</p>",
         "_tagIds": []
       }
     },
@@ -6306,7 +6306,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Charged:</strong> The <strong>Heckler</strong> creates the following object in an adjacent free tile:</p>\n<p>� <strong>Bomb [ HP:</strong> 5 <strong>]</strong> ( <em>Destructible Cover</em> )</p>\n<p>� An adjacent character can <strong>Interact</strong> (??)<strong>:</strong> The <strong>Bomb</strong> suffers <strong>Push</strong> 2.</p>\n<p>� <strong>End of Round:</strong> The <strong>Bomb</strong> suffers <strong>6 Damage.</strong></p>\n<p>� <strong>When Destroyed:</strong> Adjacent characters make a <strong>Resistance Roll,</strong> suffering 8 damage on a failure (half on a Resist).</p>",
+        "effect": "<p><strong>Charged:</strong> The <strong>Heckler</strong> creates the following object in an adjacent free tile:</p>\n<p>• <strong>Bomb [ HP:</strong> 5 <strong>]</strong> ( <em>Destructible Cover</em> )</p>\n<p>• An adjacent character can <strong>Interact</strong> (??)<strong>:</strong> The <strong>Bomb</strong> suffers <strong>Push</strong> 2.</p>\n<p>• <strong>End of Round:</strong> The <strong>Bomb</strong> suffers <strong>6 Damage.</strong></p>\n<p>• <strong>When Destroyed:</strong> Adjacent characters make a <strong>Resistance Roll,</strong> suffering 8 damage on a failure (half on a Resist).</p>",
         "_tagIds": [
           "spell"
         ]
@@ -6380,7 +6380,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Heckler</strong> has <strong>+1 Advantage</strong> on <em>Melee Attack</em> <strong>Actions</strong> against a character it�s <strong>Flanking.</strong> <em>( The Heckler is</em> <em><strong>Flanking</strong></em> <em>a character if it and an ally are in melee range of, and on opposite sides of that character. A line drawn from the center of the Heckler�s tile to the center of the ally�s tile must pass through opposite corners or sides of the flanked character�s tile. )</em></p>",
+        "effect": "<p>The <strong>Heckler</strong> has <strong>+1 Advantage</strong> on <em>Melee Attack</em> <strong>Actions</strong> against a character it’s <strong>Flanking.</strong> <em>( The Heckler is</em> <em><strong>Flanking</strong></em> <em>a character if it and an ally are in melee range of, and on opposite sides of that character. A line drawn from the center of the Heckler’s tile to the center of the ally’s tile must pass through opposite corners or sides of the flanked character’s tile. )</em></p>",
         "_tagIds": []
       }
     },
@@ -6428,7 +6428,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Heckler�s</strong> first <em>Melee</em> <strong>Attack Action</strong> each round has <strong>On Damage:</strong> The target is <strong>Poisoned +1.</strong></p>",
+        "effect": "<p>The <strong>Heckler’s</strong> first <em>Melee</em> <strong>Attack Action</strong> each round has <strong>On Damage:</strong> The target is <strong>Poisoned +1.</strong></p>",
         "_tagIds": []
       }
     },
@@ -6508,7 +6508,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Howlpack</strong> and other allied <strong>Howlpacks</strong> within <strong>Range 4</strong> perform <strong>Move</strong> as a <strong>Reaction.</strong> During this <em>Movement:</em> Those characters move as far as possible and can�t end their turn adjacent to a hostile character unless that character is <strong>Bleeding, Staggered,</strong> or <strong>Wounded.</strong></p>",
+        "effect": "<p>The <strong>Howlpack</strong> and other allied <strong>Howlpacks</strong> within <strong>Range 4</strong> perform <strong>Move</strong> as a <strong>Reaction.</strong> During this <em>Movement:</em> Those characters move as far as possible and can’t end their turn adjacent to a hostile character unless that character is <strong>Bleeding, Staggered,</strong> or <strong>Wounded.</strong></p>",
         "_tagIds": [
           "movement"
         ]
@@ -6534,7 +6534,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 4",
-        "effect": "<p><strong>1/Round:</strong> Up to one target hostile character within <strong>Range 4</strong> that�s <strong>Bleeding, Staggered,</strong> or <strong>Wounded</strong> becomes <strong>Off Guard.</strong></p>",
+        "effect": "<p><strong>1/Round:</strong> Up to one target hostile character within <strong>Range 4</strong> that’s <strong>Bleeding, Staggered,</strong> or <strong>Wounded</strong> becomes <strong>Off Guard.</strong></p>",
         "_tagIds": [
           "spell"
         ]
@@ -6584,7 +6584,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Encounter</strong> � <strong>Iconic:</strong> Hostile characters in a <strong>Size 2 Area</strong> centered on the <strong>Howlpack</strong> make a <strong>Resistance Roll</strong> or are <strong>Sundered 1</strong> and perform <strong>Move</strong> as a <strong>Reaction</strong> (?) as far as possible from the character performing <strong>Howl.</strong></p>",
+        "effect": "<p><strong>1/Encounter</strong> — <strong>Iconic:</strong> Hostile characters in a <strong>Size 2 Area</strong> centered on the <strong>Howlpack</strong> make a <strong>Resistance Roll</strong> or are <strong>Sundered 1</strong> and perform <strong>Move</strong> as a <strong>Reaction</strong> (?) as far as possible from the character performing <strong>Howl.</strong></p>",
         "_tagIds": []
       }
     },
@@ -6761,7 +6761,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� The <strong>Large</strong> character occupies a <strong>2x2</strong> area. They can fit into an area as small as <strong>1x2</strong> but treat that area as <strong>Difficult Terrain.</strong></p>\n<p>� The <strong>Large</strong> character is immune to involuntary movement.</p>\n<p>� The <strong>Large</strong> character can never gain <strong>Concealment,</strong> perform <em>Stealth</em> <strong>Actions,</strong> or benefit from <strong>cover.</strong></p>\n<p>� <em>( Areas of effect that originate from a</em> <em><strong>Large</strong></em> <em>character may increase in size. Range is drawn to and from any tile you occupy. )</em></p>",
+        "effect": "<p>• The <strong>Large</strong> character occupies a <strong>2x2</strong> area. They can fit into an area as small as <strong>1x2</strong> but treat that area as <strong>Difficult Terrain.</strong></p>\n<p>• The <strong>Large</strong> character is immune to involuntary movement.</p>\n<p>• The <strong>Large</strong> character can never gain <strong>Concealment,</strong> perform <em>Stealth</em> <strong>Actions,</strong> or benefit from <strong>cover.</strong></p>\n<p>• <em>( Areas of effect that originate from a</em> <em><strong>Large</strong></em> <em>character may increase in size. Range is drawn to and from any tile you occupy. )</em></p>",
         "_tagIds": []
       }
     },
@@ -7090,7 +7090,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p><strong>Charged:</strong> Target <strong>destructible</strong> within <strong>Range 3</strong> becomes a <strong>Minion NPC</strong> with <strong>Level</strong> equal to the <strong>Trickster�s Level.</strong> It retains its <strong>HP</strong> and <strong>Armor,</strong> as well as any Abilities, but has no other <strong>Optional Abilities.</strong> It takes its first turn immediately after the <strong>Trickster�s Turn</strong> ends; on subsequent rounds, it acts in turn order. It�s removed from play if reduced to 0 HP.�</p>",
+        "effect": "<p><strong>Charged:</strong> Target <strong>destructible</strong> within <strong>Range 3</strong> becomes a <strong>Minion NPC</strong> with <strong>Level</strong> equal to the <strong>Trickster’s Level.</strong> It retains its <strong>HP</strong> and <strong>Armor,</strong> as well as any Abilities, but has no other <strong>Optional Abilities.</strong> It takes its first turn immediately after the <strong>Trickster’s Turn</strong> ends; on subsequent rounds, it acts in turn order. It’s removed from play if reduced to 0 HP.—</p>",
         "_tagIds": [
           "support",
           "spell"
@@ -7117,7 +7117,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p><strong>1/Round:</strong> Up to one hostile character within <strong>Range 3</strong> makes a <strong>Resistance Roll</strong> or is <strong>Confused,</strong> a special <strong>Condition.</strong> Until the end of that character�s next turn: the first <em>Movement</em> or <em>Attack</em> <strong>Action</strong> that character performs has its direction <em>( if it�s a Movement</em> ) or targets ( <em>if it�s an Attack</em> ) chosen at random from among available targets.</p>",
+        "effect": "<p><strong>1/Round:</strong> Up to one hostile character within <strong>Range 3</strong> makes a <strong>Resistance Roll</strong> or is <strong>Confused,</strong> a special <strong>Condition.</strong> Until the end of that character’s next turn: the first <em>Movement</em> or <em>Attack</em> <strong>Action</strong> that character performs has its direction <em>( if it’s a Movement</em> ) or targets ( <em>if it’s an Attack</em> ) chosen at random from among available targets.</p>",
         "_tagIds": [
           "spell"
         ]
@@ -7143,7 +7143,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p><strong>1/Encounter</strong> � <strong>Iconic:</strong> Target hostile character within <strong>Range 3</strong> makes a <strong>Resistance Roll ( DV +1 )</strong> or immediately takes a turn, using all available <strong>Turn AP</strong> with all <strong>Actions</strong> chosen and controlled by the <strong>Trickster.</strong> That character can�t pay <strong>Inspiration costs</strong> or use <strong>1/Quest Abilities.</strong> Spent <strong>Focus</strong> is refunded at the end of that turn.</p>",
+        "effect": "<p><strong>1/Encounter</strong> — <strong>Iconic:</strong> Target hostile character within <strong>Range 3</strong> makes a <strong>Resistance Roll ( DV +1 )</strong> or immediately takes a turn, using all available <strong>Turn AP</strong> with all <strong>Actions</strong> chosen and controlled by the <strong>Trickster.</strong> That character can’t pay <strong>Inspiration costs</strong> or use <strong>1/Quest Abilities.</strong> Spent <strong>Focus</strong> is refunded at the end of that turn.</p>",
         "_tagIds": [
           "spell"
         ]
@@ -7193,7 +7193,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p><strong>1/Round:</strong> Target hostile character within <strong>Range 3</strong> makes a <strong>Resistance Roll.</strong> On a failure, until the end of that character�s next turn: that character can�t voluntarily move further away from the <strong>Trickster.</strong></p>",
+        "effect": "<p><strong>1/Round:</strong> Target hostile character within <strong>Range 3</strong> makes a <strong>Resistance Roll.</strong> On a failure, until the end of that character’s next turn: that character can’t voluntarily move further away from the <strong>Trickster.</strong></p>",
         "_tagIds": [
           "spell",
           "limitround"
@@ -7244,7 +7244,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Charged:</strong> At the <strong>GM�s</strong> discretion, the <strong>Trickster</strong> creates an <strong>object</strong> in target free tile**.** It uses the rules for that <strong>object,</strong> except: when an adjacent character <strong>Interacts</strong> (??) with it, they may destroy it.</p>",
+        "effect": "<p><strong>Charged:</strong> At the <strong>GM’s</strong> discretion, the <strong>Trickster</strong> creates an <strong>object</strong> in target free tile**.** It uses the rules for that <strong>object,</strong> except: when an adjacent character <strong>Interacts</strong> (??) with it, they may destroy it.</p>",
         "_tagIds": [
           "spell"
         ]
@@ -7270,7 +7270,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Round:</strong> Perform <strong>Linger</strong> only during the <strong>Trickster�s</strong> turn. The <strong>Trickster</strong> begins its next turn with <strong>+1 Turn AP</strong> (?).</p>",
+        "effect": "<p><strong>1/Round:</strong> Perform <strong>Linger</strong> only during the <strong>Trickster’s</strong> turn. The <strong>Trickster</strong> begins its next turn with <strong>+1 Turn AP</strong> (?).</p>",
         "_tagIds": [
           "limitround"
         ]
@@ -7296,7 +7296,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Encounter</strong> � <strong>Iconic:</strong> Create a <strong>Mirage</strong>, a <strong>Size 3 Area</strong> centered on the <strong>Trickster�s</strong> current tile. <strong>For the rest of the encounter:</strong></p>\n<p>o <strong>Trickster NPCs</strong> within the <strong>Mirage</strong> ignore terrain, elevation, and obstructions within the <strong>Mirage</strong>, and have <strong>Concealment 3. If an Action that targets a single character would miss a Trickster NPC within the Mirage:</strong> Instead, change the target of that <strong>Action</strong> to a target of the Trickster�s choice. <em>( Within the</em> <em><strong>Action�s</strong></em> <em>range. )</em></p>\n<p>o Other characters can�t draw <strong>line of effect</strong> into, out of, or through the <strong>Mirage.</strong> While within the <strong>Mirage,</strong> those characters have: (?): <strong>Resistance Roll.</strong> On a <strong>Resist,</strong> ignore the effects of <strong>Mirage for the rest of the encounter</strong>.</p>",
+        "effect": "<p>• <strong>1/Encounter</strong> — <strong>Iconic:</strong> Create a <strong>Mirage</strong>, a <strong>Size 3 Area</strong> centered on the <strong>Trickster’s</strong> current tile. <strong>For the rest of the encounter:</strong></p>\n<p>o <strong>Trickster NPCs</strong> within the <strong>Mirage</strong> ignore terrain, elevation, and obstructions within the <strong>Mirage</strong>, and have <strong>Concealment 3. If an Action that targets a single character would miss a Trickster NPC within the Mirage:</strong> Instead, change the target of that <strong>Action</strong> to a target of the Trickster’s choice. <em>( Within the</em> <em><strong>Action’s</strong></em> <em>range. )</em></p>\n<p>o Other characters can’t draw <strong>line of effect</strong> into, out of, or through the <strong>Mirage.</strong> While within the <strong>Mirage,</strong> those characters have: (?): <strong>Resistance Roll.</strong> On a <strong>Resist,</strong> ignore the effects of <strong>Mirage for the rest of the encounter</strong>.</p>",
         "_tagIds": [
           "spell"
         ]
@@ -7350,7 +7350,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 3",
-        "effect": "<p>� <strong>1/Encounter:</strong> Create <strong>Tanglebough,</strong> a <strong>Size 1 Area</strong> centered on a tile within Range 3. <strong>For the rest of the encounter,</strong> that area is <strong>Difficult Terrain</strong>.</p>\n<p>� <strong>Passive:</strong> <strong>Difficult Terrain</strong> created by the <strong>Trickster</strong> deals <strong>1 Piercing Damage</strong> to a character whenever it causes them to spend additional <em>Movement.</em></p>",
+        "effect": "<p>• <strong>1/Encounter:</strong> Create <strong>Tanglebough,</strong> a <strong>Size 1 Area</strong> centered on a tile within Range 3. <strong>For the rest of the encounter,</strong> that area is <strong>Difficult Terrain</strong>.</p>\n<p>• <strong>Passive:</strong> <strong>Difficult Terrain</strong> created by the <strong>Trickster</strong> deals <strong>1 Piercing Damage</strong> to a character whenever it causes them to spend additional <em>Movement.</em></p>",
         "_tagIds": [
           "spell"
         ]
@@ -7376,7 +7376,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>Iconic:</strong> Up to one hostile character per scenario is marked as a <strong>Cult Leader</strong> and has <strong>+5 Max HP</strong> and the <strong>Ritual</strong> <em>Spell</em> <strong>Action.</strong></p>\n<p>� <strong>Cultists</strong> within <strong>Range 3</strong> of a <strong>Cult Leader</strong> have <strong>+1 Advantage</strong> on <strong>Resistance Rolls.</strong></p>\n<p>� A hostile character that deals nonzero damage to a <strong>Cult Leader</strong> is a <strong>Heretic</strong> for the rest of the encounter.</p>\n<p>� When a <strong>Cult Leader</strong> is reduced to <strong>0 HP,</strong> other <strong>Cultists</strong> gain <strong>Barrier 4+LV</strong> and become <strong>Blessed.</strong></p>",
+        "effect": "<p>• <strong>Iconic:</strong> Up to one hostile character per scenario is marked as a <strong>Cult Leader</strong> and has <strong>+5 Max HP</strong> and the <strong>Ritual</strong> <em>Spell</em> <strong>Action.</strong></p>\n<p>• <strong>Cultists</strong> within <strong>Range 3</strong> of a <strong>Cult Leader</strong> have <strong>+1 Advantage</strong> on <strong>Resistance Rolls.</strong></p>\n<p>• A hostile character that deals nonzero damage to a <strong>Cult Leader</strong> is a <strong>Heretic</strong> for the rest of the encounter.</p>\n<p>• When a <strong>Cult Leader</strong> is reduced to <strong>0 HP,</strong> other <strong>Cultists</strong> gain <strong>Barrier 4+LV</strong> and become <strong>Blessed.</strong></p>",
         "_tagIds": []
       }
     },
@@ -7400,7 +7400,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Encounter:</strong> Create <strong>Rune</strong> in a free space within <strong>Range.</strong> It�s a <strong>destructible obstruction</strong> with <strong>30 HP,</strong> but doesn�t provide <strong>cover</strong> or block <strong>line of effect.</strong></p>\n<p>� An adjacent <strong>Cultist</strong> can <strong>Interact</strong> (?)<strong>:</strong> Place a <strong>counter</strong> on the <strong>Rune.</strong> If the <strong>Rune</strong> has six or more <strong>counters</strong>, all <strong>Heretics</strong> take <strong>1 Piercing Damage.</strong> If the <strong>Rune</strong> has sixteen or more <strong>counters,</strong> remove it from play and create an <strong>Elite Scourge NPC</strong> in that tile. It�s not a scoring character and doesn�t count towards the number of hostile characters in play or in an encounter.</p>",
+        "effect": "<p>• <strong>1/Encounter:</strong> Create <strong>Rune</strong> in a free space within <strong>Range.</strong> It’s a <strong>destructible obstruction</strong> with <strong>30 HP,</strong> but doesn’t provide <strong>cover</strong> or block <strong>line of effect.</strong></p>\n<p>• An adjacent <strong>Cultist</strong> can <strong>Interact</strong> (?)<strong>:</strong> Place a <strong>counter</strong> on the <strong>Rune.</strong> If the <strong>Rune</strong> has six or more <strong>counters</strong>, all <strong>Heretics</strong> take <strong>1 Piercing Damage.</strong> If the <strong>Rune</strong> has sixteen or more <strong>counters,</strong> remove it from play and create an <strong>Elite Scourge NPC</strong> in that tile. It’s not a scoring character and doesn’t count towards the number of hostile characters in play or in an encounter.</p>",
         "_tagIds": [
           "spell"
         ]
@@ -7426,7 +7426,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Round:</strong> Up to one <strong>Cultist</strong> becomes <strong>Blessed. Pray</strong> has unlimited <strong>Range</strong> and doesn�t require <strong>Line of Effect.</strong></p>",
+        "effect": "<p><strong>1/Round:</strong> Up to one <strong>Cultist</strong> becomes <strong>Blessed. Pray</strong> has unlimited <strong>Range</strong> and doesn’t require <strong>Line of Effect.</strong></p>",
         "_tagIds": [
           "spell",
           "limitround"
@@ -7477,7 +7477,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Melee",
-        "effect": "<p>� <strong>Axiomatic Attack</strong> has <strong>+1 Disadvantage</strong> and can only target a <strong>Heretic.</strong></p>\n<p>� <strong>On Hit:</strong> The target becomes <strong>Prone.</strong></p>",
+        "effect": "<p>• <strong>Axiomatic Attack</strong> has <strong>+1 Disadvantage</strong> and can only target a <strong>Heretic.</strong></p>\n<p>• <strong>On Hit:</strong> The target becomes <strong>Prone.</strong></p>",
         "_tagIds": [
           "melee",
           "spell",
@@ -7505,7 +7505,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 4",
-        "effect": "<p>� <strong>Range:</strong> 4 � <strong>DMG:</strong> 0</p>\n<p>� <strong>Chorus</strong> treats <strong>Obstructions</strong> as <strong>Cover</strong> and deals <strong>Bonus Damage</strong> equal to the number of times <strong>Chorus</strong> has been used among all characters this encounter, including this use. <em>( max. 8 )</em></p>",
+        "effect": "<p>• <strong>Range:</strong> 4 — <strong>DMG:</strong> 0</p>\n<p>• <strong>Chorus</strong> treats <strong>Obstructions</strong> as <strong>Cover</strong> and deals <strong>Bonus Damage</strong> equal to the number of times <strong>Chorus</strong> has been used among all characters this encounter, including this use. <em>( max. 8 )</em></p>",
         "_tagIds": [
           "ranged",
           "spell",
@@ -7533,7 +7533,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> An adjacent <strong>Cultist</strong> takes any amount of damage.</p>\n<p>� <strong>Effect:</strong> Reduce that damage to 0. The <strong>Cultist</strong> performing <strong>Martyrdom</strong> takes that much <strong>Piercing Chaos Damage.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> An adjacent <strong>Cultist</strong> takes any amount of damage.</p>\n<p>• <strong>Effect:</strong> Reduce that damage to 0. The <strong>Cultist</strong> performing <strong>Martyrdom</strong> takes that much <strong>Piercing Chaos Damage.</strong></p>",
         "_tagIds": [
           "support",
           "reaction",
@@ -7609,7 +7609,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Cultist</strong> is immune to <strong>Push</strong> and can�t be forced to <strong>Move.</strong></p>",
+        "effect": "<p>The <strong>Cultist</strong> is immune to <strong>Push</strong> and can’t be forced to <strong>Move.</strong></p>",
         "_tagIds": []
       }
     },
@@ -7633,7 +7633,7 @@
         "hasResistance": true,
         "resistanceDamage": "[tier]+5",
         "range": "Range 4",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> The <strong>Cultist</strong> is reduced to <strong>0 HP.</strong></p>\n<p>� <strong>Effect: Heretics</strong> within <strong>Range 4</strong> make a <strong>Resistance Roll</strong> or take [LV]+5 <strong>Damage.</strong> A character that <strong>Resists</strong> takes half damage.</p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> The <strong>Cultist</strong> is reduced to <strong>0 HP.</strong></p>\n<p>• <strong>Effect: Heretics</strong> within <strong>Range 4</strong> make a <strong>Resistance Roll</strong> or take [LV]+5 <strong>Damage.</strong> A character that <strong>Resists</strong> takes half damage.</p>",
         "_tagIds": [
           "reaction",
           "limitround"
@@ -7732,7 +7732,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Encounter � Condition:</strong> A round ends.</p>\n<p>� <strong>Effect:</strong> The <strong>Undead</strong> gains <strong>1 HP</strong> and becomes <strong>Off Guard.</strong> It can perform this <strong>Reaction</strong> while at <strong>0 HP.</strong></p>",
+        "effect": "<p>• <strong>1/Encounter — Condition:</strong> A round ends.</p>\n<p>• <strong>Effect:</strong> The <strong>Undead</strong> gains <strong>1 HP</strong> and becomes <strong>Off Guard.</strong> It can perform this <strong>Reaction</strong> while at <strong>0 HP.</strong></p>",
         "_tagIds": [
           "reaction"
         ]
@@ -7758,7 +7758,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Encounter</strong> � <strong>Iconic:</strong> <strong>Military</strong> characters gain <strong>Concealment 3</strong> until the end of their next turn. This round, after all characters have acted: up to one <strong>Military</strong> character takes an additional turn.</p>",
+        "effect": "<p><strong>1/Encounter</strong> — <strong>Iconic:</strong> <strong>Military</strong> characters gain <strong>Concealment 3</strong> until the end of their next turn. This round, after all characters have acted: up to one <strong>Military</strong> character takes an additional turn.</p>",
         "_tagIds": [
           "spell",
           "limitencounter"
@@ -7785,7 +7785,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Military</strong> characters can�t have more than one <strong>Optional Military Ability</strong> and must have a unique <strong>Optional Ability</strong> if able. The <strong>Optional Ability</strong> is visible to all characters without using the <strong>Study Action.</strong></p>",
+        "effect": "<p><strong>Military</strong> characters can’t have more than one <strong>Optional Military Ability</strong> and must have a unique <strong>Optional Ability</strong> if able. The <strong>Optional Ability</strong> is visible to all characters without using the <strong>Study Action.</strong></p>",
         "_tagIds": []
       }
     },
@@ -7809,7 +7809,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Passive:</strong> Immune to <strong>Involuntary Movement.</strong></p>\n<p><strong>1/Encounter:</strong> Choose an adjacent <strong>Obstruction.</strong> At the end of the next round, destroy that <strong>Obstruction</strong> and all <strong>Obstructions</strong> adjacent to it. Hostile characters adjacent to that <strong>Obstruction</strong> make a <strong>Resistance Roll</strong> or take <strong>2[LV]+4 Damage</strong> and are <strong>Stunned +1.</strong> A character that <strong>Resists</strong> takes half damage and isn�t <strong>Stunned.</strong></p>",
+        "effect": "<p><strong>Passive:</strong> Immune to <strong>Involuntary Movement.</strong></p>\n<p><strong>1/Encounter:</strong> Choose an adjacent <strong>Obstruction.</strong> At the end of the next round, destroy that <strong>Obstruction</strong> and all <strong>Obstructions</strong> adjacent to it. Hostile characters adjacent to that <strong>Obstruction</strong> make a <strong>Resistance Roll</strong> or take <strong>2[LV]+4 Damage</strong> and are <strong>Stunned +1.</strong> A character that <strong>Resists</strong> takes half damage and isn’t <strong>Stunned.</strong></p>",
         "_tagIds": [
           "spell",
           "limitencounter"
@@ -7836,7 +7836,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Passive:</strong> Immune to <strong>Poisoned.</strong></p>\n<p><strong>1/Encounter:</strong> Choose a <strong>Size 1 Area</strong> centered on a tile within <strong>Range 6.</strong> A character that begins their turn in that <strong>Area</strong> or moves into the <strong>Area</strong> for the first time in a turn becomes <strong>Poisoned 2[LV]</strong> and has <strong>+1 Disadvantage</strong> on <strong>Resistance Rolls</strong> while <strong>Poisoned</strong> this way. The <strong>Area</strong> lasts until the end of the <strong>Specialist�s</strong> next turn.</p>",
+        "effect": "<p><strong>Passive:</strong> Immune to <strong>Poisoned.</strong></p>\n<p><strong>1/Encounter:</strong> Choose a <strong>Size 1 Area</strong> centered on a tile within <strong>Range 6.</strong> A character that begins their turn in that <strong>Area</strong> or moves into the <strong>Area</strong> for the first time in a turn becomes <strong>Poisoned 2[LV]</strong> and has <strong>+1 Disadvantage</strong> on <strong>Resistance Rolls</strong> while <strong>Poisoned</strong> this way. The <strong>Area</strong> lasts until the end of the <strong>Specialist’s</strong> next turn.</p>",
         "_tagIds": [
           "spell",
           "limitencounter"
@@ -7891,7 +7891,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>Passive:</strong> Immune to <strong>Blinded.</strong> Ignores <strong>Concealment.</strong></p>\n<p><strong>1/Encounter: Move.</strong> At the end of this <em>Movement,</em> hostile characters within <strong>Range 3</strong> that don�t have <strong>Cover</strong> from this character make a <strong>Resistance Roll</strong> or are <strong>Blinded 3.</strong> A character that <strong>Resists</strong> is <strong>Blinded 1.</strong></p>",
+        "effect": "<p><strong>Passive:</strong> Immune to <strong>Blinded.</strong> Ignores <strong>Concealment.</strong></p>\n<p><strong>1/Encounter: Move.</strong> At the end of this <em>Movement,</em> hostile characters within <strong>Range 3</strong> that don’t have <strong>Cover</strong> from this character make a <strong>Resistance Roll</strong> or are <strong>Blinded 3.</strong> A character that <strong>Resists</strong> is <strong>Blinded 1.</strong></p>",
         "_tagIds": [
           "movement",
           "spell",
@@ -7919,7 +7919,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>Passive:</strong> Immune to <strong>Bleeding.</strong> Ignores <strong>Difficult Terrain.</strong></p>\n<p>� <strong>Range:</strong> <em>Melee</em> � <strong>DMG:</strong> [LV]</p>\n<p>� <strong>On Attack: Move +2 Speed.</strong></p>\n<p>� <strong>On Hit:</strong> The target suffers <strong>Push 2</strong> and becomes <strong>Prone</strong>.</p>",
+        "effect": "<p>• <strong>Passive:</strong> Immune to <strong>Bleeding.</strong> Ignores <strong>Difficult Terrain.</strong></p>\n<p>• <strong>Range:</strong> <em>Melee</em> — <strong>DMG:</strong> [LV]</p>\n<p>• <strong>On Attack: Move +2 Speed.</strong></p>\n<p>• <strong>On Hit:</strong> The target suffers <strong>Push 2</strong> and becomes <strong>Prone</strong>.</p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -7975,7 +7975,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 4",
-        "effect": "<p><strong>1/Encounter:</strong> Choose a non-<em>Weapon,</em> non-<em>Spell,</em> non-<em>Basic</em> <strong>Action</strong> available to a target hostile character within <strong>Range 4.</strong> Until end of encounter, that character can�t perform that <strong>Action</strong> unless the <strong>Esoteric</strong> has been reduced to <strong>0 HP.</strong></p>",
+        "effect": "<p><strong>1/Encounter:</strong> Choose a non-<em>Weapon,</em> non-<em>Spell,</em> non-<em>Basic</em> <strong>Action</strong> available to a target hostile character within <strong>Range 4.</strong> Until end of encounter, that character can’t perform that <strong>Action</strong> unless the <strong>Esoteric</strong> has been reduced to <strong>0 HP.</strong></p>",
         "_tagIds": [
           "spell"
         ]
@@ -8027,7 +8027,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> An adjacent hostile character performs a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> The <strong>Marauder</strong> may <strong>Move</strong> as part of this <strong>Reaction.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> An adjacent hostile character performs a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> The <strong>Marauder</strong> may <strong>Move</strong> as part of this <strong>Reaction.</strong></p>",
         "_tagIds": [
           "movement",
           "reaction",
@@ -8055,7 +8055,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>Against characters that aren�t adjacent, the <strong>Marauder�s</strong> attacks have <strong>On Hit: Pull 1.</strong></p>",
+        "effect": "<p>Against characters that aren’t adjacent, the <strong>Marauder’s</strong> attacks have <strong>On Hit: Pull 1.</strong></p>",
         "_tagIds": []
       }
     },
@@ -8079,7 +8079,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>When forcing a <strong>Resistance Roll</strong> from a hostile character, the <strong>Marauder</strong> may consume that character�s <strong>Off Guard</strong> to give them <strong>+1 Disadvantage</strong> on the <strong>Resistance Roll.</strong></p>",
+        "effect": "<p>When forcing a <strong>Resistance Roll</strong> from a hostile character, the <strong>Marauder</strong> may consume that character’s <strong>Off Guard</strong> to give them <strong>+1 Disadvantage</strong> on the <strong>Resistance Roll.</strong></p>",
         "_tagIds": []
       }
     },
@@ -8103,7 +8103,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Melee",
-        "effect": "<p>� Perform <strong>Ransom</strong> only with <strong>Initiative.</strong></p>\n<p>� <strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or is <strong>Removed from Play.</strong> A <strong>Staggered</strong> character has <strong>+1 Disadvantage</strong> on the <strong>Resistance Roll.</strong> Create a <strong>Cage</strong> (<strong>Destructible Obstruction, [LV]+10 HP)</strong> in an adjacent free space. The target returns to play in that space when the <strong>Cage</strong> is destroyed, and any adjacent character can <strong>Interact</strong> (??) with the <strong>Cage</strong> to destroy it. A character that�s <strong>Removed from Play</strong> at the end of the encounter gains a consequence at the GM�s discretion.</p>",
+        "effect": "<p>• Perform <strong>Ransom</strong> only with <strong>Initiative.</strong></p>\n<p>• <strong>On Hit:</strong> The target makes a <strong>Resistance Roll</strong> or is <strong>Removed from Play.</strong> A <strong>Staggered</strong> character has <strong>+1 Disadvantage</strong> on the <strong>Resistance Roll.</strong> Create a <strong>Cage</strong> (<strong>Destructible Obstruction, [LV]+10 HP)</strong> in an adjacent free space. The target returns to play in that space when the <strong>Cage</strong> is destroyed, and any adjacent character can <strong>Interact</strong> (??) with the <strong>Cage</strong> to destroy it. A character that’s <strong>Removed from Play</strong> at the end of the encounter gains a consequence at the GM’s discretion.</p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -8132,7 +8132,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Melee",
-        "effect": "<p>Up to one adjacent hostile character makes a <strong>Resistance Roll</strong> or becomes <strong>Perpetually Disarmed</strong> until that character ends a <em>Movement</em> in or adjacent to a free tile of the <strong>Marauder�s</strong> choice within <strong>Range 3.</strong></p>",
+        "effect": "<p>Up to one adjacent hostile character makes a <strong>Resistance Roll</strong> or becomes <strong>Perpetually Disarmed</strong> until that character ends a <em>Movement</em> in or adjacent to a free tile of the <strong>Marauder’s</strong> choice within <strong>Range 3.</strong></p>",
         "_tagIds": [
           "weapon"
         ]
@@ -8158,7 +8158,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Range 6",
-        "effect": "<p>Up to one hostile character within <strong>Range 6</strong> makes a <strong>Resistance Roll</strong> or is pulled to an adjacent free tile of the <strong>Marauder�s</strong> choice and becomes <strong>Prone.</strong> A character that <strong>Resists</strong> suffers <strong>Pull 1.</strong></p>",
+        "effect": "<p>Up to one hostile character within <strong>Range 6</strong> makes a <strong>Resistance Roll</strong> or is pulled to an adjacent free tile of the <strong>Marauder’s</strong> choice and becomes <strong>Prone.</strong> A character that <strong>Resists</strong> suffers <strong>Pull 1.</strong></p>",
         "_tagIds": [
           "weapon"
         ]
@@ -8235,7 +8235,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The NPC�s <strong>Max HP</strong> is <strong>doubled</strong>, applied before other modifiers. The <strong>NPC</strong> can <strong>Evade.</strong> It has a number of <strong>Optional Exemplar Abilities</strong> equal to its <strong>Level,</strong> and it has <strong>+1 Optional Ability</strong> from its <strong>Class</strong> or <strong>Templates</strong> (including <strong>Exemplar</strong>).</p>",
+        "effect": "<p>The NPC’s <strong>Max HP</strong> is <strong>doubled</strong>, applied before other modifiers. The <strong>NPC</strong> can <strong>Evade.</strong> It has a number of <strong>Optional Exemplar Abilities</strong> equal to its <strong>Level,</strong> and it has <strong>+1 Optional Ability</strong> from its <strong>Class</strong> or <strong>Templates</strong> (including <strong>Exemplar</strong>).</p>",
         "_tagIds": []
       }
     },
@@ -8259,7 +8259,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Round:</strong> The NPC chooses � up to one adjacent allied character clears <strong>Prone,</strong> clears <strong>Off Guard,</strong> or becomes <strong>Blessed.</strong></p>",
+        "effect": "<p><strong>1/Round:</strong> The NPC chooses — up to one adjacent allied character clears <strong>Prone,</strong> clears <strong>Off Guard,</strong> or becomes <strong>Blessed.</strong></p>",
         "_tagIds": []
       }
     },
@@ -8283,7 +8283,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character within the <strong>Range</strong> of a <em>Melee</em> <em>Attack</em> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> Perform the <em>Melee Attack</em> on that character as part of this <strong>Reaction.</strong> If no <em>Melee Attack</em> is available, perform a <em>Basic Melee Attack</em> that deals <strong>4 Damage.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character within the <strong>Range</strong> of a <em>Melee</em> <em>Attack</em> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> Perform the <em>Melee Attack</em> on that character as part of this <strong>Reaction.</strong> If no <em>Melee Attack</em> is available, perform a <em>Basic Melee Attack</em> that deals <strong>4 Damage.</strong></p>",
         "_tagIds": [
           "attack",
           "reaction"
@@ -8334,7 +8334,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Exemplar�s</strong> <em>Spell Attack</em> <strong>Actions</strong> that target a single character target an additional character.</p>",
+        "effect": "<p>The <strong>Exemplar’s</strong> <em>Spell Attack</em> <strong>Actions</strong> that target a single character target an additional character.</p>",
         "_tagIds": []
       }
     },
@@ -8358,7 +8358,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>The <strong>Exemplar�s</strong> <em>Attack</em> <strong>Actions</strong> deal <strong>6 Bonus Damage</strong> to <strong>Destructibles.</strong></p>",
+        "effect": "<p>The <strong>Exemplar’s</strong> <em>Attack</em> <strong>Actions</strong> deal <strong>6 Bonus Damage</strong> to <strong>Destructibles.</strong></p>",
         "_tagIds": []
       }
     },
@@ -8482,7 +8482,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 4",
-        "effect": "<p><strong>1/Turn:</strong> Target hostile character within <strong>Range 4</strong> becomes <strong>Off Guard.</strong> The <strong>Exemplar</strong> can�t consume this <strong>Off Guard</strong> this turn.</p>",
+        "effect": "<p><strong>1/Turn:</strong> Target hostile character within <strong>Range 4</strong> becomes <strong>Off Guard.</strong> The <strong>Exemplar</strong> can’t consume this <strong>Off Guard</strong> this turn.</p>",
         "_tagIds": [
           "limitturn"
         ]
@@ -8562,7 +8562,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Melee",
-        "effect": "<p>� <strong>Heavensfall</strong> is performed <strong>only</strong> as a part of this <strong>NPC�s Refocus Action 1/Round.</strong></p>\n<p>� <strong>On Hit</strong>: <strong>Push 1.</strong></p>",
+        "effect": "<p>• <strong>Heavensfall</strong> is performed <strong>only</strong> as a part of this <strong>NPC’s Refocus Action 1/Round.</strong></p>\n<p>• <strong>On Hit</strong>: <strong>Push 1.</strong></p>",
         "_tagIds": [
           "melee",
           "weapon",
@@ -8592,7 +8592,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> The <strong>Exemplar</strong> becomes <strong>Battered.</strong></p>\n<p>� <strong>Effect:</strong> Adjacent hostile characters make a <strong>Resistance Roll</strong> or are <strong>Blinded 3.</strong> The <strong>Exemplar</strong> clears up to one <strong>Condition</strong> and may <strong>Move</strong>�this <em>Movement</em> doesn�t trigger hostile <strong>Reactions.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> The <strong>Exemplar</strong> becomes <strong>Battered.</strong></p>\n<p>• <strong>Effect:</strong> Adjacent hostile characters make a <strong>Resistance Roll</strong> or are <strong>Blinded 3.</strong> The <strong>Exemplar</strong> clears up to one <strong>Condition</strong> and may <strong>Move</strong>—this <em>Movement</em> doesn’t trigger hostile <strong>Reactions.</strong></p>",
         "_tagIds": [
           "movement",
           "reaction"
@@ -8619,7 +8619,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>Charged</strong> � <strong>1/Round � Condition:</strong> A turn ends.</p>\n<p>� <strong>Effect:</strong> The <strong>Exemplar</strong> performs a <em>Spell</em> <strong>Action</strong> as part of this <strong>Reaction.</strong></p>",
+        "effect": "<p>• <strong>Charged</strong> — <strong>1/Round — Condition:</strong> A turn ends.</p>\n<p>• <strong>Effect:</strong> The <strong>Exemplar</strong> performs a <em>Spell</em> <strong>Action</strong> as part of this <strong>Reaction.</strong></p>",
         "_tagIds": [
           "spell",
           "reaction"
@@ -8646,7 +8646,7 @@
         "hasResistance": true,
         "resistanceDamage": "",
         "range": "Line 30",
-        "effect": "<p><strong>Charged:</strong> Characters within <strong>Line 30</strong> make a <strong>Resistance Roll</strong> or take damage equal to their current <strong>HP.</strong> A character that <strong>Resists</strong> takes that much damage minus 1. Astra�s <strong>Line 30</strong> ignores <strong>Line of Effect,</strong> destroying all <strong>Obstructions</strong> and <strong>Cover</strong> in the <strong>Line.</strong></p>",
+        "effect": "<p><strong>Charged:</strong> Characters within <strong>Line 30</strong> make a <strong>Resistance Roll</strong> or take damage equal to their current <strong>HP.</strong> A character that <strong>Resists</strong> takes that much damage minus 1. Astra’s <strong>Line 30</strong> ignores <strong>Line of Effect,</strong> destroying all <strong>Obstructions</strong> and <strong>Cover</strong> in the <strong>Line.</strong></p>",
         "_tagIds": [
           "spell"
         ]
@@ -8672,7 +8672,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "Range 6",
-        "effect": "<p>Any number of characters in <strong>Range</strong> that aren�t in cover become targets.</p>",
+        "effect": "<p>Any number of characters in <strong>Range</strong> that aren’t in cover become targets.</p>",
         "_tagIds": [
           "ranged",
           "weapon",
@@ -8725,7 +8725,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p><strong>1/Round:</strong> The NPC chooses � up to one adjacent allied character clears <strong>Prone,</strong> clears <strong>Off Guard,</strong> or becomes <strong>Blessed.</strong></p>",
+        "effect": "<p><strong>1/Round:</strong> The NPC chooses — up to one adjacent allied character clears <strong>Prone,</strong> clears <strong>Off Guard,</strong> or becomes <strong>Blessed.</strong></p>",
         "_tagIds": []
       }
     },
@@ -8749,7 +8749,7 @@
         "hasResistance": false,
         "resistanceDamage": "",
         "range": "",
-        "effect": "<p>� <strong>1/Round � Condition:</strong> A hostile character within the <strong>Range</strong> of a <em>Melee</em> <em>Attack</em> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>� <strong>Effect:</strong> Perform the <em>Melee Attack</em> on that character as part of this <strong>Reaction.</strong> If no <em>Melee Attack</em> is available, perform a <em>Basic Melee Attack</em> that deals <strong>4 Damage.</strong></p>",
+        "effect": "<p>• <strong>1/Round — Condition:</strong> A hostile character within the <strong>Range</strong> of a <em>Melee</em> <em>Attack</em> moves as part of a <em>Movement</em> <strong>Action.</strong></p>\n<p>• <strong>Effect:</strong> Perform the <em>Melee Attack</em> on that character as part of this <strong>Reaction.</strong> If no <em>Melee Attack</em> is available, perform a <em>Basic Melee Attack</em> that deals <strong>4 Damage.</strong></p>",
         "_tagIds": []
       }
     }
@@ -10755,7 +10755,7 @@
         }
       },
       "system": {
-        "description": "<p>An Elite is considered equivalent to 2 NPCs when counting the number of enemies in play or in an encounter�s budget. These NPCs are the best of the best and are capable of fighting alone against organized forces.</p>",
+        "description": "<p>An Elite is considered equivalent to 2 NPCs when counting the number of enemies in play or in an encounter’s budget. These NPCs are the best of the best and are capable of fighting alone against organized forces.</p>",
         "_abilityIds": [
           {
             "id": "template-elite-reflexes",
@@ -10937,7 +10937,7 @@
         }
       },
       "system": {
-        "description": "<p>An Exemplar is considered equivalent to 1.5 NPCs when counting the number of enemies in play or in an encounter�s budget, and serves as a fine parallel to a PC should the opportunity to fight alongside them arise.</p>",
+        "description": "<p>An Exemplar is considered equivalent to 1.5 NPCs when counting the number of enemies in play or in an encounter’s budget, and serves as a fine parallel to a PC should the opportunity to fight alongside them arise.</p>",
         "_abilityIds": [
           {
             "id": "template-exemplar-passive",

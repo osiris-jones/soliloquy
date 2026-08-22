@@ -6,6 +6,7 @@
     "color": "#7a3500",
     "entries": [
       "npc-class-minion",
+      "npc-class-soldier",
       "npc-class-assassin",
       "npc-class-medic",
       "npc-class-beast",
@@ -21,7 +22,8 @@
       "npc-class-duelist",
       "npc-class-phantasm",
       "npc-class-sharpshooter",
-      "npc-class-displacer"
+      "npc-class-displacer",
+      "npc-class-champion"
     ]
   },
   {
@@ -33,12 +35,17 @@
       "npc-template-brute",
       "npc-template-large",
       "npc-template-leader",
-      "npc-template-ghost",
+      "npc-template-undead",
       "npc-template-ranger",
       "npc-template-heckler",
       "npc-template-howlpack",
       "npc-template-trickster",
-      "npc-template-elite"
+      "npc-template-elite",
+      "npc-template-exemplar",
+      "npc-template-marauder",
+      "npc-template-cultist",
+      "npc-template-esoteric",
+      "npc-template-military"
     ]
   }
 ]
