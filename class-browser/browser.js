@@ -20,7 +20,8 @@ let TAG_MAP     = {};     // tag id → tag object
 let ABILITY_MAP = {};     // ability id → ability object
 
 let activeCategory = null;   // null = "All Classes"
-let searchQuery    = "";
+let searchQuery    = "";  // raw text from the search box
+let searchTerms    = [];  // parsed query — see parseQuery()
 
 // ── Boot ────────────────────────────────────────────────────────────────────
 
@@ -58,9 +59,9 @@ async function init() {
   buildSidebar();
   render();
 
-  document.getElementById("search").addEventListener("input", e => {
-    searchQuery = e.target.value.toLowerCase().trim();
-    render();
+  const searchBox = document.getElementById("search");
+  searchBox.addEventListener("input", e => {
+    setSearch(e.target.value);
   });
 }
 
@@ -115,17 +116,17 @@ function setCategory(catId) {
 
 function render() {
   const grid    = document.getElementById("class-grid");
-  const classes = filterClasses();
+  const results = filterClasses();
 
   grid.innerHTML = "";
 
-  if (classes.length === 0) {
+  if (results.length === 0) {
     grid.innerHTML = `<p class="no-results">No classes match your search.</p>`;
     return;
   }
 
   const fragment = document.createDocumentFragment();
-  classes.forEach(cls => fragment.appendChild(buildClassCard(cls)));
+  results.forEach(res => fragment.appendChild(buildClassCard(res)));
   grid.appendChild(fragment);
 }
 
@@ -158,31 +159,116 @@ function filterClasses() {
   });
 
   // ── Search filter ────────────────────────────────────────
-  if (searchQuery) {
-    classes = classes.filter(cls => classMatchesSearch(cls));
-  }
-
-  return classes;
+  // Each surviving class carries its own search result so the card can
+  // render only the abilities that matched.
+  return classes
+    .map(cls => searchClass(cls))
+    .filter(res => res.visible);
 }
 
+// ── Search ──────────────────────────────────────────────────────────────────
+//
+// The query is a space-separated list of terms, ANDed together:
+//
+//   guard            free text — ability name, description, class name/desc,
+//                    or the name of one of the ability's tags
+//   tag:spell        tag term — matches only against the ability's tags
+//   #spell           shorthand for tag:spell
+//
+// A tag term never matches a class by itself, so `tag:aura` narrows every
+// class down to its aura abilities rather than showing whole classes.
+
+function setSearch(raw) {
+  searchQuery = raw.toLowerCase().trim();
+  searchTerms = parseQuery(searchQuery);
+  renderQueryChips();
+  render();
+}
+
+function parseQuery(q) {
+  return q
+    .split(/\s+/)
+    .filter(Boolean)
+    .map(tok => {
+      if (tok.startsWith("tag:")) return { kind: "tag",  value: tok.slice(4) };
+      if (tok.startsWith("#"))    return { kind: "tag",  value: tok.slice(1) };
+      return                             { kind: "text", value: tok };
+    })
+    .filter(t => t.value.length > 0);
+}
+
+/** Tag ids + names for one ability, lowercased, for matching. */
+function abilityTagText(ab) {
+  return (ab.tags ?? []).flatMap(tid => [
+    tid.toLowerCase(),
+    (TAG_MAP[tid]?.name ?? "").toLowerCase()
+  ]);
+}
+
+function abilityMatchesTerm(ab, term) {
+  const tagText = abilityTagText(ab);
+  if (term.kind === "tag") {
+    return tagText.some(t => t.includes(term.value));
+  }
+  return ab.name.toLowerCase().includes(term.value)
+      || (ab.description ?? "").toLowerCase().includes(term.value)
+      || tagText.some(t => t.includes(term.value));
+}
+
+function abilityMatchesSearch(ab) {
+  return searchTerms.every(term => abilityMatchesTerm(ab, term));
+}
+
+/**
+ * A class matches on its own name/description only when every term is free
+ * text — a tag term describes an ability, never a class.
+ */
 function classMatchesSearch(cls) {
-  const q = searchQuery;
-  if (cls.name.toLowerCase().includes(q))        return true;
-  if ((cls.description ?? "").toLowerCase().includes(q)) return true;
-  return (cls.abilities ?? []).some(id => {
-    const ab = ABILITY_MAP[id];
-    if (!ab) return false;
-    return ab.name.toLowerCase().includes(q)
-        || (ab.description ?? "").toLowerCase().includes(q);
-  });
+  if (searchTerms.some(t => t.kind === "tag")) return false;
+  const hay = `${cls.name} ${cls.description ?? ""}`.toLowerCase();
+  return searchTerms.every(t => hay.includes(t.value));
+}
+
+/**
+ * Resolve a class against the active query.
+ *
+ *   { cls, visible, abilities, filtered, matchCount, totalCount }
+ *
+ * `abilities` is what the card should render: the matching subset when the
+ * class was reached through its abilities, the full list when the class
+ * itself matched (or when there is no query at all).
+ */
+function searchClass(cls) {
+  const abilities = (cls.abilities ?? [])
+    .map(id => ABILITY_MAP[id])
+    .filter(Boolean);
+
+  const base = { cls, visible: true, abilities, filtered: false,
+                 matchCount: abilities.length, totalCount: abilities.length };
+
+  if (searchTerms.length === 0) return base;
+
+  const hits = abilities.filter(abilityMatchesSearch);
+  if (hits.length > 0) {
+    return { cls, visible: true, abilities: hits, filtered: true,
+             matchCount: hits.length, totalCount: abilities.length };
+  }
+
+  // No ability hit — the class survives only if it matched by name/description,
+  // and then it shows everything it has.
+  if (classMatchesSearch(cls)) return base;
+
+  return { cls, visible: false };
 }
 
 // ── Class Card ────────────────────────────────────────────────────────────────
 
-function buildClassCard(cls) {
+function buildClassCard(res) {
+  const cls  = res.cls;
   const card = document.createElement("article");
   card.className    = "class-card";
   card.dataset.classId = cls.id;
+  card.classList.toggle("is-filtered", !!res.filtered);
 
   // Category metadata for this class
   const cat = CATEGORIES.find(c => (c.classes ?? []).includes(cls.id));
@@ -191,8 +277,9 @@ function buildClassCard(cls) {
     ${buildCardHeader(cls, cat)}
     ${buildClassStats(cls.stats ?? {})}
     ${buildClassDesc(cls.description)}
+    ${buildFilterNote(res)}
     <div class="card-abilities">
-      ${buildAllRankGroups(cls)}
+      ${buildAllRankGroups(res)}
     </div>`;
 
   // Wire up rank group toggles
@@ -205,7 +292,24 @@ function buildClassCard(cls) {
     row.addEventListener("click", () => toggleAbilityRow(row));
   });
 
+  // Tag chips are search shortcuts — clicking one adds it to the query.
+  card.querySelectorAll(".ab-tag[data-tag-id]").forEach(chip => {
+    chip.addEventListener("click", e => {
+      e.stopPropagation();      // don't toggle the ability row underneath
+      addTagTerm(chip.dataset.tagId);
+    });
+  });
+
   return card;
+}
+
+/** "Showing 3 of 21 abilities" banner, only while a query is narrowing the card. */
+function buildFilterNote(res) {
+  if (!res.filtered) return "";
+  return `
+    <div class="card-filter-note">
+      Showing ${res.matchCount} of ${res.totalCount} abilities
+    </div>`;
 }
 
 function buildCardHeader(cls, cat) {
@@ -237,80 +341,113 @@ function buildClassDesc(description) {
   return `<div class="class-desc">${marked.parse(description)}</div>`;
 }
 
-function buildAllRankGroups(cls) {
-  const abilityIds = cls.abilities ?? [];
-  const abilities  = abilityIds.map(id => ABILITY_MAP[id]).filter(Boolean);
+function buildAllRankGroups(res) {
+  const cls       = res.cls;
+  const abilities = res.abilities;
 
-  if (abilities.length === 0) {
+  // Full roster, used for the "n of m" counts on a filtered card.
+  const allAbilities = (cls.abilities ?? [])
+    .map(id => ABILITY_MAP[id])
+    .filter(Boolean);
+
+  if (allAbilities.length === 0) {
     return `<p class="no-abilities">No abilities defined.</p>`;
   }
 
-  // Separate heroic talents from regular abilities
-  const heroicAbilities  = abilities.filter(ab => ab.isHeroicTalent);
-  const regularAbilities = abilities.filter(ab => !ab.isHeroicTalent);
+  const bucket = list => {
+    const heroic = list.filter(ab => ab.isHeroicTalent);
+    const byRank = {};
+    list.filter(ab => !ab.isHeroicTalent).forEach(ab => {
+      const r = ab.rank ?? 0;
+      (byRank[r] = byRank[r] ?? []).push(ab);
+    });
+    return { heroic, byRank };
+  };
 
-  // Group regular abilities by rank
-  const byRank = {};
-  regularAbilities.forEach(ab => {
-    const r = ab.rank ?? 0;
-    (byRank[r] = byRank[r] ?? []).push(ab);
-  });
+  const shown = bucket(abilities);      // what the query left standing
+  const total = bucket(allAbilities);   // what the class actually has
 
-  const ranks    = Object.keys(byRank).map(Number).sort((a, b) => a - b);
+  // Ranks come from the full roster so a filtered card keeps its shape; empty
+  // groups are dropped further down.
+  const ranks    = Object.keys(total.byRank).map(Number).sort((a, b) => a - b);
   const sections = [];
   let heroicPlaced = false;
 
+  const pushHeroic = () => {
+    sections.push(buildHeroicGroup(
+      shown.heroic, total.heroic.length, res.filtered
+    ));
+    heroicPlaced = true;
+  };
+
   for (const r of ranks) {
-    sections.push(buildRankGroup(r, byRank[r]));
+    sections.push(buildRankGroup(
+      r, shown.byRank[r] ?? [], total.byRank[r].length, res.filtered
+    ));
     // Heroic section goes immediately after Basic (rank 0); if there are no
     // basics it goes before the first ranked group instead.
-    if (!heroicPlaced && r === 0) {
-      sections.push(buildHeroicGroup(heroicAbilities));
-      heroicPlaced = true;
-    }
+    if (!heroicPlaced && r === 0) pushHeroic();
   }
 
   // No rank-0 basics — place the heroic section before rank 1.
   if (!heroicPlaced) {
-    sections.unshift(buildHeroicGroup(heroicAbilities));
+    sections.unshift(buildHeroicGroup(
+      shown.heroic, total.heroic.length, res.filtered
+    ));
   }
 
-  return sections.join("");
+  const html = sections.filter(Boolean).join("");
+  return html || `<p class="no-abilities">No abilities match your search.</p>`;
 }
 
-function buildHeroicGroup(abilities) {
+/**
+ * A rank group's body holds only `abilities` — the matching subset while a
+ * query is active — so expanding a rank during a search reveals just the hits.
+ * `total` is the unfiltered size, shown alongside as "2 / 7". Groups with no
+ * matches are dropped from a filtered card entirely (return "").
+ */
+function buildRankGroupShell({ groupCls, badgeCls, label, hint, abilities, total, filtered }) {
+  if (filtered && abilities.length === 0) return "";
+
   const rows = abilities.length
     ? abilities.map(buildAbilityRow).join("")
-    : `<p class="no-abilities">No heroic talents defined yet.</p>`;
-  return `
-    <div class="rank-group rank-group-heroic">
-      <div class="rank-group-header">
-        <span class="caret">&#9654;</span>
-        <span class="rank-badge rank-heroic">Heroic Talent</span>
-        <span class="rank-hint">every 4th level</span>
-        <span class="rank-count">${abilities.length}</span>
-      </div>
-      <div class="rank-abilities" hidden>${rows}</div>
-    </div>`;
-}
+    : `<p class="no-abilities">${hint.empty}</p>`;
 
-function buildRankGroup(rank, abilities) {
-  const isBasic  = rank === 0;
-  const label    = isBasic ? "Basic" : `Rank ${rank}`;
-  const badgeCls = isBasic ? "rank-basic" : `rank-${rank}`;
-
-  const rows = abilities.map(buildAbilityRow).join("");
+  const count = filtered
+    ? `<span class="rank-count is-filtered">${abilities.length} / ${total}</span>`
+    : `<span class="rank-count">${total}</span>`;
 
   return `
-    <div class="rank-group">
+    <div class="rank-group ${groupCls}">
       <div class="rank-group-header">
         <span class="caret">&#9654;</span>
         <span class="rank-badge ${badgeCls}">${label}</span>
-        ${isBasic ? '<span class="rank-hint">auto-granted</span>' : ""}
-        <span class="rank-count">${abilities.length}</span>
+        ${hint.text ? `<span class="rank-hint">${hint.text}</span>` : ""}
+        ${count}
       </div>
       <div class="rank-abilities" hidden>${rows}</div>
     </div>`;
+}
+
+function buildHeroicGroup(abilities, total, filtered) {
+  return buildRankGroupShell({
+    groupCls: "rank-group-heroic",
+    badgeCls: "rank-heroic",
+    label:    "Heroic Talent",
+    hint:     { text: "every 4th level", empty: "No heroic talents defined yet." },
+    abilities, total, filtered
+  });
+}
+
+function buildRankGroup(rank, abilities, total, filtered) {
+  const isBasic = rank === 0;
+  return buildRankGroupShell({
+    groupCls: "",
+    badgeCls: isBasic ? "rank-basic" : `rank-${rank}`,
+    label:    isBasic ? "Basic" : `Rank ${rank}`,
+    hint:     { text: isBasic ? "auto-granted" : "", empty: "No abilities defined." },
+    abilities, total, filtered
+  });
 }
 
 // ── Ability Row ───────────────────────────────────────────────────────────────
@@ -330,7 +467,8 @@ function buildAbilityRow(ab) {
     .map(tid => {
       const tag = TAG_MAP[tid];
       const tip = tag?.description ? ` title="${tag.description}"` : "";
-      return `<span class="ab-tag"${tip}>${tag?.name ?? tid}</span>`;
+      const hit = tagMatchesQuery(tid) ? " is-hit" : "";
+      return `<span class="ab-tag${hit}" data-tag-id="${tid}"${tip}>${tag?.name ?? tid}</span>`;
     })
     .join("");
 
@@ -397,6 +535,79 @@ function costLabel(cost) {
   if (cost === "reaction") return "Reaction";
   if (cost === "0")        return "Free";
   return `${cost} AP`;
+}
+
+// ── Tag search UI ──────────────────────────────────────────────────────────
+
+/** True when an active tag term targets this tag id — used to light up chips. */
+function tagMatchesQuery(tagId) {
+  const name = (TAG_MAP[tagId]?.name ?? "").toLowerCase();
+  const id   = tagId.toLowerCase();
+  return searchTerms.some(t =>
+    t.kind === "tag" && (id.includes(t.value) || name.includes(t.value))
+  );
+}
+
+/** Clicking a tag chip appends `tag:<id>` to the query (or removes it again). */
+function addTagTerm(tagId) {
+  const term    = `tag:${tagId.toLowerCase()}`;
+  const present = searchTerms.some(t => t.kind === "tag" && t.value === tagId.toLowerCase());
+
+  const rest = searchQuery
+    .split(/\s+/)
+    .filter(Boolean)
+    .filter(tok => tok !== term && tok !== `#${tagId.toLowerCase()}`);
+
+  const next = present ? rest.join(" ") : [...rest, term].join(" ");
+  applySearch(next);
+}
+
+function removeTerm(raw) {
+  const next = searchQuery
+    .split(/\s+/)
+    .filter(Boolean)
+    .filter(tok => tok !== raw)
+    .join(" ");
+  applySearch(next);
+}
+
+/** Push a query into the search box and re-render. */
+function applySearch(next) {
+  const box = document.getElementById("search");
+  box.value = next;
+  setSearch(next);
+}
+
+/** Renders the active query as removable chips under the top bar. */
+function renderQueryChips() {
+  const bar = document.getElementById("query-chips");
+  if (!bar) return;
+
+  const raw = searchQuery.split(/\s+/).filter(Boolean);
+  if (raw.length === 0) {
+    bar.innerHTML = "";
+    bar.hidden = true;
+    return;
+  }
+
+  bar.hidden = false;
+  bar.innerHTML = raw.map((tok, i) => {
+    const term  = searchTerms[i];
+    const isTag = term?.kind === "tag";
+    const label = isTag
+      ? (TAG_MAP[term.value]?.name ?? term.value)
+      : tok;
+    return `
+      <button class="query-chip ${isTag ? "query-chip-tag" : ""}" data-term="${tok}">
+        ${isTag ? "#" : ""}${label}
+        <span class="query-chip-x">&times;</span>
+      </button>`;
+  }).join("") + `<button class="query-chip query-chip-clear" data-clear="1">Clear all</button>`;
+
+  bar.querySelectorAll("[data-term]").forEach(chip => {
+    chip.addEventListener("click", () => removeTerm(chip.dataset.term));
+  });
+  bar.querySelector("[data-clear]")?.addEventListener("click", () => applySearch(""));
 }
 
 // ── Entry point ────────────────────────────────────────────────────────────

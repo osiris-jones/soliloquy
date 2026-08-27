@@ -16,8 +16,12 @@
         <a class="top-bar-link" href="../character-builder/">Character Builder</a>
         <a class="top-bar-link" href="../npc-browser/">NPC Browser</a>
       </nav>
-      <input id="search" type="search" placeholder="Search classes &amp; abilities&hellip;" autocomplete="off">
+      <input id="search" type="search"
+             placeholder="Search &mdash; try &quot;guard&quot; or &quot;tag:aura&quot;&hellip;"
+             title="Space-separated terms are ANDed. Use tag:spell or #spell to match a tag."
+             autocomplete="off">
     </header>
+
 
     <div id="layout">
 
@@ -28,6 +32,9 @@
       </nav>
 
       <main id="main-content">
+        <!-- Active query, one removable chip per term (populated by browser.js) -->
+        <div id="query-chips" hidden></div>
+
         <div id="class-grid">
           <p class="loading-msg">Loading&hellip;</p>
         </div>

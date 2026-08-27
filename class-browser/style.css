@@ -408,6 +408,95 @@ body {
   color: var(--text-muted);
 }
 
+/* ── Search-by-tag: active query chips ─────────────────────── */
+#query-chips {
+  position: sticky;
+  top: -20px;                       /* cancels #main-content's top padding */
+  z-index: 50;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: -20px -20px 16px;
+  padding: 10px 20px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+/* `display: flex` above outranks the UA `[hidden]` rule — restate it. */
+#query-chips[hidden] { display: none; }
+
+.query-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--bg-card);
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 0.72rem;
+  cursor: pointer;
+  transition: background 0.1s, color 0.1s, border-color 0.1s;
+}
+.query-chip:hover {
+  background: rgba(122, 53, 0, 0.08);
+  border-color: var(--accent-mid);
+  color: var(--accent);
+}
+.query-chip-tag {
+  background: rgba(184, 146, 10, 0.16);
+  border-color: var(--gold);
+  color: var(--accent);
+  font-weight: 600;
+}
+.query-chip-x {
+  font-size: 0.85rem;
+  line-height: 1;
+  opacity: 0.55;
+}
+.query-chip:hover .query-chip-x { opacity: 1; }
+
+.query-chip-clear {
+  margin-left: auto;
+  border-style: dashed;
+  font-style: italic;
+}
+
+/* ── Search-by-tag: filtered card affordances ──────────────── */
+
+/* Banner on a card the query has narrowed. */
+.card-filter-note {
+  padding: 6px 16px;
+  background: rgba(184, 146, 10, 0.1);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* "2 / 7" rank count while filtering. */
+.rank-count.is-filtered {
+  background: rgba(184, 146, 10, 0.28);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Tag chips double as search shortcuts. */
+.ab-tag[data-tag-id] { cursor: pointer; }
+.ab-tag[data-tag-id]:hover {
+  background: rgba(184, 146, 10, 0.28);
+  border-color: var(--gold);
+  color: var(--accent);
+}
+.ab-tag.is-hit {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+  font-weight: 600;
+}
+
 /* ── Ability details (expanded) ────────────────────────────── */
 .ability-details {
   padding: 8px 16px 12px 28px;
